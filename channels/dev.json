@@ -1,13 +1,13 @@
 {
-  "version": "0.2.0",
-  "notes": "- Recent captures: press **Alt+Shift+Z** (or pick it in the tray menu) for a strip of your newest captures, newest first, from the screenshots folder (6, 9 or 12 of them: Settings, \"Show in strip\"). It opens at once with placeholders and the thumbnails fill in; they are kept in memory only, never written to disk.\n- Select with a click or the keys 1 to 9 (Ctrl+A for all, arrows and Space to walk and toggle), then Enter or Ctrl+C: one capture goes to the clipboard as the picture plus its file, several go as files, oldest first, so they paste in the order you took them. A toast says \"Copied 4 captures\".\n- Drag one capture, or the whole selection, out of the strip as files into Explorer, a browser chat box, Teams or Outlook. Right-click a card: Open, Show in folder, Copy path, Delete (to the Recycle Bin, with an Undo on the toast).\n- Esc, a click outside, or the hotkey again closes the strip without touching the clipboard.\n- Clicking the \"Copied · …\" toast after a capture opens the strip with that capture selected (Shift+click still shows the file in its folder).\n- Settings: a \"Recent captures hotkey\" row beside the capture hotkey, with the same warning in Settings and the tray when another app owns the key.",
-  "pub_date": "2026-10-23T21:44:58Z",
+  "version": "0.2.1",
+  "notes": "- Recent captures: a Volt **Copy to clipboard** button across the top of the strip, so you can pick with the mouse and copy without reaching for Enter. It says what one click copies (\"Copy to clipboard\", \"Copy 3 to clipboard\") and is off, reading \"Select captures to copy\", until something is selected. It does what Enter does (one capture as the picture plus its file, several as files, oldest first), says \"Copied 3 captures\" and closes the strip. Enter and Ctrl+C still work, and the button never takes the keyboard from the cards.\n- Double-click the tray icon to open Settings (or bring it forward). Right-click still shows the menu; a single left click still shows it too, a moment later, after the double-click time has passed.",
+  "pub_date": "2026-10-23T22:56:16Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0hnMlJkbTVBWHFnVmY0UENDVkgvbmluUTlVY3dFMWladG9Fc1hCQndzcVgrSldsUTJzaURRRVZ1T1hDSzlCdUxTK0xuMnpXY0MrUjdzQmtkRHluUUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzkxODc1CWZpbGU6QTkgU25hcF8wLjIuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjAKdFR6TGhqTU5wR3hNRlFsakZrVHkzY2RKbHJJUHRCa29nZlQ4SXNvajU0YThOVFJsTjUzN2h1UHVrTjF5bFJuMEZTSFRUbXhMUXdLZTY1U2dkZWlGRHc9PQo=",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.2.0/A9Snap_0.2.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0thRGd6YUdJb0xuNWRZaUw0akZ6aVJwWjZ2dSs2TkdRQThLaU1jOGdUMmltVk9lQVl3Z3phZnBPQXVqNDdneDcvTWg0T0ZhcDJGS2JZTkdXTUlEcVE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzk2MTY1CWZpbGU6QTkgU25hcF8wLjIuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjEKRGxzbk04NFVnYjczc1krR1VWMHFJWi9HOWUzQmJhRjNEME03V1Npbkg3aG5wWUZ0WWlpM1RYZ2ltdU1DazFic3hPdktnUy84NXNCVUVGUE8zbUpsRHc9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.2.1/A9Snap_0.2.1_x64-setup.exe"
     }
   },
-  "installer_sha256": "d04781f45abab5463566f4204008701cf3d9f37cfc86a2cf5d18a4ea565411d8",
-  "installer_size": 2767519
+  "installer_sha256": "4bd2c04791d386aeb5b9e6f32bd5700bc3d818be14af68a32edd145d5c391e97",
+  "installer_size": 2771565
 }

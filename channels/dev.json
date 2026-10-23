@@ -1,13 +1,13 @@
 {
-  "version": "0.2.1",
-  "notes": "- Recent captures: a Volt **Copy to clipboard** button across the top of the strip, so you can pick with the mouse and copy without reaching for Enter. It says what one click copies (\"Copy to clipboard\", \"Copy 3 to clipboard\") and is off, reading \"Select captures to copy\", until something is selected. It does what Enter does (one capture as the picture plus its file, several as files, oldest first), says \"Copied 3 captures\" and closes the strip. Enter and Ctrl+C still work, and the button never takes the keyboard from the cards.\n- Double-click the tray icon to open Settings (or bring it forward). Right-click still shows the menu; a single left click still shows it too, a moment later, after the double-click time has passed.",
-  "pub_date": "2026-10-23T22:56:16Z",
+  "version": "0.3.0",
+  "notes": "- The editor: draw on a capture and send it. Open it from the recent captures strip (**E**, a double-click, or right-click → Edit), from the **Edit** button on the \"Copied · …\" confirmation, or after every capture (Settings, \"Open the editor after every capture\", off by default).\n- Tools, each with a key: Arrow (A), Box (B), Ellipse (E), Highlight (H), Text (T), Blur (U), Crop (C), and Select (V). Five colours (Nine Red, Volt, Ink, white, blue) and thin, medium or thick. Every shape stays editable until you save: select it, move it, drag its handles, change its colour, delete it. Undo and redo (Ctrl+Z, Ctrl+Y) go back through the whole session.\n- Blur pixelates the region for real: the saved file holds flat blocks, not the picture with a layer on top. Text is Geist with a soft dark outline so it reads on any background. Crop: drag a region, Enter applies, undo brings the whole picture back. Ctrl+wheel zooms, Ctrl+0 is 100 %.\n- **Ctrl+S or Done** saves over the same file, so the numbering never changes, and puts the result on the clipboard as the picture and as the file (\"Saved · … · copied\"). **Ctrl+Shift+S** saves as the next numbered file instead. **Esc** with unsaved changes asks in the window: Save, Discard or Cancel.\n- The untouched original is kept in a hidden `.a9snap` folder inside your screenshots folder, so **Revert** can put it back. The numbering ignores that folder. A capture that was edited shows a small Volt dot in the strip. The original still holds whatever a blur hid, so delete the `.a9snap` folder before you share the whole screenshots folder.\n- The confirmation toast now stays 3.5 seconds when it has an Edit button, and is a little wider.",
+  "pub_date": "2026-10-23T23:12:16Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0thRGd6YUdJb0xuNWRZaUw0akZ6aVJwWjZ2dSs2TkdRQThLaU1jOGdUMmltVk9lQVl3Z3phZnBPQXVqNDdneDcvTWg0T0ZhcDJGS2JZTkdXTUlEcVE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzk2MTY1CWZpbGU6QTkgU25hcF8wLjIuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjEKRGxzbk04NFVnYjczc1krR1VWMHFJWi9HOWUzQmJhRjNEME03V1Npbkg3aG5wWUZ0WWlpM1RYZ2ltdU1DazFic3hPdktnUy84NXNCVUVGUE8zbUpsRHc9PQo=",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.2.1/A9Snap_0.2.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0MrZDhxaktJczN0QkE4V2FzckFXZkVLeG9xL3BaL3h0NUNpWGdmblpHcFpOSkY0MmdkWkdSTGt4MkVyQTN0Z1JXMVBoV0piZzg1OEVBR3VpS05rcmdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzk3MTIzCWZpbGU6QTkgU25hcF8wLjMuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjAKbFRrRE1mVUdiRTR2ZFVNWXg0NjhZRmtpU1psV3BBcTJHb3hmdGIwYXpaSkc0WlVPcU95Slh3TkF5VmdrUzM2R0ZOVktwTDBsTWRWL3NGeEJHUWJNQ2c9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.0/A9Snap_0.3.0_x64-setup.exe"
     }
   },
-  "installer_sha256": "4bd2c04791d386aeb5b9e6f32bd5700bc3d818be14af68a32edd145d5c391e97",
-  "installer_size": 2771565
+  "installer_sha256": "8ced55bfd640e792bd563b65802f622bc85b242abaf1dc858064ee19e892689e",
+  "installer_size": 2804097
 }

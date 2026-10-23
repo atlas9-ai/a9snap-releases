@@ -1,0 +1,13 @@
+{
+  "version": "0.1.1",
+  "notes": "- Numbering continues an existing folder: the scan ignores case and treats `-`, `_`, a space or nothing as the same separator, and the next file copies the style of the highest-numbered one (`SNAG-7094.png` is followed by `SNAG-7095.png`, whatever prefix Settings says). The count is read from the folder on every capture; gaps are never filled and a file is never overwritten.\n- Settings shows the real next file name, read from the folder and refreshed as you change the folder or the prefix (it used to show a fixed example).\n- The crosshair, bullseye and loupe are drawn only on the monitor the pointer is on, also while you drag from one monitor to another.\n- The approved A9 Snap look: Ink and Graphite surfaces, Volt accent, the Bullseye icon (app, tray and installer) and the A9 Snap lockup in the Settings header, Geist and Geist Mono.\n- Dev releases are marked as pre-releases, so they never take GitHub's Latest badge.",
+  "pub_date": "2026-10-23T20:34:55Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0ZCNEs0YmpwbFAzVTFTV2p1VmttZUg3WGJacDJ3WEVxeUg5bGcyOCtkU2VORjlLVms1K2Jnd3dqanVucUNIRnRDVjBwRkFYTVZpMGFRZzVBOGJ6ekFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzg3Njg0CWZpbGU6QTkgU25hcF8wLjEuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4xLjEKZGVHVzAwNDN3SDlYSkpmL1EyMkIxWVI2a3NWNDVvV1RZTmh3dXhFTWxJSVl6eXo0YXlQNzNlMXlBOFNRd1JWK1djR3NYQlhrSlFaOFZwaGNQZVNxQVE9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.1.1/A9Snap_0.1.1_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "5d16a06a25bfda5d8a88dab726f5e290b053b7111beba994f423c9f27a063ccf",
+  "installer_size": 2677643
+}

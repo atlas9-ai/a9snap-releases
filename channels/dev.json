@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "notes": "- First release: press Alt+Z, drag a region (crosshair, bullseye and an 8x loupe help you land on a single pixel), and the picture is on your clipboard and saved as the next numbered PNG in your screenshots folder.",
+  "pub_date": "2026-10-23T19:24:04Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0NWWmxNcGNHNFZVdzRZbTBGS0FpVUlVTmNRdUtQdE1ocWc1OEFJSkpySUVWV0RHbU1idUtUVVFxaldlK2lkcFlUVXFiYTMydnlXYjlmS1d3TnhKY1FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzgzNDMyCWZpbGU6QTkgU25hcF8wLjEuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4xLjAKc2lqQTZoSmo2QlVzVmV0VHExOWpCNkFMbWlFRVpvSDhRbnQwdCt0SzhkODFQelYxWTRSWnowU2xxN1F3QTBUK2ZNRTFGYTZNR0UzbFk0Mld4ZE1QQmc9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.1.0/A9Snap_0.1.0_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "a6731384a18266add7a9366018dbea05ae0467053e0096854dac3cf7341623fb",
+  "installer_size": 2653603
+}

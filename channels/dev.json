@@ -1,13 +1,13 @@
 {
-  "version": "0.1.1",
-  "notes": "- Numbering continues an existing folder: the scan ignores case and treats `-`, `_`, a space or nothing as the same separator, and the next file copies the style of the highest-numbered one (`SNAG-7094.png` is followed by `SNAG-7095.png`, whatever prefix Settings says). The count is read from the folder on every capture; gaps are never filled and a file is never overwritten.\n- Settings shows the real next file name, read from the folder and refreshed as you change the folder or the prefix (it used to show a fixed example).\n- The crosshair, bullseye and loupe are drawn only on the monitor the pointer is on, also while you drag from one monitor to another.\n- The approved A9 Snap look: Ink and Graphite surfaces, Volt accent, the Bullseye icon (app, tray and installer) and the A9 Snap lockup in the Settings header, Geist and Geist Mono.\n- Dev releases are marked as pre-releases, so they never take GitHub's Latest badge.",
-  "pub_date": "2026-10-23T20:34:55Z",
+  "version": "0.2.0",
+  "notes": "- Recent captures: press **Alt+Shift+Z** (or pick it in the tray menu) for a strip of your newest captures, newest first, from the screenshots folder (6, 9 or 12 of them: Settings, \"Show in strip\"). It opens at once with placeholders and the thumbnails fill in; they are kept in memory only, never written to disk.\n- Select with a click or the keys 1 to 9 (Ctrl+A for all, arrows and Space to walk and toggle), then Enter or Ctrl+C: one capture goes to the clipboard as the picture plus its file, several go as files, oldest first, so they paste in the order you took them. A toast says \"Copied 4 captures\".\n- Drag one capture, or the whole selection, out of the strip as files into Explorer, a browser chat box, Teams or Outlook. Right-click a card: Open, Show in folder, Copy path, Delete (to the Recycle Bin, with an Undo on the toast).\n- Esc, a click outside, or the hotkey again closes the strip without touching the clipboard.\n- Clicking the \"Copied · …\" toast after a capture opens the strip with that capture selected (Shift+click still shows the file in its folder).\n- Settings: a \"Recent captures hotkey\" row beside the capture hotkey, with the same warning in Settings and the tray when another app owns the key.",
+  "pub_date": "2026-10-23T21:44:58Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0ZCNEs0YmpwbFAzVTFTV2p1VmttZUg3WGJacDJ3WEVxeUg5bGcyOCtkU2VORjlLVms1K2Jnd3dqanVucUNIRnRDVjBwRkFYTVZpMGFRZzVBOGJ6ekFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzg3Njg0CWZpbGU6QTkgU25hcF8wLjEuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4xLjEKZGVHVzAwNDN3SDlYSkpmL1EyMkIxWVI2a3NWNDVvV1RZTmh3dXhFTWxJSVl6eXo0YXlQNzNlMXlBOFNRd1JWK1djR3NYQlhrSlFaOFZwaGNQZVNxQVE9PQo=",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.1.1/A9Snap_0.1.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0hnMlJkbTVBWHFnVmY0UENDVkgvbmluUTlVY3dFMWladG9Fc1hCQndzcVgrSldsUTJzaURRRVZ1T1hDSzlCdUxTK0xuMnpXY0MrUjdzQmtkRHluUUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzkxODc1CWZpbGU6QTkgU25hcF8wLjIuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjAKdFR6TGhqTU5wR3hNRlFsakZrVHkzY2RKbHJJUHRCa29nZlQ4SXNvajU0YThOVFJsTjUzN2h1UHVrTjF5bFJuMEZTSFRUbXhMUXdLZTY1U2dkZWlGRHc9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.2.0/A9Snap_0.2.0_x64-setup.exe"
     }
   },
-  "installer_sha256": "5d16a06a25bfda5d8a88dab726f5e290b053b7111beba994f423c9f27a063ccf",
-  "installer_size": 2677643
+  "installer_sha256": "d04781f45abab5463566f4204008701cf3d9f37cfc86a2cf5d18a4ea565411d8",
+  "installer_size": 2767519
 }

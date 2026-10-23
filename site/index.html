@@ -63,6 +63,13 @@ p{margin:0}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(11,12,14,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--bone);font-weight:600;font-size:18px}
+/* Lockup: Bullseye, the A9 outline (A in Bone, 9 in Nine Red; paths from assets/brand/a9-glyph.svg), "Snap" in Geist 600 */
+.brand .a9{height:1.55em;width:auto;margin-left:-2px;flex:none}
+.brand .a9 .a{fill:var(--bone)}
+.brand .snap{font-size:1.3em;font-weight:600;letter-spacing:-.02em;line-height:1;margin-left:-6px}
+.foot-brand{font-size:15px;color:var(--steel);gap:7px}
+.foot-brand .snap{color:var(--bone)}
+.foot-brand .by{margin-left:12px;font-weight:400;font-size:14px}
 .links{display:flex;align-items:center;gap:28px;font-size:15px}
 .links a{text-decoration:none;color:var(--mist)}
 .links a:hover{color:var(--bone)}
@@ -82,6 +89,11 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;heigh
 .hero .lede b{color:var(--bone);font-weight:600}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .fine{font-size:14px;color:var(--steel);margin-top:16px}
+.dlmeta{font-family:var(--mono);font-size:13px;color:var(--steel);margin-top:14px}
+.fine .more{color:var(--volt);text-decoration:none;white-space:nowrap}
+.fine.install{margin-top:10px;max-width:46ch}
+.fine.install b{color:var(--mist);font-weight:600}
+details p b{color:var(--bone);font-weight:600}
 kbd{font-family:var(--mono);font-size:.85em;background:var(--raised);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 7px;color:var(--bone)}
 @media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
 
@@ -229,15 +241,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   <div class="wrap">
     <nav aria-label="Main">
       <a class="brand" href="#top" aria-label="A9 Snap home">
-        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg>
-        A9 Snap
+        <svg class="mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span>
       </a>
       <div class="links">
         <a href="#paste">How it works</a>
         <a href="#editor">Editor</a>
         <a href="#switch">Leaving Snagit</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn-volt" href="#get">Coming soon</a>
+        <a class="btn btn-volt" data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">Download</a>
       </div>
     </nav>
   </div>
@@ -251,13 +262,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         <h1 style="margin-top:18px">Point. Snap. Paste.</h1>
         <p class="lede">Press <kbd>Alt</kbd>+<kbd>Z</kbd> anywhere and drag. <b>The moment you let go</b>, it’s on your clipboard and saved as a numbered PNG.</p>
         <div class="ctas" id="get">
-          <span class="btn btn-volt lg" aria-disabled="true">
+          <a class="btn btn-volt lg" data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
-            Coming soon to the Microsoft Store
-          </span>
-          <a class="btn btn-ghost" href="#switch">Leaving Snagit? →</a>
+            Download for Windows
+          </a>
         </div>
-        <p class="fine">Windows 10 and 11 · Free · Launching on the Microsoft Store</p>
+        <p class="dlmeta" data-dl-meta>Free · Early access · v0.1.0 · 2.5 MB</p>
+        <p class="fine install">Windows may say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. Signed builds arrive with the Store release.</p>
+        <p class="fine">Coming to the Microsoft Store. Windows 10 and 11. <a class="more" href="#switch">Leaving Snagit? →</a></p>
       </div>
 
       <div class="demo">
@@ -451,6 +463,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       <div class="head"><p class="eyebrow">Questions</p><h2>Short answers.</h2></div>
       <div class="faq">
         <details open><summary>Will capture ever cost money?</summary><p>No. Capture, the loupe, numbered files and the editor are free for good. That’s in writing below.</p></details>
+        <details><summary>Is it safe to install?</summary><p>Yes. Early builds aren’t signed with a Windows certificate yet, so Windows may say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. Signed builds arrive with the Store release. There’s no account, and nothing leaves your PC except the update check.</p></details>
         <details><summary>Does it send my screenshots anywhere?</summary><p>No. Files go to the folder you pick. The only thing Snap sends is a check for updates.</p></details>
         <details><summary>Two monitors? 150% scaling?</summary><p>Yes. Every monitor is captured at its real resolution, and the selection lands on the pixels you see.</p></details>
         <details><summary>Can I change Alt+Z?</summary><p>Yes, in Settings. If another app already owns a shortcut, Snap tells you instead of failing quietly.</p></details>
@@ -473,10 +486,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 
 <footer>
   <div class="wrap">
-    <span style="display:flex;align-items:center;gap:10px">
-      <svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg>
-      A9 Snap · An A9 Solutions product
-    </span>
+    <span class="brand foot-brand" role="img" aria-label="A9 Snap"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span><span class="by">An A9 Solutions product</span></span>
     <span class="mono">Point. Snap. Paste.</span>
   </div>
 </footer>
@@ -583,5 +593,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   calc();
 })();
 </script>
+<script src="/download.js" defer></script>
 </body>
 </html>

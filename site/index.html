@@ -145,15 +145,36 @@ section.band{padding-block:96px;border-top:1px solid var(--line)}
 .filmwin{position:relative;aspect-ratio:16/9;background:var(--ink);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -18px rgba(0,0,0,.75)}
 .filmwin video{display:block;width:100%;height:100%;object-fit:contain;background:var(--ink)}
 .filmwin.js video{cursor:pointer}
-.fbtn{position:absolute;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;background:rgba(11,12,14,.8);color:var(--bone);font:inherit;font-size:14px;font-weight:600;line-height:1;padding:10px 16px;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.fbtn[hidden]{display:none}
-.fbtn:hover{border-color:var(--steel)}
-.fbtn:focus-visible{outline:2px solid var(--volt);outline-offset:2px;border-radius:999px}
-.fbtn svg{flex:none}
-.fsound{right:14px;bottom:14px}
-.fplay,.freplay{left:50%;top:50%;transform:translate(-50%,-50%);background:var(--volt);color:var(--volt-ink);border-color:var(--volt);font-size:17px;padding:16px 26px}
-.fplay:hover,.freplay:hover{border-color:var(--bone)}
-@media (max-width:600px){.fsound{right:8px;bottom:8px;padding:8px 12px;font-size:13px}.fplay,.freplay{font-size:15px;padding:12px 20px}}
+.filmwin:focus-visible{outline:2px solid var(--volt);outline-offset:3px}
+.fcenter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:12px;pointer-events:none}
+.fcenter[hidden]{display:none}
+.fbig{pointer-events:auto;display:grid;place-items:center;width:88px;height:88px;padding:0;border:0;border-radius:50%;background:var(--volt);color:var(--volt-ink);cursor:pointer;box-shadow:0 10px 30px -8px rgba(0,0,0,.7);transition:transform .15s}
+.fbig:hover{transform:scale(1.06)}
+.fbig:focus-visible{outline:2px solid var(--bone);outline-offset:4px}
+.fbig svg{width:40px;height:40px}
+.fbig.play svg{margin-left:4px}
+.flabel{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--bone);background:rgba(11,12,14,.8);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.fbar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:4px;padding:8px 10px;background:rgba(11,12,14,.8);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:var(--bone)}
+.fbar[hidden]{display:none}
+.filmwin.js .fbar{opacity:0;pointer-events:none;transition:opacity .18s}
+.filmwin.js.show .fbar{opacity:1;pointer-events:auto}
+.filmwin.js .fbar:has(:focus-visible){opacity:1;pointer-events:auto}
+.fc{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:40px;height:40px;padding:0;border:0;border-radius:8px;background:transparent;color:var(--bone);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.fc:hover{background:rgba(244,242,238,.12)}
+.fc:focus-visible,.fseek:focus-visible{outline:2px solid var(--volt);outline-offset:2px}
+.fc svg{width:22px;height:22px}
+.fc .lbl{display:none}
+.fc.hint{background:var(--volt);color:var(--volt-ink);padding:0 12px}
+.fc.hint .lbl{display:inline}
+.ftime{flex:none;font-family:var(--mono);font-size:12.5px;color:var(--mist);font-variant-numeric:tabular-nums;white-space:nowrap;padding:0 6px}
+.fseek{--p:0%;flex:1 1 auto;min-width:0;height:40px;margin:0 6px;background:transparent;cursor:pointer;-webkit-appearance:none;appearance:none}
+.fseek::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:linear-gradient(to right,var(--volt) var(--p),rgba(244,242,238,.28) var(--p))}
+.fseek::-moz-range-track{height:4px;border-radius:2px;background:rgba(244,242,238,.28)}
+.fseek::-moz-range-progress{height:4px;border-radius:2px;background:var(--volt)}
+.fseek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;margin-top:-5px;border:0;border-radius:50%;background:var(--bone)}
+.fseek::-moz-range-thumb{width:14px;height:14px;border:0;border-radius:50%;background:var(--bone)}
+@media (max-width:600px){.fbig{width:64px;height:64px}.fbig svg{width:30px;height:30px}.flabel{font-size:12px;padding:5px 10px}.fbar{padding:4px 6px;gap:0}.ftime{font-size:11.5px;padding:0 4px}.fseek{margin:0 4px}}
+@media (prefers-reduced-motion:reduce){.filmwin.js .fbar,.fbig{transition:none}}
 
 /* Describe vs snap */
 .versus{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
@@ -269,6 +290,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
     <symbol id="ok" viewBox="0 0 10 10"><path d="M1.5 5.2 4 7.5 8.5 2.5" fill="none" stroke="#0B0C0E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M6 4.5h4v15H6zM14 4.5h4v15h-4z"/></symbol>
     <symbol id="i-replay" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12a8 8 0 1 0 2.5-5.8M4 4v4.5h4.5"/></symbol>
     <symbol id="i-sound-off" viewBox="0 0 24 24"><path fill="currentColor" d="M4 9.5v5h3.5l4.5 4v-13l-4.5 4z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 9.5l5 5M21 9.5l-5 5"/></symbol>
     <symbol id="i-sound-on" viewBox="0 0 24 24"><path fill="currentColor" d="M4 9.5v5h3.5l4.5 4v-13l-4.5 4z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a7.8 7.8 0 0 1 0 11"/></symbol>
@@ -347,15 +369,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       </div>
       <figure class="film" id="film">
         <div class="filmwin" id="filmwin">
-          <video id="filmvideo" controls muted playsinline preload="metadata" poster="/media/just-send-it-poster.jpg" width="1280" height="720" aria-label="Film: Ken can't describe an icon over the phone, so he presses Alt+Z, marks it with an arrow and pastes it to Amy.">
+          <video id="filmvideo" controls playsinline preload="metadata" poster="/media/just-send-it-poster.jpg" width="1280" height="720" aria-label="Film: Ken can't describe an icon over the phone, so he presses Alt+Z, marks it with an arrow and pastes it to Amy.">
             <source src="/media/just-send-it.mp4" type="video/mp4">
             <a href="/media/just-send-it.mp4">Watch the film (MP4, 24 seconds)</a>
           </video>
-          <button class="fbtn fplay" id="fplay" type="button" hidden><svg width="20" height="20" aria-hidden="true"><use href="#i-play"/></svg><span>Play</span></button>
-          <button class="fbtn freplay" id="freplay" type="button" hidden><svg width="20" height="20" aria-hidden="true"><use href="#i-replay"/></svg><span>Replay</span></button>
-          <button class="fbtn fsound" id="fsound" type="button" hidden><svg width="18" height="18" aria-hidden="true"><use id="fsound-i" href="#i-sound-off"/></svg><span id="fsound-t">Sound on</span></button>
+          <div class="fcenter" id="fplayg" hidden>
+            <button class="fbig play" id="fplay" type="button" aria-label="Play"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+            <span class="flabel">Watch · 24 s · sound on</span>
+          </div>
+          <div class="fcenter" id="freplayg" hidden>
+            <button class="fbig" id="freplay" type="button" aria-label="Replay"><svg aria-hidden="true"><use href="#i-replay"/></svg></button>
+            <span class="flabel">Replay</span>
+          </div>
+          <div class="fbar" id="fbar" role="group" aria-label="Film controls" hidden>
+            <button class="fc" id="ftoggle" type="button" aria-label="Play"><svg aria-hidden="true"><use id="ftoggle-i" href="#i-play"/></svg></button>
+            <button class="fc" id="frestart" type="button" aria-label="Start over" title="Start over"><svg aria-hidden="true"><use href="#i-replay"/></svg></button>
+            <span class="ftime" id="ftime">0:00 / 0:24</span>
+            <input class="fseek" id="fseek" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek">
+            <button class="fc" id="fsound" type="button" aria-label="Sound off"><svg aria-hidden="true"><use id="fsound-i" href="#i-sound-on"/></svg><span class="lbl">Sound on</span></button>
+          </div>
         </div>
-      </figure>
+</figure>
       <div class="versus">
         <div class="convo" aria-label="Example chat: describing the screen in words">
           <div class="top"><span class="label">Describing it</span><span class="clock">4 min</span></div>
@@ -615,51 +649,112 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
     },2600); }
 })();
 
-// The film: plays muted once when half of it is on screen, pauses when scrolled away, holds the last frame with Replay.
+// The film: waits for Play, plays with the sound on from 0:00, and has its own controls (play / pause, start over, seek, sound).
+// Scrolling away pauses it and coming back does not resume it. At the end it holds the last frame and offers Replay.
 // Without this script the video keeps its own controls.
 (function(){
-  var v=document.getElementById('filmvideo'), win=document.getElementById('filmwin');
-  var bPlay=document.getElementById('fplay'), bRe=document.getElementById('freplay'), bSnd=document.getElementById('fsound');
-  var sndI=document.getElementById('fsound-i'), sndT=document.getElementById('fsound-t');
-  if(!v||!win) return;
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var held=false;   // paused by the visitor: do not resume by scrolling
-  var away=false;   // paused by this script because it scrolled out of view
-  var seen=false;   // at least half of it has been in view
-  var ask=reduce;   // show the Play button: reduced motion, paused by the visitor, or the browser refused to autoplay
-  v.removeAttribute('controls'); win.classList.add('js');
-  v.muted=true; bSnd.hidden=false;
+  var $=function(id){ return document.getElementById(id); };
+  var v=$('filmvideo'), win=$('filmwin'), bar=$('fbar'), grpPlay=$('fplayg'), grpRe=$('freplayg');
+  var bBig=$('fplay'), bRe=$('freplay'), bTog=$('ftoggle'), bRst=$('frestart'), bSnd=$('fsound'), seek=$('fseek'), tm=$('ftime');
+  if(!v||!win||!bar) return;
+  var started=false;   // it has been played at least once
+  var hint=false;      // the browser refused sound: we started it muted and the Sound button asks for one click
+  var dragging=false, hover=false, hideT=0, raf=0, touch=false;
+  v.removeAttribute('controls'); win.classList.add('js'); win.tabIndex=0;
 
-  function ui(){
-    bRe.hidden=!v.ended;
-    bPlay.hidden=!(ask&&v.paused&&!v.ended);
-    sndT.textContent=v.muted?'Sound on':'Sound off';
-    sndI.setAttribute('href',v.muted?'#i-sound-off':'#i-sound-on');
+  function fmt(t){ t=Math.max(0,Math.floor(t)); return Math.floor(t/60)+':'+('0'+(t%60)).slice(-2); }
+  function dur(){ return isFinite(v.duration)&&v.duration>0?v.duration:24; }
+  function running(){ return !v.paused&&!v.ended; }
+  function paint(){
+    var d=dur(), t=Math.min(v.currentTime,d);
+    if(!dragging) seek.value=Math.round(t/d*1000);
+    seek.style.setProperty('--p',(seek.value/10)+'%');
+    tm.textContent=fmt(dragging?seek.value/1000*d:t)+' / '+fmt(d);
+    seek.setAttribute('aria-valuetext',fmt(t)+' of '+fmt(d));
   }
-  function play(){ ask=false; var p=v.play(); if(p&&p.catch) p.catch(function(){ ask=true; ui(); }); }
-  function replay(){ held=false; away=false; v.currentTime=0; play(); }
+  function ui(){
+    var run=running();
+    grpPlay.hidden=started||!v.paused;
+    grpRe.hidden=!v.ended;
+    bar.hidden=!started;
+    bTog.setAttribute('aria-label',run?'Pause':'Play');
+    $('ftoggle-i').setAttribute('href',run?'#i-pause':'#i-play');
+    if(!v.muted) hint=false;
+    bSnd.setAttribute('aria-label',v.muted?'Sound on':'Sound off');
+    bSnd.classList.toggle('hint',hint&&v.muted);
+    $('fsound-i').setAttribute('href',v.muted?'#i-sound-off':'#i-sound-on');
+    if(!run) win.classList.add('show');
+    paint();
+  }
+  function hideBar(){
+    if(!running()||hover||bar.querySelector(':focus-visible')) return;
+    win.classList.remove('show');
+  }
+  function showBar(){
+    win.classList.add('show'); clearTimeout(hideT);
+    if(running()) hideT=setTimeout(hideBar,2000);
+  }
+  function tick(){ paint(); raf=v.paused?0:requestAnimationFrame(tick); }
 
-  ['play','pause','ended','volumechange','playing'].forEach(function(t){ v.addEventListener(t,ui); });
-  bPlay.addEventListener('click',function(){ held=false; away=false; play(); });
-  bRe.addEventListener('click',replay);
+  // Play with sound if the browser lets us; otherwise muted, with the Sound button highlighted.
+  function play(){
+    var p=v.play();
+    if(!p||!p.catch) return;
+    p.catch(function(err){
+      if(err&&err.name!=='NotAllowedError') return;
+      if(!v.muted){
+        v.muted=true; hint=true;
+        var q=v.play(); if(q&&q.catch) q.catch(ui);
+      }
+      ui();
+    });
+  }
+  function fresh(){ v.muted=false; v.volume=1; v.currentTime=0; play(); win.focus({preventScroll:true}); }
+  function toggle(){
+    if(!started||v.ended) fresh();
+    else if(v.paused) play();
+    else v.pause();
+  }
+  function restart(){ v.currentTime=0; if(v.paused) play(); }
+  function skip(by){ v.currentTime=Math.max(0,Math.min(dur(),v.currentTime+by)); paint(); }
+
+  ['play','pause','ended','volumechange','seeked','loadedmetadata','durationchange','timeupdate'].forEach(function(t){ v.addEventListener(t,ui); });
+  v.addEventListener('play',function(){ started=true; ui(); showBar(); });
+  v.addEventListener('playing',function(){ showBar(); if(!raf) raf=requestAnimationFrame(tick); });
+  v.addEventListener('pause',function(){ clearTimeout(hideT); });
+  v.addEventListener('ended',function(){ clearTimeout(hideT); });
+
+  bBig.addEventListener('click',fresh);
+  bRe.addEventListener('click',fresh);
+  bTog.addEventListener('click',toggle);
+  bRst.addEventListener('click',restart);
   bSnd.addEventListener('click',function(){ v.muted=!v.muted; if(!v.muted&&v.volume===0) v.volume=1; });
+
+  v.addEventListener('pointerdown',function(e){ touch=e.pointerType==='touch'; });
   v.addEventListener('click',function(){
-    if(v.ended){ replay(); }
-    else if(v.paused){ held=false; away=false; play(); }
-    else { held=true; ask=true; v.pause(); }
+    // A first tap on a touch screen only brings the controls up; the next one pauses.
+    if(touch&&started&&running()&&!win.classList.contains('show')){ showBar(); return; }
+    toggle();
+  });
+  win.addEventListener('pointermove',showBar);
+  bar.addEventListener('pointerenter',function(){ hover=true; showBar(); });
+  bar.addEventListener('pointerleave',function(){ hover=false; showBar(); });
+  win.addEventListener('focusin',showBar);
+  win.addEventListener('keydown',function(e){
+    if(e.target===win&&(e.key===' '||e.key==='Spacebar')){ e.preventDefault(); toggle(); }
   });
 
-  if(reduce||!('IntersectionObserver' in window)){ ui(); return; }
-  new IntersectionObserver(function(es){
-    var e=es[es.length-1];
-    if(e.intersectionRatio>=0.5){
-      seen=true; away=false;
-      if(!held&&!v.ended&&v.paused) play();
-    } else if(e.intersectionRatio<0.2&&seen&&!v.paused){
-      away=true; v.pause();
-    }
-    ui();
-  },{threshold:[0,0.2,0.5]}).observe(v);
+  seek.addEventListener('pointerdown',function(){ dragging=true; });
+  ['pointerup','pointercancel','change','blur'].forEach(function(t){ seek.addEventListener(t,function(){ dragging=false; paint(); }); });
+  seek.addEventListener('input',function(){ v.currentTime=seek.value/1000*dur(); paint(); });
+  seek.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'||e.key==='ArrowRight'){ e.preventDefault(); skip(e.key==='ArrowRight'?5:-5); }
+  });
+
+  // Scrolling away pauses it. Coming back does not start it again: the visitor presses Play.
+  if('IntersectionObserver' in window) new IntersectionObserver(function(es){
+    if(es[es.length-1].intersectionRatio<0.2&&running()) v.pause();
+  },{threshold:[0,0.2]}).observe(v);
   ui();
 })();
 </script>

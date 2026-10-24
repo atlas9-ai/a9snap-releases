@@ -37,11 +37,13 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--ink);color:var(--mist);font-family:var(--display);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
 a{color:inherit}
 h1,h2,h3{color:var(--bone);font-weight:700;letter-spacing:-.025em;line-height:1.05;text-wrap:balance;margin:0}
 p{margin:0}
+section,#top,#get{scroll-margin-top:72px}
 .wrap{max-width:var(--col);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--volt)}
 .mono{font-family:var(--mono)}
@@ -84,13 +86,13 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;heigh
 /* Hero */
 .hero{padding-block:64px 40px}
 .hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center}
-.hero h1{font-size:clamp(48px,7vw,92px);letter-spacing:-.04em}
-.hero .lede{font-size:20px;color:var(--mist);max-width:30ch;margin-top:20px}
+.hero h1{font-size:clamp(46px,6.6vw,88px);letter-spacing:-.04em}
+.hero h1 .snap{color:var(--volt)}
+.hero .lede{font-size:20px;color:var(--mist);max-width:32ch;margin-top:22px}
 .hero .lede b{color:var(--bone);font-weight:600}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .fine{font-size:14px;color:var(--steel);margin-top:16px}
 .dlmeta{font-family:var(--mono);font-size:13px;color:var(--steel);margin-top:14px}
-.fine .more{color:var(--volt);text-decoration:none;white-space:nowrap}
 .fine.install{margin-top:10px;max-width:46ch}
 .fine.install b{color:var(--mist);font-weight:600}
 details p b{color:var(--bone);font-weight:600}
@@ -115,7 +117,6 @@ kbd{font-family:var(--mono);font-size:.85em;background:var(--raised);border:1px 
 .app .err{display:flex;align-items:center;gap:8px;background:rgba(229,72,77,.12);border:1px solid rgba(229,72,77,.45);color:#F6A6A8;border-radius:8px;padding:8px 10px;font-size:11.5px}
 .app .err b{color:var(--red);font-family:var(--mono)}
 .app .btnx{align-self:flex-start;border:1px solid #3A3D42;border-radius:6px;padding:5px 10px;font-size:11px;color:var(--bone)}
-
 .sel{position:absolute;box-shadow:0 0 0 9999px rgba(11,12,14,.58);pointer-events:none;--c:var(--volt);--l:16px;--w:3px}
 .sel .dims{position:absolute;left:0;top:calc(100% + 8px);background:var(--volt);color:var(--volt-ink);font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:5px;white-space:nowrap}
 .xh{position:absolute;pointer-events:none;background:rgba(200,243,29,.55)}
@@ -128,36 +129,76 @@ kbd{font-family:var(--mono);font-size:.85em;background:var(--raised);border:1px 
 .loupe .pix{position:absolute;left:50%;top:50%;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border:2px solid var(--red)}
 .loupe .xy{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--mono);font-size:10px;color:var(--bone);text-shadow:0 1px 2px #000}
 .toast{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:10px;background:var(--ink);border:1px solid #3A3D42;border-radius:12px;padding:10px 14px;font-size:13px;color:var(--bone);box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .25s ease,opacity .25s ease}
-.toast .ok{width:18px;height:18px;border-radius:50%;background:var(--volt);display:grid;place-items:center}
+.toast .ok{width:18px;height:18px;border-radius:50%;background:var(--volt);display:grid;place-items:center;flex:none}
 .toast.pop{transform:translateY(-4px)}
 .hint{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:12px;font-size:14px;color:var(--steel)}
-.strip{display:flex;gap:8px;margin-top:14px;min-height:62px;overflow-x:auto;padding-bottom:4px}
-.thumb{flex:none;display:flex;flex-direction:column;gap:4px;font-family:var(--mono);font-size:10px;color:var(--steel)}
-.thumb .t{position:relative;overflow:hidden;border-radius:6px;border:1px solid var(--line);background:var(--graphite)}
-.thumb .t > div{position:absolute;left:0;top:0;transform-origin:0 0}
-.thumb.new .t{border-color:var(--volt)}
 
 /* Sections */
 section.band{padding-block:96px;border-top:1px solid var(--line)}
 .head{display:flex;flex-direction:column;gap:14px;max-width:720px;margin-bottom:44px}
 .head h2{font-size:clamp(34px,4.6vw,56px)}
 .head p{font-size:18px;max-width:58ch}
+@media (max-width:600px){section.band{padding-block:72px}}
+
+/* The film */
+.film{margin:0 auto 40px;max-width:960px}
+.filmwin{position:relative;aspect-ratio:16/9;background:var(--ink);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -18px rgba(0,0,0,.75)}
+.filmwin video{display:block;width:100%;height:100%;object-fit:contain;background:var(--ink)}
+.filmwin.js video{cursor:pointer}
+.fbtn{position:absolute;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;background:rgba(11,12,14,.8);color:var(--bone);font:inherit;font-size:14px;font-weight:600;line-height:1;padding:10px 16px;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.fbtn[hidden]{display:none}
+.fbtn:hover{border-color:var(--steel)}
+.fbtn:focus-visible{outline:2px solid var(--volt);outline-offset:2px;border-radius:999px}
+.fbtn svg{flex:none}
+.fsound{right:14px;bottom:14px}
+.fplay,.freplay{left:50%;top:50%;transform:translate(-50%,-50%);background:var(--volt);color:var(--volt-ink);border-color:var(--volt);font-size:17px;padding:16px 26px}
+.fplay:hover,.freplay:hover{border-color:var(--bone)}
+@media (max-width:600px){.fsound{right:8px;bottom:8px;padding:8px 12px;font-size:13px}.fplay,.freplay{font-size:15px;padding:12px 20px}}
+
+/* Describe vs snap */
+.versus{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.convo{background:var(--graphite);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:12px}
+.convo .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:4px}
+.convo .label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+.convo.good .label{color:var(--volt)}
+.clock{font-family:var(--mono);font-size:13px;color:var(--steel);font-variant-numeric:tabular-nums}
+.convo.good .clock{color:var(--volt)}
+.b{max-width:86%;padding:10px 14px;border-radius:14px;font-size:15px;line-height:1.45}
+.b.them{align-self:flex-start;background:var(--raised);border:1px solid var(--line);border-radius:14px 14px 14px 4px;color:var(--mist)}
+.b.me{align-self:flex-end;background:#25272B;border:1px solid #33363B;border-radius:14px 14px 4px 14px;color:var(--bone)}
+.b.me.long{font-size:14.5px}
+.shot{display:flex;flex-direction:column;gap:8px}
+.shot .img{position:relative;height:96px;border-radius:8px;border:1px solid var(--line);background:linear-gradient(135deg,#1E1F23,#2A2C31);overflow:hidden}
+.shot .img i{position:absolute;height:9px;border-radius:3px;background:#34363C}
+.shot .img .ring{position:absolute;right:12%;top:18%;width:26%;height:34%;border:3px solid var(--red);border-radius:6px}
+.shot .img .gear{position:absolute;right:17%;top:25%;width:16px;height:16px;border-radius:50%;border:3px solid #6B6F78}
+.shot .meta{font-family:var(--mono);font-size:12px;color:var(--steel)}
+@media (max-width:820px){.versus{grid-template-columns:minmax(0,1fr)}}
 
 /* Paste */
 .paste{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:stretch}
 .chat{background:var(--graphite);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px}
 .msg{align-self:flex-end;max-width:85%;background:var(--raised);border:1px solid var(--line);border-radius:14px 14px 4px 14px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;color:var(--bone)}
 .att{display:flex;align-items:center;gap:10px;background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px}
-.att .pv{width:64px;height:44px;border-radius:6px;background:linear-gradient(135deg,#232428,#2E3036);position:relative;overflow:hidden}
+.att .pv{width:64px;height:44px;border-radius:6px;background:linear-gradient(135deg,#232428,#2E3036);position:relative;overflow:hidden;flex:none}
 .att .pv::after{content:"";position:absolute;left:12px;top:14px;width:40px;height:12px;border:1px solid var(--red);border-radius:3px;background:rgba(229,72,77,.15)}
 .reply{max-width:85%;color:var(--mist);font-size:15px}
-.steps{display:flex;flex-direction:column;gap:12px;justify-content:center}
+.steps{display:flex;flex-direction:column;gap:14px;justify-content:center}
 .step{display:flex;gap:16px;align-items:baseline;font-size:18px;color:var(--bone)}
-.step .mono{color:var(--volt);font-size:13px;min-width:48px}
+.step .mono{color:var(--volt);font-size:13px;min-width:48px;flex:none}
+.where{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.where span{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--mist)}
 @media (max-width:820px){.paste{grid-template-columns:minmax(0,1fr)}}
 
-/* Numbers come with you */
-.files{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+/* Screenshots of the app itself */
+.appshot{margin:0;background:var(--graphite);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 24px 60px -24px rgba(0,0,0,.7)}
+.appshot img{display:block;width:100%;height:auto}
+.twocol{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+.twocol .copy{max-width:720px}
+.twocol .copy p{font-size:18px}
+.twocol .copy p+p{margin-top:14px}
+
+/* Folder */
 .folder{background:var(--graphite);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .folder .path{font-family:var(--mono);font-size:13px;color:var(--steel);padding:12px 16px;border-bottom:1px solid var(--line)}
 .folder ul{list-style:none;margin:0;padding:8px}
@@ -165,9 +206,14 @@ section.band{padding-block:96px;border-top:1px solid var(--line)}
 .folder li span:last-child{color:var(--steel)}
 .folder li.fresh{background:rgba(200,243,29,.1);color:var(--volt)}
 .folder li.fresh span:last-child{color:var(--volt)}
-.big{font-size:clamp(40px,6vw,76px);font-weight:700;color:var(--bone);letter-spacing:-.04em;line-height:1}
-.big .mono{font-weight:500;letter-spacing:-.02em}
-@media (max-width:820px){.files{grid-template-columns:minmax(0,1fr)}}
+
+/* Who */
+.who{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.whocard{background:var(--graphite);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:10px}
+.whocard .q{font-size:15px;color:var(--steel);font-style:italic}
+.whocard h3{font-size:20px}
+@media (max-width:980px){.who{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.who{grid-template-columns:minmax(0,1fr)}}
 
 /* Pillars */
 .pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
@@ -176,20 +222,9 @@ section.band{padding-block:96px;border-top:1px solid var(--line)}
 .pillar h3{font-size:24px}
 @media (max-width:820px){.pillars{grid-template-columns:minmax(0,1fr)}}
 
-/* Editor */
-.editor{background:var(--graphite);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.tools{display:flex;flex-wrap:wrap;gap:6px;padding:10px;border-bottom:1px solid var(--line)}
-.tool{font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);color:var(--mist);background:transparent;font-family:inherit;cursor:pointer}
-.tool[aria-pressed="true"]{background:var(--volt);color:var(--volt-ink);border-color:var(--volt);font-weight:600}
-.canvas{position:relative;aspect-ratio:16/7;max-width:100%;background:linear-gradient(180deg,#1A1B1F,#141518)}
-.canvas .fake{position:absolute;inset:8% 6%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4%}
-.canvas .fake i{background:#232428;border:1px solid var(--line);border-radius:8px}
-.canvas .fake i.target{background:#2A2C31}
-.canvas svg{position:absolute;inset:0;width:100%;height:100%}
-
 /* Compare */
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r)}
-table{width:100%;border-collapse:collapse;min-width:560px;font-size:16px}
+table{width:100%;border-collapse:collapse;min-width:600px;font-size:16px}
 th,td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
 thead th{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);font-weight:500;background:var(--graphite)}
@@ -198,26 +233,16 @@ td.us{color:var(--bone);font-weight:600}
 .yes{color:var(--volt)}
 .note{font-size:13px;color:var(--steel);margin-top:12px}
 
-/* Rent calculator */
-.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;padding:40px}
-.calc label{display:block;font-size:15px;color:var(--mist);margin-bottom:10px}
-.calc input[type=range]{width:100%;accent-color:var(--volt)}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px}
-.seg button{border:0;background:transparent;color:var(--mist);font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;cursor:pointer}
-.seg button[aria-pressed="true"]{background:var(--bone);color:var(--ink);font-weight:600}
-.total{font-size:clamp(56px,8vw,104px);font-weight:700;color:var(--bone);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
-.vs{margin-top:14px;font-size:18px}
-.vs b{color:var(--volt)}
-.share{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.share .status{font-size:14px;color:var(--steel)}
-@media (max-width:820px){.calc{grid-template-columns:minmax(0,1fr);padding:28px}}
+/* Switch band */
+.switch{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+@media (max-width:820px){.switch{grid-template-columns:minmax(0,1fr)}}
 
 /* Family */
 .family{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;background:var(--graphite);border:1px solid var(--line);border-radius:var(--r);padding:32px}
 .family h3{font-size:clamp(26px,3vw,36px)}
 
 /* FAQ */
-.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
 details{background:var(--graphite);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
 summary{cursor:pointer;color:var(--bone);font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
 summary::-webkit-details-marker{display:none}
@@ -226,16 +251,29 @@ details[open] summary::after{content:"−"}
 details p{margin-top:10px;font-size:15px}
 @media (max-width:820px){.faq{grid-template-columns:minmax(0,1fr)}}
 
-/* Pledge + footer */
-.pledge{text-align:left;padding:56px;display:flex;flex-direction:column;gap:16px}
-.pledge p.q{font-size:clamp(28px,4vw,48px);font-weight:700;color:var(--bone);letter-spacing:-.03em;line-height:1.1;max-width:22ch}
+/* Closer + footer */
+.closer{padding:56px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.closer .q{font-size:clamp(32px,4.6vw,60px);font-weight:700;color:var(--bone);letter-spacing:-.035em;line-height:1.05}
+.closer .q span{color:var(--volt)}
 footer{border-top:1px solid var(--line);padding-block:40px;font-size:14px;color:var(--steel)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
-@media (max-width:600px){.pledge{padding:28px}.calc{padding:24px}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:600px){.closer{padding:28px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="bullseye" viewBox="0 0 64 64"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></symbol>
+    <symbol id="ok" viewBox="0 0 10 10"><path d="M1.5 5.2 4 7.5 8.5 2.5" fill="none" stroke="#0B0C0E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12a8 8 0 1 0 2.5-5.8M4 4v4.5h4.5"/></symbol>
+    <symbol id="i-sound-off" viewBox="0 0 24 24"><path fill="currentColor" d="M4 9.5v5h3.5l4.5 4v-13l-4.5 4z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 9.5l5 5M21 9.5l-5 5"/></symbol>
+    <symbol id="i-sound-on" viewBox="0 0 24 24"><path fill="currentColor" d="M4 9.5v5h3.5l4.5 4v-13l-4.5 4z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a7.8 7.8 0 0 1 0 11"/></symbol>
+  </defs>
+</svg>
 
 <header>
   <div class="wrap">
@@ -244,9 +282,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         <svg class="mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span>
       </a>
       <div class="links">
-        <a href="#paste">How it works</a>
+        <a href="#how">How it works</a>
+        <a href="#recent">Recent</a>
         <a href="#editor">Editor</a>
-        <a href="#switch">Leaving Snagit</a>
         <a href="#faq">FAQ</a>
         <a class="btn btn-volt" data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">Download</a>
       </div>
@@ -258,18 +296,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   <div class="wrap hero">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Free · No account · No subscription</p>
-        <h1 style="margin-top:18px">Point. Snap. Paste.</h1>
-        <p class="lede">Press <kbd>Alt</kbd>+<kbd>Z</kbd> anywhere and drag. <b>The moment you let go</b>, it’s on your clipboard and saved as a numbered PNG.</p>
+        <p class="eyebrow">Free for Windows · No account · Nothing uploaded</p>
+        <h1 style="margin-top:18px"><span style="display:block">Point.</span><span class="snap" style="display:block">Snap.</span><span style="display:block">Paste.</span></h1>
+        <p class="lede">Press <kbd>Alt</kbd>+<kbd>Z</kbd> and drag over anything on your screen. <b>It’s on your clipboard before you let go</b>, ready to paste into a chat, an email, a ticket or an AI.</p>
         <div class="ctas" id="get">
           <a class="btn btn-volt lg" data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
-            Download for Windows
+            <svg width="18" height="18" aria-hidden="true"><use href="#win"/></svg>Download for Windows
           </a>
+          <a class="btn btn-ghost" href="#describe">See why ↓</a>
         </div>
-        <p class="dlmeta" data-dl-meta>Free · Early access · v0.1.0 · 2.5 MB</p>
+        <p class="dlmeta" data-dl-meta>Free · Early access · v0.3.1 · 2.7 MB</p>
         <p class="fine install">Windows may say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. Signed builds arrive with the Store release.</p>
-        <p class="fine">Coming to the Microsoft Store. Windows 10 and 11. <a class="more" href="#switch">Leaving Snagit? →</a></p>
+        <p class="fine">Windows 10 and 11. Coming to the Microsoft Store.</p>
       </div>
 
       <div class="demo">
@@ -293,29 +331,69 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
           <div class="sel frame" id="sel"><span class="dims mono" id="dims">640 × 220</span></div>
           <div class="bull" id="bull"></div>
           <div class="loupe" id="loupe"><div class="zoom" id="zoom"></div><div class="grid"></div><div class="pix"></div><div class="xy" id="xy">x 812 · y 466</div></div>
-          <div class="toast" id="toast"><span class="ok"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 5.2 4 7.5 8.5 2.5" fill="none" stroke="#0B0C0E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Copied · <span class="mono" id="fname">snag_0042.png</span></span></div>
+          <div class="toast" id="toast"><span class="ok"><svg width="10" height="10" aria-hidden="true"><use href="#ok"/></svg></span><span>Copied · <span class="mono" id="fname">snag_0042.png</span></span></div>
         </div>
         <div class="hint"><span>Try it: drag across the screen above.</span><span>Or press <kbd>Alt</kbd>+<kbd>Z</kbd></span></div>
-        <div class="strip" id="strip" aria-label="Recent captures"></div>
       </div>
     </div>
   </div>
 
-  <section class="band" id="paste">
+  <section class="band" id="describe">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Made for the paste</p>
-        <h2>Screenshots, straight into the chat.</h2>
-        <p>Most screenshots end up in front of someone else: a teammate, a ticket, an AI. Snap puts the image on your clipboard the moment you let go, so the next keystroke is <kbd>Ctrl</kbd>+<kbd>V</kbd>.</p>
+        <p class="eyebrow">The problem</p>
+        <h2>Don’t describe it. <span style="color:var(--volt)">Snap it.</span></h2>
+        <p>One picture beats a paragraph. Half of “can you help me with this?” is describing a screen in words. It’s slow for you, and it’s guesswork for whoever’s reading.</p>
+      </div>
+      <figure class="film" id="film">
+        <div class="filmwin" id="filmwin">
+          <video id="filmvideo" controls muted playsinline preload="metadata" poster="/media/just-send-it-poster.jpg" width="1280" height="720" aria-label="Film: Ken can't describe an icon over the phone, so he presses Alt+Z, marks it with an arrow and pastes it to Amy.">
+            <source src="/media/just-send-it.mp4" type="video/mp4">
+            <a href="/media/just-send-it.mp4">Watch the film (MP4, 24 seconds)</a>
+          </video>
+          <button class="fbtn fplay" id="fplay" type="button" hidden><svg width="20" height="20" aria-hidden="true"><use href="#i-play"/></svg><span>Play</span></button>
+          <button class="fbtn freplay" id="freplay" type="button" hidden><svg width="20" height="20" aria-hidden="true"><use href="#i-replay"/></svg><span>Replay</span></button>
+          <button class="fbtn fsound" id="fsound" type="button" hidden><svg width="18" height="18" aria-hidden="true"><use id="fsound-i" href="#i-sound-off"/></svg><span id="fsound-t">Sound on</span></button>
+        </div>
+      </figure>
+      <div class="versus">
+        <div class="convo" aria-label="Example chat: describing the screen in words">
+          <div class="top"><span class="label">Describing it</span><span class="clock">4 min</span></div>
+          <div class="b them">Where’s the export button?</div>
+          <div class="b me long">Top right. There’s a gear. No, not that one, the one next to your name. Then it’s the second tab. Blue, or grey if you’re in dark mode.</div>
+          <div class="b them">I see three gears.</div>
+          <div class="b me">Can you share your screen?</div>
+        </div>
+        <div class="convo good" aria-label="Example chat: answering with a screenshot">
+          <div class="top"><span class="label">Snapping it</span><span class="clock">6 sec</span></div>
+          <div class="b them">Where’s the export button?</div>
+          <div class="b me shot">
+            <div class="img"><i style="left:8%;top:18%;width:42%"></i><i style="left:8%;top:44%;width:60%"></i><i style="left:8%;top:66%;width:34%"></i><span class="gear"></span><span class="ring"></span></div>
+            <span class="meta">snag_0043.png · pasted</span>
+            <span>This one.</span>
+          </div>
+          <div class="b them">Got it. Thanks!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">How it works</p>
+        <h2>Three seconds, start to paste.</h2>
+        <p>No window to open, no file to save, no folder to dig through. The next thing you press after letting go is <kbd>Ctrl</kbd>+<kbd>V</kbd>.</p>
       </div>
       <div class="paste">
         <div class="steps">
-          <div class="step"><span class="mono">0.0 s</span>Press Alt+Z. The screen freezes under a crosshair.</div>
-          <div class="step"><span class="mono">1.2 s</span>Drag. The loupe lands you on the exact pixel.</div>
-          <div class="step"><span class="mono">1.9 s</span>Let go. Copied, and saved as snag_0043.png.</div>
-          <div class="step"><span class="mono">2.6 s</span>Paste into Claude, ChatGPT, Teams or a ticket.</div>
+          <div class="step"><span class="mono">0.0 s</span>Press Alt+Z. A crosshair appears.</div>
+          <div class="step"><span class="mono">1.2 s</span>Drag over what you mean. The loupe lands you on the exact pixel.</div>
+          <div class="step"><span class="mono">1.9 s</span>Let go. It’s copied, and saved where you’ll find it.</div>
+          <div class="step"><span class="mono">2.6 s</span>Paste it anywhere.</div>
+          <div class="where"><span>Teams</span><span>Slack</span><span>Outlook</span><span>Gmail</span><span>ChatGPT</span><span>Claude</span><span>Jira</span><span>WhatsApp</span></div>
         </div>
-        <div class="chat" aria-label="Example chat with a pasted screenshot">
+        <div class="chat" aria-label="Example: a screenshot pasted into an AI chat">
           <div class="msg">
             <div class="att"><div class="pv"></div><div><div class="mono" style="font-size:13px">snag_0043.png</div><div style="font-size:12px;color:var(--steel)">640 × 220 · pasted</div></div></div>
             <span>Why is this card getting declined?</span>
@@ -326,22 +404,33 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
     </div>
   </section>
 
-  <section class="band" id="switch">
+  <section class="band" id="recent">
+    <div class="wrap">
+      <div class="twocol">
+        <div class="copy">
+          <p class="eyebrow">Recent captures</p>
+          <h2 style="font-size:clamp(34px,4.6vw,56px);margin:14px 0 18px">Took five? Send all five.</h2>
+          <p>Press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> for your latest captures. Click the ones you want, hit <b style="color:var(--bone)">Copy</b>, and paste them in the order you took them.</p>
+          <p>Every capture is also saved in one folder, numbered in order, so the newest is always on top and nothing gets lost.</p>
+        </div>
+        <figure class="appshot">
+          <img src="/img/strip.webp" width="3096" height="532" loading="lazy" decoding="async" alt="The A9 Snap recent-captures strip: six numbered thumbnails side by side, three of them selected, with a Copy button.">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Leaving Snagit</p>
-        <h2>Your numbers come with you.</h2>
-        <p>Point Snap at the folder you already use. It reads the highest number there and keeps counting, so your newest screenshot is still at the top and nothing gets overwritten.</p>
+        <p class="eyebrow">Who it’s for</p>
+        <h2>Anyone who’s ever said “it’s the thing on the left.”</h2>
       </div>
-      <div class="files">
-        <div class="folder">
-          <div class="path">Desktop › Screenshots</div>
-          <ul id="files" aria-live="polite"></ul>
-        </div>
-        <div>
-          <p class="big"><span class="mono">snag_1847</span><br>→ <span class="mono" style="color:var(--volt)">snag_1848</span></p>
-          <p style="margin-top:20px;font-size:18px;max-width:40ch">Same prefix, same padding, same folder. One setting to change, and your muscle memory never notices you switched.</p>
-        </div>
+      <div class="who">
+        <div class="whocard"><p class="q">“Can you look at this?”</p><h3>Teammates</h3><p>Show the bug, the number or the button. Skip the meeting.</p></div>
+        <div class="whocard"><p class="q">“What does this error mean?”</p><h3>AI chats</h3><p>Paste the screen into ChatGPT, Claude or Copilot and ask.</p></div>
+        <div class="whocard"><p class="q">“Which one do I click?”</p><h3>Family</h3><p>Help your parents from across the country with one picture.</p></div>
+        <div class="whocard"><p class="q">“It worked yesterday.”</p><h3>Support</h3><p>Customers, tickets and help desks get the screen, not a story.</p></div>
       </div>
     </div>
   </section>
@@ -349,41 +438,36 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   <section class="band">
     <div class="wrap">
       <div class="pillars">
-        <div class="pillar frame"><span class="n">Alt+Z</span><h3>Instant</h3><p>From Alt+Z to crosshair. Let go, and it’s already on your clipboard.</p></div>
-        <div class="pillar frame"><span class="n">8×</span><h3>Exact</h3><p>The loupe lands you on a one-pixel border. Files save at your screen’s true resolution, on every monitor.</p></div>
-        <div class="pillar frame"><span class="n">$0</span><h3>Yours</h3><p>No subscription, no account, no cloud. Your screenshots stay in your folder and nowhere else.</p></div>
+        <div class="pillar frame"><span class="n">Alt+Z</span><h3>One hand</h3><p>Both keys sit under your left hand, so your right hand stays on the mouse. Let go, and it’s already on your clipboard.</p></div>
+        <div class="pillar frame"><span class="n">8×</span><h3>Exact</h3><p>The loupe lands you on a one-pixel edge. Every monitor is captured at its real resolution.</p></div>
+        <div class="pillar frame"><span class="n">0</span><h3>Uploads</h3><p>No account, no cloud, no ads. Your screenshots stay on your PC.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section class="band" id="home">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">The Home window</p>
+        <h2>Everything in one window.</h2>
+        <p>Capture, recent captures, the editor and your folder, each showing your own hotkey. Your six newest captures sit right there, and every setting is one click away.</p>
+      </div>
+      <figure class="appshot">
+        <img src="/img/home.webp" width="2000" height="1360" loading="lazy" decoding="async" alt="The A9 Snap Home window: buttons for Capture, Recent captures, Editor and Folder, and thumbnails of the six newest captures.">
+      </figure>
     </div>
   </section>
 
   <section class="band" id="editor">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">The editor · coming next</p>
-        <h2>“I don’t see it on my screen.”</h2>
-        <p>Draw one arrow, type two words, send. Every tool you need to point at something, and nothing you don’t.</p>
+        <p class="eyebrow">The editor</p>
+        <h2>Point at it. Then send it.</h2>
+        <p>An arrow, a box, two words, a blur over the private bit. Every tool you need to point at something, and nothing you don’t.</p>
       </div>
-      <div class="editor">
-        <div class="tools" role="toolbar" aria-label="Editor tools">
-          <button class="tool" id="t-arrow" aria-pressed="true">Arrow</button>
-          <button class="tool" id="t-box" aria-pressed="false">Box</button>
-          <button class="tool" id="t-ellipse" aria-pressed="false">Ellipse</button>
-          <button class="tool" id="t-hl" aria-pressed="false">Highlight</button>
-          <button class="tool" id="t-text" aria-pressed="false">Text</button>
-          <button class="tool" id="t-blur" aria-pressed="false">Blur</button>
-          <button class="tool" id="t-crop" aria-pressed="false">Crop</button>
-        </div>
-        <div class="canvas" aria-label="Example annotation: a red box and arrow pointing at a button, labelled 'Click here'">
-          <div class="fake"><i></i><i></i><i></i><i></i><i></i><i></i><i class="target"></i><i></i></div>
-          <svg viewBox="0 0 1000 437" preserveAspectRatio="none" aria-hidden="true">
-            <rect x="555" y="238" width="190" height="138" rx="10" fill="none" stroke="#E5484D" stroke-width="5"/>
-            <path d="M330 120 C 420 140, 480 190, 540 250" fill="none" stroke="#E5484D" stroke-width="6" stroke-linecap="round"/>
-            <path d="M540 250 L512 244 M540 250 L534 222" fill="none" stroke="#E5484D" stroke-width="6" stroke-linecap="round"/>
-            <rect x="150" y="78" width="180" height="52" rx="8" fill="#E5484D"/>
-          </svg>
-          <p style="position:absolute;left:15%;top:20%;width:18%;text-align:center;color:#fff;font-weight:700;font-size:clamp(11px,1.7vw,18px)">Click here</p>
-        </div>
-      </div>
+      <figure class="appshot">
+        <img src="/img/editor.webp" width="2360" height="1640" loading="lazy" decoding="async" alt="The A9 Snap editor on a mock capture: a red box and an arrow pointing at a button, with a short text label, and the toolbar of arrow, box, ellipse, highlight, text, blur and crop.">
+      </figure>
     </div>
   </section>
 
@@ -391,55 +475,39 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">The honest table</p>
-        <h2>What you get, and what you don’t.</h2>
-        <p>Snagit does more. If you record video or capture scrolling pages, keep it. If you take screenshots and point at things, here’s the difference.</p>
+        <h2>Already have a screenshot tool?</h2>
+        <p>Windows comes with one, and it does a lot. A9 Snap does less, faster. Here’s the difference.</p>
       </div>
       <div class="tablewrap">
         <table>
-          <thead><tr><th scope="col"></th><th scope="col">A9 Snap</th><th scope="col">Snagit Individual</th></tr></thead>
+          <thead><tr><th scope="col"></th><th scope="col">A9 Snap</th><th scope="col">Windows Snipping Tool</th></tr></thead>
           <tbody>
-            <tr><td>Price</td><td class="us">Free. Pro is $29 once</td><td>$39 a year</td></tr>
-            <tr><td>You own it</td><td class="us"><span class="yes">Yes</span></td><td>Subscription only since 2025</td></tr>
-            <tr><td>Stop paying, keep using it</td><td class="us"><span class="yes">Yes</span></td><td>No</td></tr>
-            <tr><td>Region capture, loupe, clipboard</td><td class="us"><span class="yes">Yes</span></td><td>Yes</td></tr>
-            <tr><td>Arrow, box, text, blur</td><td class="us"><span class="yes">Coming next</span></td><td>Yes</td></tr>
-            <tr><td>Screen video recording</td><td class="us">No</td><td>Yes</td></tr>
-            <tr><td>Scrolling capture</td><td class="us">No</td><td>Yes</td></tr>
+            <tr><td>Start a capture</td><td class="us">Alt+Z, one hand</td><td>Win+Shift+S, or Print Screen</td></tr>
+            <tr><td>Copied when you let go</td><td class="us"><span class="yes">Yes</span></td><td>Yes</td></tr>
+            <tr><td>Saved automatically</td><td class="us"><span class="yes">Always</span>, numbered, in the folder you pick</td><td>Yes, to your Screenshots folder</td></tr>
+            <tr><td>Pixel loupe while you drag</td><td class="us"><span class="yes">Yes</span>, 8×</td><td>No</td></tr>
+            <tr><td>Copy your last few at once</td><td class="us"><span class="yes">Yes</span></td><td>One at a time</td></tr>
+            <tr><td>Arrow, box, text, blur</td><td class="us"><span class="yes">Yes</span>, plus highlight and crop</td><td>Pen, highlighter and shapes. No blur.</td></tr>
+            <tr><td>Screen recording</td><td class="us">No</td><td>Yes</td></tr>
+            <tr><td>Price</td><td class="us">Free</td><td>Free with Windows</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="note">Snagit pricing from TechSmith’s published plans, checked October 2026. Snagit is a trademark of TechSmith Corporation.</p>
+      <p class="note">Snipping Tool features from Microsoft’s published guide, checked October 2026.</p>
     </div>
   </section>
 
-  <section class="band" id="calc">
+  <section class="band" id="switch">
     <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">The rent calculator</p>
-        <h2>Stop renting your screenshots.</h2>
-      </div>
-      <div class="calc frame">
-        <div style="display:flex;flex-direction:column;gap:28px">
-          <div>
-            <label for="years">Years you’ll keep taking screenshots: <b class="mono" id="yearsOut" style="color:var(--bone)">10</b></label>
-            <input type="range" id="years" min="1" max="20" value="10">
-          </div>
-          <div>
-            <span style="display:block;font-size:15px;margin-bottom:10px">Plan</span>
-            <div class="seg" role="group" aria-label="Plan price">
-              <button id="p39" aria-pressed="true" data-p="39">Individual · $39/yr</button>
-              <button id="p48" aria-pressed="false" data-p="48">Business · $48/yr</button>
-            </div>
-          </div>
-        </div>
+      <div class="switch">
         <div>
-          <p class="eyebrow" style="color:var(--steel)">Rent you’d pay</p>
-          <p class="total" id="total">$390</p>
-          <p class="vs">A9 Snap: <b>$0</b>. Or <b>$29 once</b> for Pro.</p>
-          <div class="share">
-            <button class="btn btn-ghost" id="copy" style="padding:10px 18px;font-size:15px">Copy my number</button>
-            <span class="status" id="status" aria-live="polite"></span>
-          </div>
+          <p class="eyebrow">Switching from another tool?</p>
+          <h2 style="font-size:clamp(34px,4.6vw,56px);margin:14px 0 18px">Your numbers come with you.</h2>
+          <p style="font-size:18px;max-width:46ch">Point A9 Snap at the folder you already use. It reads your highest number and keeps counting in the same style, so the newest screenshot stays on top.</p>
+        </div>
+        <div class="folder">
+          <div class="path">Desktop › Screenshots</div>
+          <ul id="files" aria-live="polite"></ul>
         </div>
       </div>
     </div>
@@ -462,12 +530,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
     <div class="wrap">
       <div class="head"><p class="eyebrow">Questions</p><h2>Short answers.</h2></div>
       <div class="faq">
-        <details open><summary>Will capture ever cost money?</summary><p>No. Capture, the loupe, numbered files and the editor are free for good. That’s in writing below.</p></details>
+        <details open><summary>Is it really free?</summary><p>Yes. Capture, the loupe, numbered files, recent captures and the editor are free for good. No subscription, ever.</p></details>
+        <details><summary>Does it send my screenshots anywhere?</summary><p>No. Files go to the folder you pick. The only thing A9 Snap sends is a check for updates.</p></details>
         <details><summary>Is it safe to install?</summary><p>Yes. Early builds aren’t signed with a Windows certificate yet, so Windows may say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. Signed builds arrive with the Store release. There’s no account, and nothing leaves your PC except the update check.</p></details>
-        <details><summary>Does it send my screenshots anywhere?</summary><p>No. Files go to the folder you pick. The only thing Snap sends is a check for updates.</p></details>
         <details><summary>Two monitors? 150% scaling?</summary><p>Yes. Every monitor is captured at its real resolution, and the selection lands on the pixels you see.</p></details>
-        <details><summary>Can I change Alt+Z?</summary><p>Yes, in Settings. If another app already owns a shortcut, Snap tells you instead of failing quietly.</p></details>
-        <details><summary>What’s in Pro?</summary><p>Planned: copy the text out of a capture, and smart file names. $29 once, yours to keep. Capture never moves behind it.</p></details>
+        <details><summary>Can I change Alt+Z?</summary><p>Yes, in Settings. If another app already owns a shortcut, A9 Snap tells you instead of failing quietly.</p></details>
         <details><summary>Mac or Linux?</summary><p>Windows 10 and 11 for now.</p></details>
       </div>
     </div>
@@ -475,10 +542,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 
   <section class="band">
     <div class="wrap">
-      <div class="pledge frame">
-        <p class="eyebrow">The Capture Pledge</p>
-        <p class="q">Capture will never be a subscription.</p>
-        <p style="max-width:56ch">Not now, not after we’re popular, not in a “legacy plan.” If we ever charge for something new, you’ll pay for it once and own it.</p>
+      <div class="closer frame">
+        <p class="q">Point. <span>Snap.</span> Paste.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <a class="btn btn-volt lg" data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe"><svg width="18" height="18" aria-hidden="true"><use href="#win"/></svg>Download for Windows</a>
+          <span class="fine" style="margin:0">Free · No account · Capture will never be a subscription</span>
+        </div>
       </div>
     </div>
   </section>
@@ -497,75 +566,46 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   var sel=document.getElementById('sel'), dims=document.getElementById('dims');
   var loupe=document.getElementById('loupe'), zoom=document.getElementById('zoom'), xy=document.getElementById('xy');
   var bull=document.getElementById('bull'), xv=document.getElementById('xv'), xh=document.getElementById('xhz');
-  var toast=document.getElementById('toast'), fname=document.getElementById('fname'), strip=document.getElementById('strip');
+  var toast=document.getElementById('toast'), fname=document.getElementById('fname');
   var S=6, R=75, n=42, start=null, rect=null, scale=2; // scale: pretend a 200% display, so readouts show physical pixels
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function pad(k){ return String(k).padStart(4,'0'); }
 
   // Loupe content: a clone of the mock app, sized to the screen
   var clone=app.cloneNode(true); clone.removeAttribute('id'); zoom.appendChild(clone);
   function sizeClone(){ var b=screen.getBoundingClientRect(); zoom.style.width=b.width+'px'; zoom.style.height=b.height+'px'; clone.style.position='absolute'; clone.style.inset='0'; }
-  sizeClone(); window.addEventListener('resize',function(){sizeClone(); rest();});
-
-  function pad(k){ return String(k).padStart(4,'0'); }
   function setSel(x,y,w,h){ sel.style.left=x+'px'; sel.style.top=y+'px'; sel.style.width=w+'px'; sel.style.height=h+'px'; dims.textContent=Math.round(w*scale)+' × '+Math.round(h*scale); rect={x:x,y:y,w:w,h:h}; }
   function aim(x,y){
     var b=screen.getBoundingClientRect();
-    bull.style.left=x+'px'; bull.style.top=y+'px';
-    xv.style.left=x+'px'; xh.style.top=y+'px';
+    bull.style.left=x+'px'; bull.style.top=y+'px'; xv.style.left=x+'px'; xh.style.top=y+'px';
     var lx=x+24, ly=y+24; if(lx+150>b.width) lx=x-174; if(ly+150>b.height) ly=y-174;
     loupe.style.left=Math.max(4,lx)+'px'; loupe.style.top=Math.max(4,ly)+'px';
     zoom.style.transform='translate('+(R-x*S)+'px,'+(R-y*S)+'px) scale('+S+')';
     xy.textContent='x '+Math.round(x*scale)+' · y '+Math.round(y*scale);
   }
-  function rest(){
-    // A resting example so the hero is complete before anyone touches it
-    var b=screen.getBoundingClientRect();
-    setSel(b.width*0.07, b.height*0.34, b.width*0.40, b.height*0.30);
-    aim(b.width*0.47, b.height*0.64);
-  }
+  // A resting example so the hero is complete before anyone touches it
+  function rest(){ var b=screen.getBoundingClientRect(); setSel(b.width*0.07,b.height*0.34,b.width*0.40,b.height*0.30); aim(b.width*0.47,b.height*0.64); }
   function local(e){ var b=screen.getBoundingClientRect(); return {x:Math.min(Math.max(e.clientX-b.left,0),b.width), y:Math.min(Math.max(e.clientY-b.top,0),b.height)}; }
-
+  sizeClone(); rest();
+  window.addEventListener('resize',function(){ sizeClone(); rest(); });
   screen.addEventListener('pointermove',function(e){ var p=local(e); xv.hidden=false; xh.hidden=false; aim(p.x,p.y);
     if(start){ setSel(Math.min(start.x,p.x),Math.min(start.y,p.y),Math.abs(p.x-start.x),Math.abs(p.y-start.y)); } });
   screen.addEventListener('pointerleave',function(){ if(!start){ xv.hidden=true; xh.hidden=true; } });
   screen.addEventListener('pointerdown',function(e){ e.preventDefault(); screen.setPointerCapture(e.pointerId); start=local(e); setSel(start.x,start.y,0,0); });
-  screen.addEventListener('pointerup',function(e){ if(!start) return; var r=rect; start=null;
+  screen.addEventListener('pointerup',function(){ if(!start) return; var r=rect; start=null;
     if(!r||r.w<4||r.h<4){ rest(); return; }  // a click without a drag cancels, like the app
     n+=1; fname.textContent='snag_'+pad(n)+'.png';
-    toast.classList.add('pop'); setTimeout(function(){toast.classList.remove('pop');},220);
-    addThumb(r,n); });
-
-  function addThumb(r,k){
-    var h=48, f=h/r.h, w=Math.max(24,Math.min(140,r.w*f));
-    var wrap=document.createElement('div'); wrap.className='thumb new';
-    var t=document.createElement('div'); t.className='t'; t.style.width=w+'px'; t.style.height=h+'px';
-    var inner=document.createElement('div'); var b=screen.getBoundingClientRect();
-    inner.style.width=b.width+'px'; inner.style.height=b.height+'px';
-    inner.style.transform='translate('+(-r.x*f)+'px,'+(-r.y*f)+'px) scale('+f+')';
-    var c=app.cloneNode(true); c.removeAttribute('id'); c.style.position='absolute'; c.style.inset='0'; inner.appendChild(c);
-    t.appendChild(inner); wrap.appendChild(t);
-    var l=document.createElement('span'); l.textContent='snag_'+pad(k); wrap.appendChild(l);
-    Array.prototype.forEach.call(strip.children,function(el){el.classList.remove('new');});
-    strip.insertBefore(wrap,strip.firstChild);
-  }
-
+    toast.classList.add('pop'); setTimeout(function(){toast.classList.remove('pop');},220); });
   // Alt+Z on the page: jump to the demo and arm the crosshair
   document.addEventListener('keydown',function(e){
-    if(e.altKey&&(e.key==='z'||e.key==='Z')){ e.preventDefault(); screen.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+    if(e.altKey&&(e.key==='z'||e.key==='Z')&&!e.shiftKey){ e.preventDefault(); screen.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
       sel.style.transition='opacity .2s'; sel.style.opacity='0.2'; setTimeout(function(){sel.style.opacity='1';},250); }
   });
 
-  // Seed the recent strip with two earlier captures
-  rest();
-  (function seed(){ var b=screen.getBoundingClientRect();
-    addThumb({x:b.width*0.06,y:b.height*0.05,w:b.width*0.5,h:b.height*0.16},40);
-    addThumb({x:b.width*0.06,y:b.height*0.3,w:b.width*0.42,h:b.height*0.6},41);
-    addThumb(rect,42); })();
-
   // Numbers come with you
-  var files=document.getElementById('files'), num=1843;
+  var files=document.getElementById('files');
   function row(k,fresh){ var li=document.createElement('li'); if(fresh) li.className='fresh';
-    li.innerHTML='<span>snag_'+k+'.png</span><span>'+(fresh?'just now':(1848-k)+' min ago')+'</span>'; return li; }
+    li.innerHTML='<span>Screenshot_'+k+'.png</span><span>'+(fresh?'just now':'earlier')+'</span>'; return li; }
   for(var k=1847;k>=1843;k--) files.appendChild(row(k,false));
   files.insertBefore(row(1848,true),files.firstChild);
   if(!reduce){ var next=1849; setInterval(function(){
@@ -573,24 +613,54 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       files.insertBefore(row(next++,true),files.firstChild); if(files.children.length>6) files.removeChild(files.lastChild);
       if(next>1856){ next=1849; }
     },2600); }
+})();
 
-  // Editor tool toggle (display only)
-  Array.prototype.forEach.call(document.querySelectorAll('.tool'),function(b){ b.addEventListener('click',function(){
-    document.querySelectorAll('.tool').forEach(function(x){x.setAttribute('aria-pressed','false');}); b.setAttribute('aria-pressed','true'); }); });
+// The film: plays muted once when half of it is on screen, pauses when scrolled away, holds the last frame with Replay.
+// Without this script the video keeps its own controls.
+(function(){
+  var v=document.getElementById('filmvideo'), win=document.getElementById('filmwin');
+  var bPlay=document.getElementById('fplay'), bRe=document.getElementById('freplay'), bSnd=document.getElementById('fsound');
+  var sndI=document.getElementById('fsound-i'), sndT=document.getElementById('fsound-t');
+  if(!v||!win) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var held=false;   // paused by the visitor: do not resume by scrolling
+  var away=false;   // paused by this script because it scrolled out of view
+  var seen=false;   // at least half of it has been in view
+  var ask=reduce;   // show the Play button: reduced motion, paused by the visitor, or the browser refused to autoplay
+  v.removeAttribute('controls'); win.classList.add('js');
+  v.muted=true; bSnd.hidden=false;
 
-  // Rent calculator
-  var years=document.getElementById('years'), yo=document.getElementById('yearsOut'), total=document.getElementById('total'), price=39;
-  function calc(){ yo.textContent=years.value; total.textContent='$'+(years.value*price).toLocaleString('en-US'); }
-  years.addEventListener('input',calc);
-  ['p39','p48'].forEach(function(id){ var b=document.getElementById(id); b.addEventListener('click',function(){ price=+b.dataset.p;
-    document.getElementById('p39').setAttribute('aria-pressed',String(price===39)); document.getElementById('p48').setAttribute('aria-pressed',String(price===48)); calc(); }); });
-  var status=document.getElementById('status');
-  document.getElementById('copy').addEventListener('click',function(){
-    var txt='Renting screenshots would cost me '+total.textContent+' over '+years.value+' years. Switching to A9 Snap: a9snap.com';
-    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){status.textContent='Copied';},function(){status.textContent=txt;}); }
-    else { status.textContent=txt; }
+  function ui(){
+    bRe.hidden=!v.ended;
+    bPlay.hidden=!(ask&&v.paused&&!v.ended);
+    sndT.textContent=v.muted?'Sound on':'Sound off';
+    sndI.setAttribute('href',v.muted?'#i-sound-off':'#i-sound-on');
+  }
+  function play(){ ask=false; var p=v.play(); if(p&&p.catch) p.catch(function(){ ask=true; ui(); }); }
+  function replay(){ held=false; away=false; v.currentTime=0; play(); }
+
+  ['play','pause','ended','volumechange','playing'].forEach(function(t){ v.addEventListener(t,ui); });
+  bPlay.addEventListener('click',function(){ held=false; away=false; play(); });
+  bRe.addEventListener('click',replay);
+  bSnd.addEventListener('click',function(){ v.muted=!v.muted; if(!v.muted&&v.volume===0) v.volume=1; });
+  v.addEventListener('click',function(){
+    if(v.ended){ replay(); }
+    else if(v.paused){ held=false; away=false; play(); }
+    else { held=true; ask=true; v.pause(); }
   });
-  calc();
+
+  if(reduce||!('IntersectionObserver' in window)){ ui(); return; }
+  new IntersectionObserver(function(es){
+    var e=es[es.length-1];
+    if(e.intersectionRatio>=0.5){
+      seen=true; away=false;
+      if(!held&&!v.ended&&v.paused) play();
+    } else if(e.intersectionRatio<0.2&&seen&&!v.paused){
+      away=true; v.pause();
+    }
+    ui();
+  },{threshold:[0,0.2,0.5]}).observe(v);
+  ui();
 })();
 </script>
 <script src="/download.js" defer></script>

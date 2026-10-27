@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Reference</p>
       <h1>If something goes wrong</h1>
       <p class="docs-lead">Fixes for the problems people hit most: a hotkey that does nothing, a picture that won't paste, a missing tray icon, and an update that fails.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.3</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.3.5</p>
       <p>Find your problem below. If none of it helps, the <a href="#where-the-log-file-is">log file</a> says what A9 Snap did.</p>
 <h2 id="a-hotkey-is-taken-by-another-app">A hotkey is taken by another app<a class="anchor" href="#a-hotkey-is-taken-by-another-app" aria-label="Link to A hotkey is taken by another app">#</a></h2>
 <p><strong>What you see:</strong> pressing <kbd>Alt</kbd>+<kbd>Z</kbd> does nothing, the tray icon wears a warning badge, and Settings says <strong>Alt+Z is taken by another app. Pick another.</strong></p>
@@ -76,13 +76,19 @@
 <li>Open the Home window and choose <strong>Shortcuts</strong>.</li>
 <li>Click the box that is marked, then press a different combination, such as <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>.</li>
 </ol>
-<p>The same goes for <strong>Recent captures hotkey</strong>. If you would rather keep the key, close or reconfigure the other app first, then restart A9 Snap.</p>
+<p>The same goes for <strong>OCR capture hotkey</strong> and <strong>Recent captures hotkey</strong>. If you would rather keep the key, close or reconfigure the other app first, then restart A9 Snap.</p>
 <h2 id="nothing-is-on-the-clipboard-or-it-wont-paste">Nothing is on the clipboard, or it won&#39;t paste<a class="anchor" href="#nothing-is-on-the-clipboard-or-it-wont-paste" aria-label="Link to Nothing is on the clipboard, or it won't paste">#</a></h2>
 <ul>
 <li><strong>Read the note.</strong> <strong>Copied · snag_0042.png</strong> means the picture is on the clipboard. <strong>Saved snag_0042.png · not copied</strong> gives the reason it was not. These notes show for five seconds, even with confirmations off.</li>
 <li><strong>Try another app.</strong> Paste into Paint or a document. If it works there, the first app wants a file instead of a picture: turn on <strong>Also copy as file</strong> in <a href="/docs/where-screenshots-go/#also-copy-as-file">Saving</a>.</li>
 <li><strong>Check a clipboard tool.</strong> A clipboard manager or a remote desktop session can hold the clipboard for a moment. Try again.</li>
 <li><strong>Use the strip.</strong> Press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>, pick the capture and press <kbd>Enter</kbd> to copy it again as a picture plus its file.</li>
+</ul>
+<h2 id="ocr-finds-no-text-or-cannot-start">OCR finds no text or cannot start<a class="anchor" href="#ocr-finds-no-text-or-cannot-start" aria-label="Link to OCR finds no text or cannot start">#</a></h2>
+<ul>
+<li><strong>No text found</strong> means Windows could not read words in the selected picture. Try a tighter region around clear, upright text, or a larger region with less background. Your previous clipboard contents are unchanged.</li>
+<li>If the note says Windows OCR is unavailable for your profile&#39;s languages, install an OCR-capable language in Windows Settings under <strong>Time &amp; language → Language &amp; region</strong>, then try again.</li>
+<li>OCR is local. A9 Snap does not send the picture to an online service, so this does not require an account or an API key.</li>
 </ul>
 <h2 id="the-picture-wasnt-saved">The picture wasn&#39;t saved<a class="anchor" href="#the-picture-wasnt-saved" aria-label="Link to The picture wasn't saved">#</a></h2>
 <p>The note says <strong>Copied · not saved</strong> with a reason, for example that the folder can&#39;t be written to or the disk is full. The picture is still on your clipboard, so paste it now. Then pick a folder you can write to in <a href="/docs/where-screenshots-go/#choose-the-folder">Saving</a>.</p>
@@ -120,7 +126,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/keyboard-shortcuts/"><span class="docs-step-l">Previous</span><span>Keyboard shortcuts</span></a><a class="docs-step next" href="/docs/privacy/"><span class="docs-step-l">Next</span><span>Privacy</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#a-hotkey-is-taken-by-another-app">A hotkey is taken by another app</a></li><li class="d2"><a href="#nothing-is-on-the-clipboard-or-it-wont-paste">Nothing is on the clipboard, or it won't paste</a></li><li class="d2"><a href="#the-picture-wasnt-saved">The picture wasn't saved</a></li><li class="d2"><a href="#the-next-number-is-wrong">The next number is wrong</a></li><li class="d2"><a href="#a9-snap-did-not-start-after-a-restart">A9 Snap did not start after a restart</a></li><li class="d2"><a href="#i-cant-find-the-tray-icon">I can't find the tray icon</a></li><li class="d2"><a href="#windows-says-it-protected-your-pc">Windows says it protected your PC</a></li><li class="d2"><a href="#an-update-failed">An update failed</a></li><li class="d2"><a href="#where-the-log-file-is">Where the log file is</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#a-hotkey-is-taken-by-another-app">A hotkey is taken by another app</a></li><li class="d2"><a href="#nothing-is-on-the-clipboard-or-it-wont-paste">Nothing is on the clipboard, or it won't paste</a></li><li class="d2"><a href="#ocr-finds-no-text-or-cannot-start">OCR finds no text or cannot start</a></li><li class="d2"><a href="#the-picture-wasnt-saved">The picture wasn't saved</a></li><li class="d2"><a href="#the-next-number-is-wrong">The next number is wrong</a></li><li class="d2"><a href="#a9-snap-did-not-start-after-a-restart">A9 Snap did not start after a restart</a></li><li class="d2"><a href="#i-cant-find-the-tray-icon">I can't find the tray icon</a></li><li class="d2"><a href="#windows-says-it-protected-your-pc">Windows says it protected your PC</a></li><li class="d2"><a href="#an-update-failed">An update failed</a></li><li class="d2"><a href="#where-the-log-file-is">Where the log file is</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

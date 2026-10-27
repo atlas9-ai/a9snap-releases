@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Capture</p>
       <h1>Take a screenshot</h1>
       <p class="docs-lead">Press Alt+Z, drag a box, let go. The picture is on your clipboard and saved as a numbered file.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.3</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.3.5</p>
       <p>Use this whenever you want a picture of part of your screen. It works from any app, and it works on every monitor you have.</p>
 <h2 id="capture-a-region">Capture a region<a class="anchor" href="#capture-a-region" aria-label="Link to Capture a region">#</a></h2>
 <ol>
@@ -78,6 +78,14 @@
 </ol>
 <p><figure class="shot"><img src="/img/docs/take-a-screenshot-picker-1x.webp" srcset="/img/docs/take-a-screenshot-picker-1x.webp 1x, /img/docs/take-a-screenshot-picker.webp 2x" width="880" height="620" alt="The picker mid-drag: a bright selection, its size, and the magnifier next to the pointer" loading="lazy" decoding="async"><figcaption>Dragging a region. The pointer is at the bottom right corner, and the magnifier shows the pixels under it.</figcaption></figure></p>
 <p>A note appears at the bottom right of the monitor you captured, for example <strong>Copied · snag_0042.png</strong>. It goes away by itself after a moment. If you turn the confirmation off in <a href="/docs/settings/#notifications">Notifications</a>, problems still show.</p>
+<h2 id="copy-text-instead-with-ocr">Copy text instead with OCR<a class="anchor" href="#copy-text-instead-with-ocr" aria-label="Link to Copy text instead with OCR">#</a></h2>
+<ol>
+<li>Press <kbd>Alt</kbd>+<kbd>X</kbd>. The same picker opens.</li>
+<li>Drag around the text you want and let go.</li>
+<li>The recognized words go on your clipboard as plain text. Paste them with <kbd>Ctrl</kbd>+<kbd>V</kbd>.</li>
+</ol>
+<p>A9 Snap says <strong>Text copied</strong>, or <strong>No text found</strong> when it could not read anything. OCR capture saves no picture and no numbered file, and it does not change your next file name. A problem or no text leaves your previous clipboard contents alone.</p>
+<p>Recognition uses Windows&#39; built-in OCR and the OCR languages installed on your PC. Nothing is uploaded. To copy text from a picture you already took, right-click it in the <a href="/docs/strip/">strip</a> and choose <strong>Copy text</strong>, or use <strong>Copy text</strong> in the <a href="/docs/mark-up-a-screenshot/#copy-text">editor</a>.</p>
 <h2 id="land-on-the-exact-pixel">Land on the exact pixel<a class="anchor" href="#land-on-the-exact-pixel" aria-label="Link to Land on the exact pixel">#</a></h2>
 <p>The magnifier is a circle that shows the pixels under your pointer at 8 times their size, with a thin grid. The crosshair sits on the edge between pixels, so the sides of your box fall on pixel edges. The magnifier also shows the pointer&#39;s position in pixels. It moves to the other side of the pointer when you get near an edge of the screen.</p>
 <p>Tip: press and hold at the first corner, look at the magnifier, and nudge the pointer until the corner is exactly where you want it. Then drag.</p>
@@ -98,7 +106,7 @@
 </ul>
 <p>To open the editor after every capture without clicking, turn on <strong>Open the editor after every capture</strong> in <a href="/docs/settings/#strip-and-editor">Strip and editor</a>.</p>
 <h2 id="if-the-hotkey-does-nothing">If the hotkey does nothing<a class="anchor" href="#if-the-hotkey-does-nothing" aria-label="Link to If the hotkey does nothing">#</a></h2>
-<p>Another app may own <kbd>Alt</kbd>+<kbd>Z</kbd>. A9 Snap tells you instead of failing quietly: a warning badge appears on the tray icon and Settings says <strong>Alt+Z is taken by another app. Pick another.</strong> Choose a different key in <a href="/docs/settings/#shortcuts">Shortcuts</a>.</p>
+<p>Another app may own <kbd>Alt</kbd>+<kbd>Z</kbd> or <kbd>Alt</kbd>+<kbd>X</kbd>. A9 Snap tells you instead of failing quietly: a warning badge appears on the tray icon and Settings says the key <strong>is taken by another app. Pick another.</strong> Choose a different key in <a href="/docs/settings/#shortcuts">Shortcuts</a>.</p>
 <h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
 <ul>
 <li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li>
@@ -109,7 +117,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/whats-new/"><span class="docs-step-l">Previous</span><span>What's new</span></a><a class="docs-step next" href="/docs/where-screenshots-go/"><span class="docs-step-l">Next</span><span>Where screenshots go</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#capture-a-region">Capture a region</a></li><li class="d2"><a href="#land-on-the-exact-pixel">Land on the exact pixel</a></li><li class="d2"><a href="#cancel">Cancel</a></li><li class="d2"><a href="#several-monitors">Several monitors</a></li><li class="d2"><a href="#after-you-let-go">After you let go</a></li><li class="d2"><a href="#if-the-hotkey-does-nothing">If the hotkey does nothing</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#capture-a-region">Capture a region</a></li><li class="d2"><a href="#copy-text-instead-with-ocr">Copy text instead with OCR</a></li><li class="d2"><a href="#land-on-the-exact-pixel">Land on the exact pixel</a></li><li class="d2"><a href="#cancel">Cancel</a></li><li class="d2"><a href="#several-monitors">Several monitors</a></li><li class="d2"><a href="#after-you-let-go">After you let go</a></li><li class="d2"><a href="#if-the-hotkey-does-nothing">If the hotkey does nothing</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

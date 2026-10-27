@@ -1,13 +1,13 @@
 {
-  "version": "0.3.4",
-  "notes": "- **Delete a screenshot from Home.** Point at a capture in Recent captures and a small red trash can appears in its corner (also when it has the keyboard focus; always visible on a touch screen). Click it, or press **Delete** on a focused capture: it fades out, the grid fills with the next-newest one, and a note at the bottom says \"Deleted snag_0042.png · Undo\" for 6 seconds. The file and, if you had edited it, its hidden original in `.a9snap` go to the Recycle Bin, never away for good, and Undo puts both back under the same names. If Windows can't move the file (another app has it open, say) the capture stays and the note says why.\n- **The strip has the same.** **Delete** takes the picked captures (or the focused one) to the Recycle Bin with one \"Deleted 3 screenshots · Undo\" note, a small trash can shows on a card under the pointer, and the right-click menu's Delete takes the whole selection a card belongs to.\n- **A capture deleted from A9 Snap keeps its number** while the app is running: deleting the newest one no longer hands its number to the next capture, so \"Next file\" stays where it was. (Files deleted in Explorer still follow the folder, as before.)",
-  "pub_date": "2026-10-27T15:45:32Z",
+  "version": "0.3.5",
+  "notes": "- **OCR capture copies text, not a picture.** Press **Alt+X**, drag around text in the same pixel-precise picker, and the recognized words go on the clipboard as plain text. No PNG is saved and the capture numbering does not move. **Text copied** confirms it; **No text found** or a recognition problem leaves the clipboard alone. The hotkey is configurable in Shortcuts, with its own conflict warning, and the tray menu has an **OCR capture** item.\n- **Copy text from an existing capture.** Right-click a capture in the recent strip and choose **Copy text**, or use the editor's new **Copy text** button. The editor recognizes the picture currently on screen, including an unsaved crop or annotation, and stays open; neither path changes the capture or writes another file.\n- **Recognition is completely local.** A9 Snap uses Windows' built-in OCR and your installed OCR languages. Pictures go to the recognizer in memory only: no upload, no temporary image or text files, and no recognized text in the log.",
+  "pub_date": "2026-10-27T20:20:05Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0w5LzMzRk5wSXYzNlZ0OGw1UWNyeXZUd1QyLy9KWVgwRGtvMzBObGt3a0dFWVRkQTlnY01jTFRUUU1pZFFaV0dSOE1UbUgraWpRdXdyR3hnWFBmVVFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTE1OTE5CWZpbGU6QTkgU25hcF8wLjMuNF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjQKTXoveE5KSFBHTm5aRTkzVzNqODFPQ2hoVVEzM1RLQVZmY2tRVVdhaHhyclkvVllmRE51d1QzaGNlQ1BEQkliMjNiRXY1ZHRyM21xM3NWVnhxUEJTQ1E9PQo=",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.4/A9Snap_0.3.4_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0VWdmZWbW11QXhaSHNkV09ESTVBdHF5OHB0L24yTWNPZFFsN3ZUaW9zcnZ6a1Q4bzR0dmtTUXVMamg0aVdjbkZkdnVGY01idFhwczFGZFlNUU91aVFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTMyMzkzCWZpbGU6QTkgU25hcF8wLjMuNV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjUKNGpnZTlLOTQyMXhibTBOeFNJOVM4UTJSdWpsWHpYK0NsNzdkOWtGUXQxdjlzSk1DN1R4YUk5OFpjVS9NVkFCRXk5dlJWdTk4eE5iT042cTVPYkZRRHc9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.5/A9Snap_0.3.5_x64-setup.exe"
     }
   },
-  "installer_sha256": "d7abbf4a49c3b97fdefa5e1836e257f806e753c5325c701b97e785b50e105c97",
-  "installer_size": 2840054
+  "installer_sha256": "fdcf8bc1059b303461153a6065b291326418e1a61955b736b6435c2fde6ebce3",
+  "installer_size": 2853091
 }

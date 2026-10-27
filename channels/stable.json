@@ -1,13 +1,13 @@
 {
-  "version": "0.3.1",
-  "notes": "- A new **Home** window replaces the single scrolling Settings page. Double-click the tray icon (or pick Settings in the tray menu) and it opens on Home: a side column with **Capture**, **Recent captures**, **Editor** (opens your newest capture) and **Folder** buttons, each showing your own hotkey, and a menu of sections: Home, Shortcuts, Saving, Strip and editor, Notifications, Updates and about.\n- Home shows your six newest captures as thumbnails, with the file name, how long ago, and the Volt dot on edited ones; click one to open it in the editor. Under them: where the next file goes (and what it will be called) and what happens after a capture.\n- Every setting is still there, in the section it belongs to, with the values you already had. The window is 1000 × 680 (it can be made as small as 860 × 600, and then the right-hand side scrolls); the version and an update card with **Update now** stay in the side column.",
-  "pub_date": "2026-10-24T14:34:25Z",
+  "version": "0.3.3",
+  "notes": "- **The A9 Snap manual is at a9snap.com/docs**: how to capture, the recent captures strip, the editor (and what Save, Save as new and Revert do to your files), every setting, Start at login, keyboard shortcuts, privacy, and what to do when something goes wrong. It has a search box, screenshots, and an \"On this page\" list on each page.\n- **A Manual row in the Home window** (under the section menu) opens it in your browser, and a **?** button at the top right of every section opens the page for that section. **F1** with the Home window in front does the same, and the tray menu has a **Manual** item above Settings.",
+  "pub_date": "2026-10-27T14:47:27Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0hPMlBmWmJhMGZpMDJPZGpCQ3JraEhnRXNRdm1XakNXYjFnUDNaNDFnVlNzWUdHWGlYWFU3UXkvMlM1Z2pSSmJjcWNQNVV3M2hLNXhteGM4MWszU1FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyODUyNDUyCWZpbGU6QTkgU25hcF8wLjMuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjEKRSszdm12THpTcG9QeFcwUitOcGdhL1Z6Ym43TVpEWUdDaDF5YWF4YVpsR3YxQzZNZExaUHROMFc1Wm1zNGZSblFlb0lSNTRVMDZnN24vQ0JoMDhsRFE9PQo=",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.1/A9Snap_0.3.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0tZdWZSc3NTUDBIbEZkbm45QzJBT0ltUitkUlM3MjRyNm5SVlQyU2NKK1k3RmJYSkVOYXdFZVhjaTB5SkJWL1JJek5vbjdLL2tKeG9FUUIwazQrR3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTEyNDM0CWZpbGU6QTkgU25hcF8wLjMuM194NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjMKQzVwaUYydDE0VDhJUXl4c09nYVFWeXhPeWFzWXpyU01yMW1FcDhyZWdrOGVvekt5d0tWT3BEd2ZXdkRBaVFkZzFTSWRFVTFUQ0crQkxZSFRrVm5BQ3c9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.3/A9Snap_0.3.3_x64-setup.exe"
     }
   },
-  "installer_sha256": "cea0a9d23962a9101e0e45a7fd7171f29eca953fa847dda428bce3d1447d1b37",
-  "installer_size": 2818583
+  "installer_sha256": "0297b7f1a5177f5592803225a19d3a110764e4625a2310b504c13dadb8bff0d4",
+  "installer_size": 2830202
 }

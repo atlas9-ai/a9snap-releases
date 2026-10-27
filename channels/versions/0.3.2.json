@@ -1,0 +1,13 @@
+{
+  "version": "0.3.2",
+  "notes": "- **A9 Snap comes back after Windows closes it.** When Windows closes every app for a Restart that never finishes (or is cancelled), no sign-in follows, so the login entry never fires and A9 Snap stayed gone. Now, when Windows ends the session, A9 Snap sets a one-time task in your own Task Scheduler to start it again two minutes later. If the PC really restarts, the login entry starts it and removes the task; every start removes it. A9 Snap never holds up a shutdown, and asks Windows to restart it after a crash.\n- The switch shows what Windows will really do, not just what was saved. If you turned A9 Snap off in Windows' Startup apps, Shortcuts keeps the switch on and says \"Windows has turned this off in Startup apps.\" with a **Fix in Windows** button that opens that page. A9 Snap never switches Windows' own setting back on for you.\n- **The login entry is checked on every launch.** It is written with the program's path in quotes (the install folder has a space in it) and, if it is missing, unquoted, points at another copy (a dev build, an old path) or is out of date after an update, A9 Snap puts it right; if you switch Start at login off, it is removed.\n- The log now says how A9 Snap ended: quit from the tray, Windows ending the session (and whether the session is really ending), a crash, or a normal exit.\n- A launch at login goes straight to the tray: no window, no confirmation, the hotkeys ready. New installs have Start at login on; if you had turned it off, it stays off.",
+  "pub_date": "2026-10-27T12:34:45Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0V3aHdUQ0hucC9qaFFhZTZqejFyRFVzR2lFMmtuK1lTQ1d2bndKc3ZWZ2VuU0NqeHh5ZGJNR0kyRE1UeXZQbGNxUHhleXFYcmZvdzVEQVB3UEx2UWdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTA0NDczCWZpbGU6QTkgU25hcF8wLjMuMl94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjIKa3l0bkU1VlBIQjNCVldlZG1wWEFDNTdjbzNoMmVMeWhVZ1NBbjF4eFpnOW1RbklXMVgvc21OTXpTbW1DTzF4MG15dXJhcGc2WkxLeGFzSFJaM2E5Q2c9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.2/A9Snap_0.3.2_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "ff9f089fe7dc86f91c56d5722973ccefbacd52dd274db411a7dffc441d2ef762",
+  "installer_size": 2824098
+}

@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Capture</p>
       <h1>Where screenshots go</h1>
       <p class="docs-lead">Pictures are saved as numbered PNG files in one folder, and the numbering picks up where the folder left off.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.3</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.3.4</p>
       <p>Every capture is saved to your screenshots folder as a PNG, as well as going to the clipboard. This page covers the folder, the file names and the clipboard option. All of it lives in <strong>Saving</strong> on the Home window.</p>
 <p><figure class="shot"><img src="/img/docs/settings-saving-1x.webp" srcset="/img/docs/settings-saving-1x.webp 1x, /img/docs/settings-saving.webp 2x" width="728" height="374" alt="The Saving section: the screenshots folder, the file name prefix and digits, and Also copy as file" loading="lazy" decoding="async"><figcaption>The Saving section, showing the folder, the next file name and the clipboard option.</figcaption></figure></p>
 <h2 id="choose-the-folder">Choose the folder<a class="anchor" href="#choose-the-folder" aria-label="Link to Choose the folder">#</a></h2>
@@ -82,7 +82,7 @@
 <p>New files are named <code>snag_0042.png</code>: a prefix, a number and <code>.png</code>. The first picture in an empty folder is <code>snag_0001.png</code>.</p>
 <ul>
 <li>A9 Snap reads the folder on every capture. The new number is the highest one it finds, plus one.</li>
-<li>It never fills gaps and never overwrites a file. If you delete <code>snag_0007.png</code>, the next capture is still the highest number plus one.</li>
+<li>It never fills gaps and never overwrites a file. If you delete <code>snag_0007.png</code>, the next capture is still the highest number plus one. When you delete the newest capture from A9 Snap (the trash can or <kbd>Delete</kbd>), its number also stays taken until A9 Snap restarts, so the next capture doesn&#39;t reuse it.</li>
 <li>It counts only files named like your prefix, with the number after it and <code>.png</code> at the end. It ignores letter case, and treats <code>-</code>, <code>_</code>, a space or nothing between the prefix and the number as the same. With the prefix <code>snag_</code>, it counts <code>snag_0042.png</code>, <code>SNAG-7094.png</code> and <code>Snag 12.png</code>. It does not count <code>IMG_0042.png</code> or <code>notes.png</code>.</li>
 <li>If the folder already has such a sequence, the next file copies the style of the highest-numbered one: the same letter case, the same separator and the same number of digits. A folder whose newest file is <code>SNAG-7094.png</code> gets <code>SNAG-7095.png</code> next, whatever the prefix in Settings says.</li>
 </ul>

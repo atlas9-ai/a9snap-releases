@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Settings</p>
       <h1>The Home window</h1>
       <p class="docs-lead">The one window A9 Snap has: your actions on the left, your newest captures in the middle, and every setting a click away.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.3</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.3.4</p>
       <p>Open the Home window by double-clicking the tray icon, or by choosing <strong>Settings</strong> in the tray menu. It always opens on Home, however you left it. Closing the window does not quit A9 Snap: it keeps waiting in the tray.</p>
 <p><figure class="shot"><img src="/img/docs/home-window-overview-1x.webp" srcset="/img/docs/home-window-overview-1x.webp 1x, /img/docs/home-window-overview.webp 2x" width="1000" height="680" alt="The Home window with the actions on the left and six captures in the middle" loading="lazy" decoding="async"><figcaption>The Home window on mock captures.</figcaption></figure></p>
 <h2 id="the-left-side">The left side<a class="anchor" href="#the-left-side" aria-label="Link to The left side">#</a></h2>
@@ -88,6 +88,15 @@
 <li><strong>Saving to</strong> shows your screenshots folder and <strong>Next file</strong>, the name the next capture will get.</li>
 <li><strong>After a capture</strong> says what happens when you let go: <strong>Copied as an image</strong>, <strong>Copied as image and file</strong>, and <strong>Opens in the editor</strong> if you turned that on.</li>
 </ul>
+<h2 id="delete-a-screenshot">Delete a screenshot<a class="anchor" href="#delete-a-screenshot" aria-label="Link to Delete a screenshot">#</a></h2>
+<p>Point at a capture in <strong>Recent captures</strong> and a small red <strong>trash can</strong> appears in the top-right corner of its picture. It also shows when the capture has the keyboard focus. Click it, or press <kbd>Delete</kbd> with the capture focused, and:</p>
+<ol>
+<li>The capture fades out and the grid fills in with the next-newest one.</li>
+<li>A note at the bottom of the window says <strong>Deleted snag_0042.png</strong> with an <strong>Undo</strong> button, for 6 seconds.</li>
+</ol>
+<p>The file goes to the Recycle Bin, not away for good, and so does the hidden original the editor kept if you had edited it. <strong>Undo</strong> puts both back under the same names, exactly as they were, and the capture returns to the grid. Clicking the trash can never opens the editor.</p>
+<p><strong>Next file</strong> doesn&#39;t change: a deleted capture keeps its number while A9 Snap is running, so the next capture is never given the number of the one you just threw away. If Windows can&#39;t move the file, for example because another app has it open, the capture stays and the note says why.</p>
+<p>The <a href="/docs/strip/#delete-a-screenshot">strip</a> works the same way.</p>
 <h2 id="the-buttons-and-f1">The ? buttons and F1<a class="anchor" href="#the-buttons-and-f1" aria-label="Link to The ? buttons and F1">#</a></h2>
 <p>Every section, including Home, has a <strong>?</strong> button at the top right. It opens the manual page for that section. <strong>Start at login</strong> has a small <strong>?</strong> of its own. With the Home window in front, press <kbd>F1</kbd> for the page that matches the section on screen. The tray menu&#39;s <strong>Manual</strong> item opens the front page.</p>
 <h2 id="the-size-of-the-window">The size of the window<a class="anchor" href="#the-size-of-the-window" aria-label="Link to The size of the window">#</a></h2>
@@ -102,7 +111,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/saving-and-revert/"><span class="docs-step-l">Previous</span><span>Saving, Save as new and Revert</span></a><a class="docs-step next" href="/docs/settings/"><span class="docs-step-l">Next</span><span>Settings sections</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#the-left-side">The left side</a></li><li class="d2"><a href="#the-middle">The middle</a></li><li class="d2"><a href="#the-buttons-and-f1">The ? buttons and F1</a></li><li class="d2"><a href="#the-size-of-the-window">The size of the window</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#the-left-side">The left side</a></li><li class="d2"><a href="#the-middle">The middle</a></li><li class="d2"><a href="#delete-a-screenshot">Delete a screenshot</a></li><li class="d2"><a href="#the-buttons-and-f1">The ? buttons and F1</a></li><li class="d2"><a href="#the-size-of-the-window">The size of the window</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

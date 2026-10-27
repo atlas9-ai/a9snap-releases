@@ -1,13 +1,13 @@
 {
-  "version": "0.3.3",
-  "notes": "- **The A9 Snap manual is at a9snap.com/docs**: how to capture, the recent captures strip, the editor (and what Save, Save as new and Revert do to your files), every setting, Start at login, keyboard shortcuts, privacy, and what to do when something goes wrong. It has a search box, screenshots, and an \"On this page\" list on each page.\n- **A Manual row in the Home window** (under the section menu) opens it in your browser, and a **?** button at the top right of every section opens the page for that section. **F1** with the Home window in front does the same, and the tray menu has a **Manual** item above Settings.",
-  "pub_date": "2026-10-27T14:47:27Z",
+  "version": "0.3.5",
+  "notes": "- **OCR capture copies text, not a picture.** Press **Alt+X**, drag around text in the same pixel-precise picker, and the recognized words go on the clipboard as plain text. No PNG is saved and the capture numbering does not move. **Text copied** confirms it; **No text found** or a recognition problem leaves the clipboard alone. The hotkey is configurable in Shortcuts, with its own conflict warning, and the tray menu has an **OCR capture** item.\n- **Copy text from an existing capture.** Right-click a capture in the recent strip and choose **Copy text**, or use the editor's new **Copy text** button. The editor recognizes the picture currently on screen, including an unsaved crop or annotation, and stays open; neither path changes the capture or writes another file.\n- **Recognition is completely local.** A9 Snap uses Windows' built-in OCR and your installed OCR languages. Pictures go to the recognizer in memory only: no upload, no temporary image or text files, and no recognized text in the log.",
+  "pub_date": "2026-10-27T20:20:05Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0tZdWZSc3NTUDBIbEZkbm45QzJBT0ltUitkUlM3MjRyNm5SVlQyU2NKK1k3RmJYSkVOYXdFZVhjaTB5SkJWL1JJek5vbjdLL2tKeG9FUUIwazQrR3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTEyNDM0CWZpbGU6QTkgU25hcF8wLjMuM194NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjMKQzVwaUYydDE0VDhJUXl4c09nYVFWeXhPeWFzWXpyU01yMW1FcDhyZWdrOGVvekt5d0tWT3BEd2ZXdkRBaVFkZzFTSWRFVTFUQ0crQkxZSFRrVm5BQ3c9PQo=",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.3/A9Snap_0.3.3_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0VWdmZWbW11QXhaSHNkV09ESTVBdHF5OHB0L24yTWNPZFFsN3ZUaW9zcnZ6a1Q4bzR0dmtTUXVMamg0aVdjbkZkdnVGY01idFhwczFGZFlNUU91aVFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTMyMzkzCWZpbGU6QTkgU25hcF8wLjMuNV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjUKNGpnZTlLOTQyMXhibTBOeFNJOVM4UTJSdWpsWHpYK0NsNzdkOWtGUXQxdjlzSk1DN1R4YUk5OFpjVS9NVkFCRXk5dlJWdTk4eE5iT042cTVPYkZRRHc9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.5/A9Snap_0.3.5_x64-setup.exe"
     }
   },
-  "installer_sha256": "0297b7f1a5177f5592803225a19d3a110764e4625a2310b504c13dadb8bff0d4",
-  "installer_size": 2830202
+  "installer_sha256": "fdcf8bc1059b303461153a6065b291326418e1a61955b736b6435c2fde6ebce3",
+  "installer_size": 2853091
 }

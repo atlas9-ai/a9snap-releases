@@ -1,0 +1,46 @@
+{
+ "home-window-overview": {
+  "w": 1000,
+  "h": 680
+ },
+ "mark-up-a-screenshot-editor": {
+  "w": 1180,
+  "h": 820
+ },
+ "saving-and-revert-unsaved": {
+  "w": 590,
+  "h": 242
+ },
+ "settings-notifications": {
+  "w": 728,
+  "h": 144
+ },
+ "settings-saving": {
+  "w": 728,
+  "h": 374
+ },
+ "settings-shortcuts": {
+  "w": 728,
+  "h": 287
+ },
+ "settings-strip": {
+  "w": 728,
+  "h": 216
+ },
+ "settings-updates": {
+  "w": 728,
+  "h": 287
+ },
+ "start-at-login-blocked": {
+  "w": 728,
+  "h": 330
+ },
+ "strip-selected": {
+  "w": 1548,
+  "h": 266
+ },
+ "take-a-screenshot-picker": {
+  "w": 880,
+  "h": 620
+ }
+}

@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://a9snap.com/sitemap.xml

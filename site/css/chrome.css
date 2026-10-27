@@ -1,0 +1,53 @@
+/* The home page's own chrome: tokens, base, header, buttons and footer, copied verbatim from the <style> in index.html.
+   site/build.mjs fails when a line here is not in index.html, so the manual cannot drift from the home page.
+   Edit index.html first, then copy the change here. */
+:root{
+  --ink:#0B0C0E; --graphite:#17181B; --raised:#1E1F23; --line:#2A2C31;
+  --bone:#F4F2EE; --mist:#C9CBD0; --steel:#9A9DA4; --red:#E5484D; --volt:#C8F31D; --volt-ink:#0B0C0E;
+  --display:'Geist', 'Segoe UI', system-ui, sans-serif;
+  --mono:'Geist Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --col:1120px; --r:16px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--mist);font-family:var(--display);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+a{color:inherit}
+h1,h2,h3{color:var(--bone);font-weight:700;letter-spacing:-.025em;line-height:1.05;text-wrap:balance;margin:0}
+p{margin:0}
+section,#top,#get{scroll-margin-top:72px}
+.wrap{max-width:var(--col);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--volt)}
+.mono{font-family:var(--mono)}
+:focus-visible{outline:2px solid var(--volt);outline-offset:3px;border-radius:6px}
+/* Nav */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(11,12,14,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--bone);font-weight:600;font-size:18px}
+/* Lockup: Bullseye, the A9 outline (A in Bone, 9 in Nine Red; paths from assets/brand/a9-glyph.svg), "Snap" in Geist 600 */
+.brand .a9{height:1.55em;width:auto;margin-left:-2px;flex:none}
+.brand .a9 .a{fill:var(--bone)}
+.brand .snap{font-size:1.3em;font-weight:600;letter-spacing:-.02em;line-height:1;margin-left:-6px}
+.foot-brand{font-size:15px;color:var(--steel);gap:7px}
+.foot-brand .snap{color:var(--bone)}
+.foot-brand .by{margin-left:12px;font-weight:400;font-size:14px}
+.links{display:flex;align-items:center;gap:28px;font-size:15px}
+.links a{text-decoration:none;color:var(--mist)}
+.links a:hover{color:var(--bone)}
+.links a.btn-volt,.links a.btn-volt:hover{color:var(--volt-ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid transparent;cursor:pointer;font:inherit;font-weight:600}
+.btn-volt{background:var(--volt);color:var(--volt-ink);padding:10px 20px;font-size:15px}
+.btn-volt.lg{padding:15px 28px;font-size:17px}
+.btn-ghost{border-color:#3A3D42;color:var(--bone);padding:15px 26px;background:transparent;font-size:17px}
+.btn-ghost:hover{border-color:var(--steel)}
+.links a[aria-current="page"]{color:var(--bone)}
+@media (max-width:760px){.links{gap:18px}.links a:not(.btn):not(.nav-manual){display:none}}
+kbd{font-family:var(--mono);font-size:.85em;background:var(--raised);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 7px;color:var(--bone)}
+footer{border-top:1px solid var(--line);padding-block:40px;font-size:14px;color:var(--steel)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+.foot-links{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px}
+.foot-links a{color:var(--steel);text-decoration:none}
+.foot-links a:hover{color:var(--bone)}
+.foot-links .ver{font-family:var(--mono);font-size:13px;color:var(--mist);border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}

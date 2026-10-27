@@ -5,7 +5,7 @@
  * the app's update check reads. If the fetch fails, or the manifest is not what we expect, nothing changes: the
  * static link stays, so the button is never dead.
  *
- * Marked in the page: [data-dl] (a link: its href), [data-dl-meta] (an element: its text).
+ * Marked in the page: [data-dl] (a link: its href), [data-dl-meta] (an element: its text), [data-ver] (the footer's "v0.3.2" badge).
  * A plain script (no module system): it runs itself on load and leaves its functions on self.a9download for
  * site/download.test.mjs, which runs it in a sandbox.
  */
@@ -31,7 +31,7 @@
       var text = "Free · Early access · v" + manifest.version;
       var size = manifest.installer_size;
       if (typeof size === "number" && size > 0) text += " · " + (size / 1048576).toFixed(1) + " MB";
-      return { href: rel[1] + ASSET, text: text };
+      return { href: rel[1] + ASSET, text: text, version: "v" + manifest.version };
     } catch (e) {
       return null;
     }
@@ -49,6 +49,7 @@
         if (!d) return false;
         Array.prototype.forEach.call(doc.querySelectorAll("[data-dl]"), function (a) { a.href = d.href; });
         Array.prototype.forEach.call(doc.querySelectorAll("[data-dl-meta]"), function (el) { el.textContent = d.text; });
+        Array.prototype.forEach.call(doc.querySelectorAll("[data-ver]"), function (el) { el.textContent = d.version; });
         return true;
       })
       .catch(function () { return false; })

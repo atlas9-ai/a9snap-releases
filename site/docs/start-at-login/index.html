@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Start at login · A9 Snap Manual</title>
+<meta name="description" content="A9 Snap can start by itself when you sign in to Windows, so your hotkey is always ready. Here is how it behaves, and what to do when Windows says no.">
+<link rel="canonical" href="https://a9snap.com/docs/start-at-login/">
+<meta name="theme-color" content="#0B0C0E">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A9 Snap">
+<meta property="og:title" content="Start at login · A9 Snap Manual">
+<meta property="og:description" content="A9 Snap can start by itself when you sign in to Windows, so your hotkey is always ready. Here is how it behaves, and what to do when Windows says no.">
+<meta property="og:url" content="https://a9snap.com/docs/start-at-login/">
+<meta property="og:image" content="https://a9snap.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/chrome.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+<body class="docs">
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="/" aria-label="A9 Snap home">
+        <svg class="mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span>
+      </a>
+      <div class="links">
+        <a href="/#how">How it works</a>
+        <a href="/#recent">Recent</a>
+        <a href="/#editor">Editor</a>
+        <a href="/#faq">FAQ</a>
+        <a class="nav-manual" href="/docs/" aria-current="page">Manual</a>
+        <a class="btn btn-volt" data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">Download</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="docs-shell wrap">
+  <aside class="docs-side">
+    <button class="docs-toggle" type="button" aria-expanded="false" aria-controls="docs-nav">Manual menu</button>
+    <div id="docs-nav" class="docs-nav-wrap">
+      <form class="docs-search" role="search" action="/docs/" onsubmit="return false">
+        <label class="sr" for="docs-q">Search the manual</label>
+        <input id="docs-q" type="search" placeholder="Search the manual" autocomplete="off" spellcheck="false" aria-controls="docs-results" aria-describedby="docs-q-hint">
+        <span id="docs-q-hint" class="sr">Press the slash key to jump to search. Results appear below the box.</span>
+      </form>
+      <div id="docs-status" class="sr" role="status" aria-live="polite"></div>
+      <ul id="docs-results" class="docs-results" hidden></ul>
+      <nav class="docs-nav" aria-label="Manual">
+<div class="docs-group"><h2 class="docs-group-h">Start here</h2><ul><li><a href="/docs/">Getting started</a></li><li><a href="/docs/whats-new/">What's new</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Recent captures</h2><ul><li><a href="/docs/strip/">The recent captures strip</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/">Saving, Save as new and Revert</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/" aria-current="page">Start at login</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Reference</h2><ul><li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li><li><a href="/docs/troubleshooting/">If something goes wrong</a></li><li><a href="/docs/privacy/">Privacy</a></li><li><a href="/docs/updates-and-channels/">Updates and channels</a></li></ul></div>
+      </nav>
+    </div>
+  </aside>
+  <main id="main" class="docs-main">
+    <article class="docs-article">
+      <p class="docs-crumb"><a href="/docs/">Manual</a> · Settings</p>
+      <h1>Start at login</h1>
+      <p class="docs-lead">A9 Snap can start by itself when you sign in to Windows, so your hotkey is always ready. Here is how it behaves, and what to do when Windows says no.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.3.2</p>
+      <p>Start at login is on for a new install. A9 Snap starts straight into the tray: no window opens and nothing asks you anything. If you had turned it off before, it stays off.</p>
+<h2 id="turn-it-on-or-off">Turn it on or off<a class="anchor" href="#turn-it-on-or-off" aria-label="Link to Turn it on or off">#</a></h2>
+<ol>
+<li>Open the Home window and choose <strong>Shortcuts</strong>.</li>
+<li>Use the <strong>Start at login</strong> switch.</li>
+</ol>
+<p>Turning it on adds a startup entry for your Windows user, with the program&#39;s path in quotes (the install folder has a space in it). Turning it off removes the entry.</p>
+<h2 id="what-the-switch-shows">What the switch shows<a class="anchor" href="#what-the-switch-shows" aria-label="Link to What the switch shows">#</a></h2>
+<p>The switch shows what Windows will really do, not only what you saved. Windows has its own list in <strong>Settings › Apps › Startup</strong>, and it can turn A9 Snap off there.</p>
+<ul>
+<li>If Windows turned it off, the switch stays on and a line under it says <strong>Windows has turned this off in Startup apps.</strong> Click <strong>Fix in Windows</strong>. It opens that Windows page. Turn <strong>A9 Snap</strong> on there. A9 Snap never switches Windows&#39; own setting back on for you.</li>
+<li>If A9 Snap could not add its startup entry, the line says <strong>A9 Snap couldn&#39;t add itself to Windows startup.</strong></li>
+</ul>
+<p><figure class="shot"><img src="/img/docs/start-at-login-blocked-1x.webp" srcset="/img/docs/start-at-login-blocked-1x.webp 1x, /img/docs/start-at-login-blocked.webp 2x" width="728" height="330" alt="Start at login switched on, with the line Windows has turned this off in Startup apps and a Fix in Windows button" loading="lazy" decoding="async"><figcaption>What you see when Windows has turned A9 Snap off in Startup apps.</figcaption></figure></p>
+<h2 id="it-checks-itself">It checks itself<a class="anchor" href="#it-checks-itself" aria-label="Link to It checks itself">#</a></h2>
+<p>A9 Snap checks its startup entry every time it starts. If the entry is missing, has no quotes, points at another copy (an old path or a development build) or is out of date after an update, A9 Snap puts it right. If you switch the setting off, the entry is removed.</p>
+<h2 id="after-windows-closes-your-apps-for-an-update">After Windows closes your apps for an update<a class="anchor" href="#after-windows-closes-your-apps-for-an-update" aria-label="Link to After Windows closes your apps for an update">#</a></h2>
+<p>Sometimes Windows closes every app so it can restart for an update, and then the restart never finishes, or you cancel it. Nothing signs you in again, so the startup entry never fires and A9 Snap would stay closed.</p>
+<p>To cover that, when Windows ends your session and Start at login is on, A9 Snap sets a one-time task in your own Task Scheduler named <strong>A9 Snap relaunch after Windows closed it</strong>. It starts A9 Snap again two minutes later and ends after an hour.</p>
+<ul>
+<li>If the PC really restarts, the startup entry starts A9 Snap and removes the task.</li>
+<li>Every start of A9 Snap removes the task.</li>
+<li>A9 Snap never holds up a shutdown or a restart, and it asks Windows to start it again after a crash.</li>
+<li>With Start at login off, no task is made.</li>
+</ul>
+<h2 id="checking-what-happened">Checking what happened<a class="anchor" href="#checking-what-happened" aria-label="Link to Checking what happened">#</a></h2>
+<p>The <a href="/docs/troubleshooting/#where-the-log-file-is">log file</a> records how each run ended: quit from the tray, Windows ending the session (and whether the session is really ending), a crash, or a normal exit. A login start is recorded as <strong>started at login</strong>.</p>
+<h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
+<ul>
+<li><a href="/docs/settings/">Settings sections</a></li>
+<li><a href="/docs/troubleshooting/#a9-snap-did-not-start-after-a-restart">If something goes wrong</a></li>
+</ul>
+
+      <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
+      <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/settings/"><span class="docs-step-l">Previous</span><span>Settings sections</span></a><a class="docs-step next" href="/docs/keyboard-shortcuts/"><span class="docs-step-l">Next</span><span>Keyboard shortcuts</span></a></nav>
+    </article>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#turn-it-on-or-off">Turn it on or off</a></li><li class="d2"><a href="#what-the-switch-shows">What the switch shows</a></li><li class="d2"><a href="#it-checks-itself">It checks itself</a></li><li class="d2"><a href="#after-windows-closes-your-apps-for-an-update">After Windows closes your apps for an update</a></li><li class="d2"><a href="#checking-what-happened">Checking what happened</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+  </main>
+</div>
+<footer>
+  <div class="wrap">
+    <span class="brand foot-brand" role="img" aria-label="A9 Snap"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span><span class="by">An A9 Solutions product</span></span>
+    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a class="ver" data-ver href="/docs/whats-new/">v0.3.2</a></div>
+    <span class="mono">Point. Snap. Paste.</span>
+  </div>
+</footer>
+<script type="module" src="/js/docs.js"></script>
+<script src="/download.js" defer></script>
+</body>
+</html>

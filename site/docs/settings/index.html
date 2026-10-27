@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Settings sections · A9 Snap Manual</title>
+<meta name="description" content="Every setting, section by section, in the order the Home window lists them, with what each one does and its default.">
+<link rel="canonical" href="https://a9snap.com/docs/settings/">
+<meta name="theme-color" content="#0B0C0E">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A9 Snap">
+<meta property="og:title" content="Settings sections · A9 Snap Manual">
+<meta property="og:description" content="Every setting, section by section, in the order the Home window lists them, with what each one does and its default.">
+<meta property="og:url" content="https://a9snap.com/docs/settings/">
+<meta property="og:image" content="https://a9snap.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/chrome.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+<body class="docs">
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="/" aria-label="A9 Snap home">
+        <svg class="mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span>
+      </a>
+      <div class="links">
+        <a href="/#how">How it works</a>
+        <a href="/#recent">Recent</a>
+        <a href="/#editor">Editor</a>
+        <a href="/#faq">FAQ</a>
+        <a class="nav-manual" href="/docs/" aria-current="page">Manual</a>
+        <a class="btn btn-volt" data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">Download</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="docs-shell wrap">
+  <aside class="docs-side">
+    <button class="docs-toggle" type="button" aria-expanded="false" aria-controls="docs-nav">Manual menu</button>
+    <div id="docs-nav" class="docs-nav-wrap">
+      <form class="docs-search" role="search" action="/docs/" onsubmit="return false">
+        <label class="sr" for="docs-q">Search the manual</label>
+        <input id="docs-q" type="search" placeholder="Search the manual" autocomplete="off" spellcheck="false" aria-controls="docs-results" aria-describedby="docs-q-hint">
+        <span id="docs-q-hint" class="sr">Press the slash key to jump to search. Results appear below the box.</span>
+      </form>
+      <div id="docs-status" class="sr" role="status" aria-live="polite"></div>
+      <ul id="docs-results" class="docs-results" hidden></ul>
+      <nav class="docs-nav" aria-label="Manual">
+<div class="docs-group"><h2 class="docs-group-h">Start here</h2><ul><li><a href="/docs/">Getting started</a></li><li><a href="/docs/whats-new/">What's new</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Recent captures</h2><ul><li><a href="/docs/strip/">The recent captures strip</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/">Saving, Save as new and Revert</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/" aria-current="page">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Reference</h2><ul><li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li><li><a href="/docs/troubleshooting/">If something goes wrong</a></li><li><a href="/docs/privacy/">Privacy</a></li><li><a href="/docs/updates-and-channels/">Updates and channels</a></li></ul></div>
+      </nav>
+    </div>
+  </aside>
+  <main id="main" class="docs-main">
+    <article class="docs-article">
+      <p class="docs-crumb"><a href="/docs/">Manual</a> · Settings</p>
+      <h1>Settings sections</h1>
+      <p class="docs-lead">Every setting, section by section, in the order the Home window lists them, with what each one does and its default.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.3.2</p>
+      <p>Every setting is in the Home window&#39;s menu of sections. A change is saved the moment you make it, and A9 Snap checks it. If a value is not allowed, a line under the setting says why and the setting goes back to what it was. For the window itself, see <a href="/docs/home-window/">The Home window</a>.</p>
+<h2 id="shortcuts">Shortcuts<a class="anchor" href="#shortcuts" aria-label="Link to Shortcuts">#</a></h2>
+<p><figure class="shot"><img src="/img/docs/settings-shortcuts-1x.webp" srcset="/img/docs/settings-shortcuts-1x.webp 1x, /img/docs/settings-shortcuts.webp 2x" width="728" height="287" alt="The Shortcuts section: the capture hotkey, the recent captures hotkey and Start at login" loading="lazy" decoding="async"><figcaption>The Shortcuts section.</figcaption></figure></p>
+<ul>
+<li><strong>Capture hotkey</strong> starts a screenshot. Default <kbd>Alt</kbd>+<kbd>Z</kbd>.</li>
+<li><strong>Recent captures hotkey</strong> opens the <a href="/docs/strip/">strip</a>. Default <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>.</li>
+<li><strong>Start at login</strong> starts A9 Snap in the tray when you sign in to Windows. On by default for a new install. See <a href="/docs/start-at-login/">Start at login</a>.</li>
+</ul>
+<p>To change a hotkey:</p>
+<ol>
+<li>Click the box. It says <strong>Press the keys…</strong></li>
+<li>Press the combination you want, for example <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>.</li>
+<li>If the key is allowed and free, it is saved. Press <kbd>Esc</kbd> to leave the box without changing it.</li>
+</ol>
+<p>A hotkey needs <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Shift</kbd> or <kbd>Win</kbd> with a key. Function keys and <kbd>PrintScreen</kbd> may stand alone. The two hotkeys can&#39;t be the same. A9 Snap never takes <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>, <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> or <kbd>Ctrl</kbd>+<kbd>C</kbd>, <kbd>V</kbd>, <kbd>X</kbd> and <kbd>Z</kbd>. They belong to Windows and to every app&#39;s editing keys.</p>
+<p>If another app already owns a key, the box is marked and a line says <strong>Alt+Z is taken by another app. Pick another.</strong> The tray icon also shows a warning badge until you fix it.</p>
+<h2 id="saving">Saving<a class="anchor" href="#saving" aria-label="Link to Saving">#</a></h2>
+<p><figure class="shot"><img src="/img/docs/settings-saving-1x.webp" srcset="/img/docs/settings-saving-1x.webp 1x, /img/docs/settings-saving.webp 2x" width="728" height="374" alt="The Saving section: the screenshots folder, the file name and Also copy as file" loading="lazy" decoding="async"><figcaption>The Saving section.</figcaption></figure></p>
+<ul>
+<li><strong>Screenshots folder</strong> is where pictures are saved. Default <code>Desktop\Screenshots</code>. <strong>Browse…</strong> picks another, <strong>Open</strong> shows it, <strong>Use the default folder</strong> goes back.</li>
+<li><strong>File name</strong> has <strong>Prefix</strong> (default <code>snag_</code>) and <strong>Digits</strong> (default 4, from 0 to 6). A line shows <strong>Next file</strong>.</li>
+<li><strong>Also copy as file</strong> puts the saved file on the clipboard next to the picture. Off by default.</li>
+</ul>
+<p><a href="/docs/where-screenshots-go/">Where screenshots go</a> explains the numbering in full.</p>
+<h2 id="strip-and-editor">Strip and editor<a class="anchor" href="#strip-and-editor" aria-label="Link to Strip and editor">#</a></h2>
+<p><figure class="shot"><img src="/img/docs/settings-strip-1x.webp" srcset="/img/docs/settings-strip-1x.webp 1x, /img/docs/settings-strip.webp 2x" width="728" height="216" alt="The Strip and editor section: Captures in the strip and Open the editor after every capture" loading="lazy" decoding="async"><figcaption>The Strip and editor section.</figcaption></figure></p>
+<ul>
+<li><strong>Captures in the strip</strong> is how many of the newest captures the <a href="/docs/strip/">strip</a> shows: 6, 9 or 12. Default 12.</li>
+<li><strong>Open the editor after every capture</strong> opens the <a href="/docs/mark-up-a-screenshot/">editor</a> on each capture as you take it. Off by default. When it is off, press <kbd>E</kbd> in the strip or click <strong>Edit</strong> on the note.</li>
+</ul>
+<h2 id="notifications">Notifications<a class="anchor" href="#notifications" aria-label="Link to Notifications">#</a></h2>
+<p><figure class="shot"><img src="/img/docs/settings-notifications-1x.webp" srcset="/img/docs/settings-notifications-1x.webp 1x, /img/docs/settings-notifications.webp 2x" width="728" height="144" alt="The Notifications section with Show a confirmation" loading="lazy" decoding="async"><figcaption>The Notifications section.</figcaption></figure></p>
+<ul>
+<li><strong>Show a confirmation</strong> shows a small note at the bottom right after each capture, such as <strong>Copied · snag_0042.png</strong>. On by default.</li>
+</ul>
+<p>The note stays about a second and a half, or three and a half seconds when it has an <strong>Edit</strong> button. Problems always show, and stay for five seconds, whatever this setting says.</p>
+<h2 id="updates-and-about">Updates and about<a class="anchor" href="#updates-and-about" aria-label="Link to Updates and about">#</a></h2>
+<p><figure class="shot"><img src="/img/docs/settings-updates-1x.webp" srcset="/img/docs/settings-updates-1x.webp 1x, /img/docs/settings-updates.webp 2x" width="728" height="287" alt="The Updates and about section: the version, the update channel and the release notes button" loading="lazy" decoding="async"><figcaption>The Updates and about section.</figcaption></figure></p>
+<ul>
+<li><strong>Version</strong> shows the number you have, your channel and when the last check got an answer. <strong>Check for updates</strong> looks now. When an update is ready the button becomes <strong>Update now</strong>.</li>
+<li><strong>Update channel</strong> is <strong>Dev</strong> or <strong>Stable</strong>. See <a href="/docs/updates-and-channels/">Updates and channels</a>.</li>
+<li><strong>What&#39;s new</strong> shows the newest change in a sentence. <strong>Release notes</strong> opens this version&#39;s notes on GitHub. All versions are in <a href="/docs/whats-new/">What&#39;s new</a>.</li>
+</ul>
+<p>At the bottom, a line reminds you that nothing leaves your PC except the update check. See <a href="/docs/privacy/">Privacy</a>.</p>
+<h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
+<ul>
+<li><a href="/docs/start-at-login/">Start at login</a></li>
+<li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+<li><a href="/docs/troubleshooting/">If something goes wrong</a></li>
+</ul>
+
+      <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
+      <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/home-window/"><span class="docs-step-l">Previous</span><span>The Home window</span></a><a class="docs-step next" href="/docs/start-at-login/"><span class="docs-step-l">Next</span><span>Start at login</span></a></nav>
+    </article>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#shortcuts">Shortcuts</a></li><li class="d2"><a href="#saving">Saving</a></li><li class="d2"><a href="#strip-and-editor">Strip and editor</a></li><li class="d2"><a href="#notifications">Notifications</a></li><li class="d2"><a href="#updates-and-about">Updates and about</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+  </main>
+</div>
+<footer>
+  <div class="wrap">
+    <span class="brand foot-brand" role="img" aria-label="A9 Snap"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span><span class="by">An A9 Solutions product</span></span>
+    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a class="ver" data-ver href="/docs/whats-new/">v0.3.2</a></div>
+    <span class="mono">Point. Snap. Paste.</span>
+  </div>
+</footer>
+<script type="module" src="/js/docs.js"></script>
+<script src="/download.js" defer></script>
+</body>
+</html>

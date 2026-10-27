@@ -81,7 +81,8 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;heigh
 .btn-volt.lg{padding:15px 28px;font-size:17px}
 .btn-ghost{border-color:#3A3D42;color:var(--bone);padding:15px 26px;background:transparent;font-size:17px}
 .btn-ghost:hover{border-color:var(--steel)}
-@media (max-width:760px){.links a:not(.btn){display:none}}
+.links a[aria-current="page"]{color:var(--bone)}
+@media (max-width:760px){.links{gap:18px}.links a:not(.btn):not(.nav-manual){display:none}}
 
 /* Hero */
 .hero{padding-block:64px 40px}
@@ -278,6 +279,10 @@ details p{margin-top:10px;font-size:15px}
 .closer .q span{color:var(--volt)}
 footer{border-top:1px solid var(--line);padding-block:40px;font-size:14px;color:var(--steel)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+.foot-links{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px}
+.foot-links a{color:var(--steel);text-decoration:none}
+.foot-links a:hover{color:var(--bone)}
+.foot-links .ver{font-family:var(--mono);font-size:13px;color:var(--mist);border:1px solid var(--line);border-radius:999px;padding:1px 10px}
 @media (max-width:600px){.closer{padding:28px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
@@ -308,6 +313,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         <a href="#recent">Recent</a>
         <a href="#editor">Editor</a>
         <a href="#faq">FAQ</a>
+        <a class="nav-manual" href="/docs/">Manual</a>
         <a class="btn btn-volt" data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">Download</a>
       </div>
     </nav>
@@ -566,10 +572,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       <div class="faq">
         <details open><summary>Is it really free?</summary><p>Yes. Capture, the loupe, numbered files, recent captures and the editor are free for good. No subscription, ever.</p></details>
         <details><summary>Does it send my screenshots anywhere?</summary><p>No. Files go to the folder you pick. The only thing A9 Snap sends is a check for updates.</p></details>
-        <details><summary>Is it safe to install?</summary><p>Yes. Early builds aren’t signed with a Windows certificate yet, so Windows may say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. Signed builds arrive with the Store release. There’s no account, and nothing leaves your PC except the update check.</p></details>
+        <details><summary>Is it safe to install?</summary><p>Yes. Early builds aren’t signed with a Windows certificate yet, so Windows may say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. Signed builds arrive with the Store release. There’s no account, and nothing leaves your PC except the update check. The <a href="/docs/getting-started/">manual</a> shows each screen.</p></details>
         <details><summary>Two monitors? 150% scaling?</summary><p>Yes. Every monitor is captured at its real resolution, and the selection lands on the pixels you see.</p></details>
-        <details><summary>Can I change Alt+Z?</summary><p>Yes, in Settings. If another app already owns a shortcut, A9 Snap tells you instead of failing quietly.</p></details>
+        <details><summary>Can I change Alt+Z?</summary><p>Yes, in Settings. If another app already owns a shortcut, A9 Snap tells you instead of failing quietly. <a href="/docs/settings/#shortcuts">Shortcuts in the manual</a> lists every key.</p></details>
         <details><summary>Mac or Linux?</summary><p>Windows 10 and 11 for now.</p></details>
+        <details><summary>Where is the manual?</summary><p>At <a href="/docs/">a9snap.com/docs</a>: how to capture, the recent captures strip, the editor, every setting, and what to do if something goes wrong. It has a search box, and the app’s Home window links to it.</p></details>
       </div>
     </div>
   </section>
@@ -590,6 +597,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 <footer>
   <div class="wrap">
     <span class="brand foot-brand" role="img" aria-label="A9 Snap"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span><span class="by">An A9 Solutions product</span></span>
+    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a class="ver" data-ver href="/docs/whats-new/">v0.3.2</a></div>
     <span class="mono">Point. Snap. Paste.</span>
   </div>
 </footer>

@@ -1,13 +1,13 @@
 {
-  "version": "0.3.3",
-  "notes": "- **The A9 Snap manual is at a9snap.com/docs**: how to capture, the recent captures strip, the editor (and what Save, Save as new and Revert do to your files), every setting, Start at login, keyboard shortcuts, privacy, and what to do when something goes wrong. It has a search box, screenshots, and an \"On this page\" list on each page.\n- **A Manual row in the Home window** (under the section menu) opens it in your browser, and a **?** button at the top right of every section opens the page for that section. **F1** with the Home window in front does the same, and the tray menu has a **Manual** item above Settings.",
-  "pub_date": "2026-10-27T14:47:28Z",
+  "version": "0.3.4",
+  "notes": "- **Delete a screenshot from Home.** Point at a capture in Recent captures and a small red trash can appears in its corner (also when it has the keyboard focus; always visible on a touch screen). Click it, or press **Delete** on a focused capture: it fades out, the grid fills with the next-newest one, and a note at the bottom says \"Deleted snag_0042.png · Undo\" for 6 seconds. The file and, if you had edited it, its hidden original in `.a9snap` go to the Recycle Bin, never away for good, and Undo puts both back under the same names. If Windows can't move the file (another app has it open, say) the capture stays and the note says why.\n- **The strip has the same.** **Delete** takes the picked captures (or the focused one) to the Recycle Bin with one \"Deleted 3 screenshots · Undo\" note, a small trash can shows on a card under the pointer, and the right-click menu's Delete takes the whole selection a card belongs to.\n- **A capture deleted from A9 Snap keeps its number** while the app is running: deleting the newest one no longer hands its number to the next capture, so \"Next file\" stays where it was. (Files deleted in Explorer still follow the folder, as before.)",
+  "pub_date": "2026-10-27T15:45:32Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0tZdWZSc3NTUDBIbEZkbm45QzJBT0ltUitkUlM3MjRyNm5SVlQyU2NKK1k3RmJYSkVOYXdFZVhjaTB5SkJWL1JJek5vbjdLL2tKeG9FUUIwazQrR3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTEyNDM0CWZpbGU6QTkgU25hcF8wLjMuM194NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjMKQzVwaUYydDE0VDhJUXl4c09nYVFWeXhPeWFzWXpyU01yMW1FcDhyZWdrOGVvekt5d0tWT3BEd2ZXdkRBaVFkZzFTSWRFVTFUQ0crQkxZSFRrVm5BQ3c9PQo=",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.3/A9Snap_0.3.3_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0w5LzMzRk5wSXYzNlZ0OGw1UWNyeXZUd1QyLy9KWVgwRGtvMzBObGt3a0dFWVRkQTlnY01jTFRUUU1pZFFaV0dSOE1UbUgraWpRdXdyR3hnWFBmVVFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTE1OTE5CWZpbGU6QTkgU25hcF8wLjMuNF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjQKTXoveE5KSFBHTm5aRTkzVzNqODFPQ2hoVVEzM1RLQVZmY2tRVVdhaHhyclkvVllmRE51d1QzaGNlQ1BEQkliMjNiRXY1ZHRyM21xM3NWVnhxUEJTQ1E9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.4/A9Snap_0.3.4_x64-setup.exe"
     }
   },
-  "installer_sha256": "0297b7f1a5177f5592803225a19d3a110764e4625a2310b504c13dadb8bff0d4",
-  "installer_size": 2830202
+  "installer_sha256": "d7abbf4a49c3b97fdefa5e1836e257f806e753c5325c701b97e785b50e105c97",
+  "installer_size": 2840054
 }

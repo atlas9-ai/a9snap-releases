@@ -1,0 +1,13 @@
+{
+  "version": "0.3.6",
+  "notes": "- **A9 Snap is packaged for the Microsoft Store.** The release now also builds `A9Snap_<version>_x64.msix`, the same program in an MSIX package that Microsoft signs after it passes certification, so a Store install has no unknown-publisher warning and Windows does the updating. The installer from a9snap.com and its updater are unchanged.\n- **The Store version behaves like a Store app.** It makes no update check and shows no update controls (**Updates and about** says \"Updates come from the Microsoft Store.\"); Start at login uses Windows' startup task, off until you switch it on, and the restart recovery from 0.3.2 works the same way; settings and the log live in the app's own folder (the manual says where), your screenshots stay in your screenshots folder. If the installer copy is installed too, the Store version tells you once that the two don't share settings.",
+  "pub_date": "2026-10-28T00:28:12Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0F6YmFnczlwemp3VUx5T0kwRnp5UXo4eU1qTURRYzNuT09PMWxDZG9EdGUzcytTUzRHNzJsOERsNG1GdnFSeDZxa01YZ01hYk1IRDdyTzFGby9LU0FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTQ3MjcxCWZpbGU6QTkgU25hcF8wLjMuNl94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjYKWTgxeWpSMzRZcnVGRmdyeXBpVFNZZ1M0aEEreEg0MU4wVmVpQW83azB3MkM4WGZxMTJxY0NwbFdIbDFTTEtrMC9UTmZOdi8rYVZlUmJJRk9CYUQzQ3c9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.3.6/A9Snap_0.3.6_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "dea7896591cc944f56358e051f54ba022fdead52d0ad2caeff91b47fdcb8a667",
+  "installer_size": 2860937
+}

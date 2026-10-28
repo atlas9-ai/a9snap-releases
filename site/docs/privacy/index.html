@@ -67,10 +67,10 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Reference</p>
       <h1>Privacy</h1>
       <p class="docs-lead">Nothing leaves your PC except the update check. No account, no telemetry, no uploads.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.5</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.3.6</p>
       <p>A9 Snap is built to stay on your computer. This page lists everything it stores and everything it sends.</p>
 <h2 id="what-leaves-your-pc">What leaves your PC<a class="anchor" href="#what-leaves-your-pc" aria-label="Link to What leaves your PC">#</a></h2>
-<p>Only the update check. See <a href="#the-update-check">The update check</a>. A9 Snap has no account, no sign-in, no analytics and no crash reporting. It never uploads a screenshot anywhere.</p>
+<p>Only the update check, and the Microsoft Store version of A9 Snap does not even make that: the Store updates it. See <a href="#the-update-check">The update check</a>. A9 Snap has no account, no sign-in, no analytics and no crash reporting. It never uploads a screenshot anywhere.</p>
 <h2 id="the-update-check">The update check<a class="anchor" href="#the-update-check" aria-label="Link to The update check">#</a></h2>
 <p>On launch and every few hours, A9 Snap asks one public file whether a newer version exists. The file is <code>channels/dev.json</code> or <code>channels/stable.json</code>, depending on your <a href="/docs/updates-and-channels/">channel</a>, at <code>raw.githubusercontent.com</code> in the A9 Snap releases repository on GitHub. If there is a newer version, A9 Snap downloads the installer from that same repository&#39;s releases and checks its signature before it will install anything.</p>
 <p>Those requests carry the normal information any web request does, such as your IP address. They carry no screenshot, no file name and no setting.</p>

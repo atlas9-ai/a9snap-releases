@@ -1,0 +1,13 @@
+{
+  "version": "0.5.0",
+  "notes": "- **Alt+Z captures a window, the screen or a region.** While the picker is up, the window under the pointer is outlined in Volt with its title and its size. **Click** to capture that window, cut from the frozen screen by its visible frame (no invisible resize border; a maximized window is the monitor's work area). **Click the bare desktop, or press F,** for the whole monitor the pointer is on (outlined and labelled **Screen** so you can see it first). **Drag** still takes a region, and the outline goes away once the drag passes 4 pixels. A window that spans two monitors is cut to the monitor you click on. Alt+X (OCR capture) uses the same picker.\n- **A click no longer cancels.** It takes the window under it, or the screen. Esc and right-click still cancel.\n- **A key hint** at the bottom of the monitor you are on: *Click a window · Drag a region · F full screen · Esc cancel*. It shows for the first 3 seconds of each picker, and the whole time for your first 5 captures after install.",
+  "pub_date": "2026-10-29T22:47:15Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0ZDUUxRRVpFRDBDcHN1dWJqZVVFM1FtSlZtc3FzT0FYUmJ0RzgyV1JaaXRSd2pHdzVlWUlEcmViNkxOUzhIbHdXLzN4bjA3MTZ5VXRxV3Exdk5QY3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMzE0MDE0CWZpbGU6QTkgU25hcF8wLjUuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC41LjAKOEw4MnRoZjZIK2RxMlFCaGFrTTZZb1Z0S2JrQmtDOHBhSmZkck00TVhkaGNnVyszTjJ0d2NhUlpNdCsranRROWxSbXNkdHI2d05SSGFsZXlBQnREQVE9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.5.0/A9Snap_0.5.0_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "8475849434cf269b6059f853fb6ade0b9efdea65b7770095e911c4dfe8db1f5a",
+  "installer_size": 2867436
+}

@@ -41,8 +41,14 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;heigh
 .btn-volt.lg{padding:15px 28px;font-size:17px}
 .btn-ghost{border-color:#3A3D42;color:var(--bone);padding:15px 26px;background:transparent;font-size:17px}
 .btn-ghost:hover{border-color:var(--steel)}
+.store-badge{display:inline-flex;line-height:0;border-radius:6px;flex:none}
+.store-badge img{display:block;height:36px;width:auto}
+.store-badge.lg{margin:1px 2px 1px 0}
+.store-badge.lg img{height:52px}
+.fine.alt a{color:var(--mist)}
+.fine.alt a:hover{color:var(--bone)}
 .links a[aria-current="page"]{color:var(--bone)}
-@media (max-width:760px){.links{gap:18px}.links a:not(.btn):not(.nav-manual){display:none}}
+@media (max-width:760px){.links{gap:18px}.links a:not(.btn):not(.nav-manual):not(.store-badge){display:none}}
 kbd{font-family:var(--mono);font-size:.85em;background:var(--raised);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 7px;color:var(--bone)}
 footer{border-top:1px solid var(--line);padding-block:40px;font-size:14px;color:var(--steel)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}

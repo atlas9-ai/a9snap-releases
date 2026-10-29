@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Recent captures</p>
       <h1>The recent captures strip</h1>
       <p class="docs-lead">One key shows your newest captures as thumbnails. Pick some and copy them, drag them into a chat, or open one to draw on it.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.5</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.5.1</p>
       <p>The strip is for the moment after you have taken a few screenshots and want to send some of them. It shows your newest captures, newest first, taken from the screenshots folder.</p>
 <p><figure class="shot"><img src="/img/docs/strip-selected-1x.webp" srcset="/img/docs/strip-selected-1x.webp 1x, /img/docs/strip-selected.webp 2x" width="1548" height="266" alt="The recent captures strip with three of the captures selected" loading="lazy" decoding="async"><figcaption>The strip with three captures picked. The Copy button says what one click will copy.</figcaption></figure></p>
 <h2 id="open-the-strip">Open the strip<a class="anchor" href="#open-the-strip" aria-label="Link to Open the strip">#</a></h2>
@@ -94,6 +94,16 @@
 </ul>
 <p>A note says <strong>Copied 4 captures</strong> and the strip closes.</p>
 <p>To move around with the keyboard, use the arrow keys, <kbd>Home</kbd> and <kbd>End</kbd>. <kbd>Space</kbd> picks or unpicks the focused capture, and <kbd>Ctrl</kbd>+<kbd>A</kbd> picks all of them.</p>
+<h2 id="search-your-captures">Search your captures<a class="anchor" href="#search-your-captures" aria-label="Link to Search your captures">#</a></h2>
+<p>The strip shows your 12 newest, but the search looks through <strong>every</strong> capture in the folder.</p>
+<ul>
+<li>Click the <strong>Search captures</strong> box at the top, or press <kbd>Ctrl</kbd>+<kbd>F</kbd> or <kbd>/</kbd>. The box does not take the keyboard when the strip opens, so <kbd>E</kbd>, <kbd>Enter</kbd>, <kbd>Delete</kbd> and the arrow keys keep working on the cards until you ask for it.</li>
+<li>Type part of a file name, such as <code>07</code> or <code>snag_01</code>. It ignores capital letters. The strip shows the newest captures that match, and says <strong>Showing 12 of 48</strong> when there are more than fit.</li>
+<li>The chips under the box narrow the list further: <strong>Today</strong>, <strong>This week</strong> (today and the six days before, by the time each file was last saved) and <strong>Edited</strong> (captures you marked up in the editor, the ones with the Volt dot). Click a chip to turn it on, and again to turn it off. A chip that is on is Volt. Chips and text work together: both must match.</li>
+<li><kbd>Down</kbd>, <kbd>Tab</kbd> or <kbd>Enter</kbd> in the box moves to the first result. <kbd>Esc</kbd> in the box clears the text first; press <kbd>Esc</kbd> again to close the strip.</li>
+<li>When nothing matches, the strip says <strong>No captures match</strong> with a <strong>Clear</strong> link that turns the search off.</li>
+</ul>
+<p>Picking, copying, dragging, editing and deleting work the same on the results. The search starts empty each time you open the strip.</p>
 <h2 id="edit-a-capture">Edit a capture<a class="anchor" href="#edit-a-capture" aria-label="Link to Edit a capture">#</a></h2>
 <p>Press <kbd>E</kbd> to open the picked capture in the <a href="/docs/mark-up-a-screenshot/">editor</a>. If you picked none or several, <kbd>E</kbd> opens the one with the focus ring. Double-clicking a capture does the same. A small Volt dot next to a name means the capture has been edited and its original is kept.</p>
 <h2 id="the-right-click-menu">The right-click menu<a class="anchor" href="#the-right-click-menu" aria-label="Link to The right-click menu">#</a></h2>
@@ -118,9 +128,9 @@
 <h2 id="drag-captures-out">Drag captures out<a class="anchor" href="#drag-captures-out" aria-label="Link to Drag captures out">#</a></h2>
 <p>Drag one capture, or the whole selection, out of the strip. They go as files, so you can drop them into Explorer, a browser chat box, Teams or Outlook. If the capture you drag is part of a larger selection, the whole selection goes.</p>
 <h2 id="close-the-strip">Close the strip<a class="anchor" href="#close-the-strip" aria-label="Link to Close the strip">#</a></h2>
-<p>Press <kbd>Esc</kbd>, click anywhere outside it, or press the hotkey again. Closing never touches your clipboard.</p>
+<p>Press <kbd>Esc</kbd> (twice if the search box has text in it), click anywhere outside it, or press the hotkey again. Closing never touches your clipboard.</p>
 <h2 id="how-many-captures-it-shows">How many captures it shows<a class="anchor" href="#how-many-captures-it-shows" aria-label="Link to How many captures it shows">#</a></h2>
-<p>The strip shows 12 captures by default. To show 6 or 9 instead, change <strong>Captures in the strip</strong> in <a href="/docs/settings/#strip-and-editor">Strip and editor</a>. The strip lists only files named like your prefix, such as <code>snag_0042.png</code>. See <a href="/docs/where-screenshots-go/#file-names-and-numbering">Where screenshots go</a>.</p>
+<p>The strip shows 12 captures by default, and the <a href="#search-your-captures">search</a> reaches the rest. To show 6 or 9 instead, change <strong>Captures in the strip</strong> in <a href="/docs/settings/#strip-and-editor">Strip and editor</a>. The strip lists only files named like your prefix, such as <code>snag_0042.png</code>. See <a href="/docs/where-screenshots-go/#file-names-and-numbering">Where screenshots go</a>.</p>
 <h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
 <ul>
 <li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li>
@@ -131,7 +141,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/where-screenshots-go/"><span class="docs-step-l">Previous</span><span>Where screenshots go</span></a><a class="docs-step next" href="/docs/mark-up-a-screenshot/"><span class="docs-step-l">Next</span><span>Mark up a screenshot</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#open-the-strip">Open the strip</a></li><li class="d2"><a href="#pick-captures-and-copy-them">Pick captures and copy them</a></li><li class="d2"><a href="#edit-a-capture">Edit a capture</a></li><li class="d2"><a href="#the-right-click-menu">The right-click menu</a></li><li class="d2"><a href="#delete-a-screenshot">Delete a screenshot</a></li><li class="d2"><a href="#drag-captures-out">Drag captures out</a></li><li class="d2"><a href="#close-the-strip">Close the strip</a></li><li class="d2"><a href="#how-many-captures-it-shows">How many captures it shows</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#open-the-strip">Open the strip</a></li><li class="d2"><a href="#pick-captures-and-copy-them">Pick captures and copy them</a></li><li class="d2"><a href="#search-your-captures">Search your captures</a></li><li class="d2"><a href="#edit-a-capture">Edit a capture</a></li><li class="d2"><a href="#the-right-click-menu">The right-click menu</a></li><li class="d2"><a href="#delete-a-screenshot">Delete a screenshot</a></li><li class="d2"><a href="#drag-captures-out">Drag captures out</a></li><li class="d2"><a href="#close-the-strip">Close the strip</a></li><li class="d2"><a href="#how-many-captures-it-shows">How many captures it shows</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

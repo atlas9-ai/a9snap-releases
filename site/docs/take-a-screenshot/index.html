@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Take a screenshot · A9 Snap Manual</title>
-<meta name="description" content="Press Alt+Z, drag a box, let go. The picture is on your clipboard and saved as a numbered file.">
+<meta name="description" content="Press Alt+Z, then click a window, press F for the whole screen, or drag a box. The picture is on your clipboard and saved as a numbered file.">
 <link rel="canonical" href="https://a9snap.com/docs/take-a-screenshot/">
 <meta name="theme-color" content="#0B0C0E">
 <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A9 Snap">
 <meta property="og:title" content="Take a screenshot · A9 Snap Manual">
-<meta property="og:description" content="Press Alt+Z, drag a box, let go. The picture is on your clipboard and saved as a numbered file.">
+<meta property="og:description" content="Press Alt+Z, then click a window, press F for the whole screen, or drag a box. The picture is on your clipboard and saved as a numbered file.">
 <meta property="og:url" content="https://a9snap.com/docs/take-a-screenshot/">
 <meta property="og:image" content="https://a9snap.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -66,14 +66,23 @@
     <article class="docs-article">
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Capture</p>
       <h1>Take a screenshot</h1>
-      <p class="docs-lead">Press Alt+Z, drag a box, let go. The picture is on your clipboard and saved as a numbered file.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.5</p>
+      <p class="docs-lead">Press Alt+Z, then click a window, press F for the whole screen, or drag a box. The picture is on your clipboard and saved as a numbered file.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.5.0</p>
       <p>Use this whenever you want a picture of part of your screen. It works from any app, and it works on every monitor you have.</p>
+<h2 id="capture-a-window-a-screen-or-a-region">Capture a window, a screen or a region<a class="anchor" href="#capture-a-window-a-screen-or-a-region" aria-label="Link to Capture a window, a screen or a region">#</a></h2>
+<p>Press <kbd>Alt</kbd>+<kbd>Z</kbd> and the screen freezes. What you do next decides what you get:</p>
+<ul>
+<li><strong>Click a window.</strong> As you move the pointer, the window under it gets a Volt outline, with its title and its size. Click, and the picture is that window, the way you see it on the frozen screen, without the invisible border Windows puts around it. The picture is cut from the frozen screen, so it shows what you see: if another window overlaps it, the overlap is in the picture too.</li>
+<li><strong>Click the bare desktop, or press <kbd>F</kbd>.</strong> You get the whole monitor the pointer is on. Over the desktop the whole monitor is outlined and labelled <strong>Screen</strong>, so you can see what a click will take.</li>
+<li><strong>Drag a box.</strong> You get exactly the region you drag. The window outline goes away as soon as you start to drag.</li>
+</ul>
+<p>A hint at the bottom of the monitor you are on lists these keys: <strong>Click a window · Drag a region · F full screen · Esc cancel</strong>. It stays for the first few seconds of every capture, and on screen the whole time for your first five captures.</p>
+<p>A window that stretches over two monitors is cut to the monitor you click on. A maximized window is captured without the taskbar. Pressing <kbd>Alt</kbd>+<kbd>X</kbd> uses the same picker, so you can click a window to copy its text.</p>
 <h2 id="capture-a-region">Capture a region<a class="anchor" href="#capture-a-region" aria-label="Link to Capture a region">#</a></h2>
 <ol>
 <li>Press <kbd>Alt</kbd>+<kbd>Z</kbd>. Every monitor freezes and dims. A crosshair, a small bullseye and a magnifier follow your pointer.</li>
 <li>Move to one corner of what you want.</li>
-<li>Press the mouse button and drag to the opposite corner. The box stays bright. Four Volt corner marks frame it, and a readout shows its size, such as 640 × 220.</li>
+<li>Press the mouse button and drag to the opposite corner. The box stays bright. Four Volt corner marks frame it, and a readout shows its size, such as 640 × 220. A tiny drag, under 4 pixels, is a click, and takes the window or screen instead.</li>
 <li>Let go. The picture is on your clipboard and saved as the next numbered file in your screenshots folder.</li>
 </ol>
 <p><figure class="shot"><img src="/img/docs/take-a-screenshot-picker-1x.webp" srcset="/img/docs/take-a-screenshot-picker-1x.webp 1x, /img/docs/take-a-screenshot-picker.webp 2x" width="880" height="620" alt="The picker mid-drag: a bright selection, its size, and the magnifier next to the pointer" loading="lazy" decoding="async"><figcaption>Dragging a region. The pointer is at the bottom right corner, and the magnifier shows the pixels under it.</figcaption></figure></p>
@@ -94,8 +103,8 @@
 <ul>
 <li>Press <kbd>Esc</kbd>.</li>
 <li>Right-click.</li>
-<li>Click without dragging, or drag only a few pixels. A tiny box counts as a click, so an accidental <kbd>Alt</kbd>+<kbd>Z</kbd> costs nothing.</li>
 </ul>
+<p>A click no longer cancels: it takes the window under the pointer, or the screen. If you pressed <kbd>Alt</kbd>+<kbd>Z</kbd> by accident, press <kbd>Esc</kbd>.</p>
 <h2 id="several-monitors">Several monitors<a class="anchor" href="#several-monitors" aria-label="Link to Several monitors">#</a></h2>
 <p>A9 Snap freezes all your monitors at their real resolution, so a screenshot is sharp even with display scaling at 125% or 150%. The crosshair, bullseye and magnifier are drawn only on the monitor your pointer is on. A capture comes from one monitor: the one where you press the mouse button. If you drag past its edge, the box stops at the edge.</p>
 <h2 id="after-you-let-go">After you let go<a class="anchor" href="#after-you-let-go" aria-label="Link to After you let go">#</a></h2>
@@ -117,7 +126,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/whats-new/"><span class="docs-step-l">Previous</span><span>What's new</span></a><a class="docs-step next" href="/docs/where-screenshots-go/"><span class="docs-step-l">Next</span><span>Where screenshots go</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#capture-a-region">Capture a region</a></li><li class="d2"><a href="#copy-text-instead-with-ocr">Copy text instead with OCR</a></li><li class="d2"><a href="#land-on-the-exact-pixel">Land on the exact pixel</a></li><li class="d2"><a href="#cancel">Cancel</a></li><li class="d2"><a href="#several-monitors">Several monitors</a></li><li class="d2"><a href="#after-you-let-go">After you let go</a></li><li class="d2"><a href="#if-the-hotkey-does-nothing">If the hotkey does nothing</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#capture-a-window-a-screen-or-a-region">Capture a window, a screen or a region</a></li><li class="d2"><a href="#capture-a-region">Capture a region</a></li><li class="d2"><a href="#copy-text-instead-with-ocr">Copy text instead with OCR</a></li><li class="d2"><a href="#land-on-the-exact-pixel">Land on the exact pixel</a></li><li class="d2"><a href="#cancel">Cancel</a></li><li class="d2"><a href="#several-monitors">Several monitors</a></li><li class="d2"><a href="#after-you-let-go">After you let go</a></li><li class="d2"><a href="#if-the-hotkey-does-nothing">If the hotkey does nothing</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

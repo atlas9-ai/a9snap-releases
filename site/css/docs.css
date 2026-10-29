@@ -76,6 +76,11 @@ body.searching .docs-nav { display: none; }
 .docs-article code { font-family: var(--mono); font-size: .88em; background: var(--raised); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; color: var(--bone); overflow-wrap: anywhere; }
 .docs-article pre { margin: 0 0 18px; padding: 16px 18px; background: var(--graphite); border: 1px solid var(--line); border-radius: 12px; overflow-x: auto; }
 .docs-article pre code { background: none; border: 0; padding: 0; font-size: 13.5px; line-height: 1.6; }
+.docs-article a.store-badge { margin: 4px 0 10px; }
+.docs-article details { background: var(--graphite); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 0 0 18px; }
+.docs-article details[open] > summary { margin-bottom: 12px; }
+.docs-article summary { cursor: pointer; color: var(--bone); font-weight: 600; font-size: 16px; }
+.docs-article details > :last-child { margin-bottom: 0; }
 .docs-article kbd { min-height: 24px; font-size: 13px; vertical-align: 1px; }
 .docs-article blockquote { margin: 0 0 18px; padding: 14px 18px; border: 1px solid var(--line); border-left: 3px solid var(--volt); border-radius: 10px; background: var(--graphite); }
 .docs-article hr { border: 0; border-top: 1px solid var(--line); margin: 36px 0; }

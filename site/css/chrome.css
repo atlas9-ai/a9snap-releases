@@ -43,8 +43,13 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;heigh
 .btn-ghost:hover{border-color:var(--steel)}
 .store-badge{display:inline-flex;line-height:0;border-radius:6px;flex:none}
 .store-badge img{display:block;height:36px;width:auto}
-.store-badge.lg{margin:1px 2px 1px 0}
-.store-badge.lg img{height:52px}
+.store-badge.lg{margin:2px 3px 2px 0}
+.store-badge.lg img{height:60px}
+@media (max-width:600px){.store-badge.lg img{height:52px}}
+@media (max-width:400px){.links{gap:12px}.store-badge img{height:32px}}
+@media (max-width:340px){.links a.nav-manual{display:none}}
+.btn-quiet{color:var(--mist);padding:15px 10px;font-size:16px;font-weight:500}
+.btn-quiet:hover{color:var(--bone)}
 .fine.alt a{color:var(--mist)}
 .fine.alt a:hover{color:var(--bone)}
 .links a[aria-current="page"]{color:var(--bone)}

@@ -83,8 +83,13 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;heigh
 .btn-ghost:hover{border-color:var(--steel)}
 .store-badge{display:inline-flex;line-height:0;border-radius:6px;flex:none}
 .store-badge img{display:block;height:36px;width:auto}
-.store-badge.lg{margin:1px 2px 1px 0}
-.store-badge.lg img{height:52px}
+.store-badge.lg{margin:2px 3px 2px 0}
+.store-badge.lg img{height:60px}
+@media (max-width:600px){.store-badge.lg img{height:52px}}
+@media (max-width:400px){.links{gap:12px}.store-badge img{height:32px}}
+@media (max-width:340px){.links a.nav-manual{display:none}}
+.btn-quiet{color:var(--mist);padding:15px 10px;font-size:16px;font-weight:500}
+.btn-quiet:hover{color:var(--bone)}
 .fine.alt a{color:var(--mist)}
 .fine.alt a:hover{color:var(--bone)}
 .links a[aria-current="page"]{color:var(--bone)}
@@ -335,7 +340,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         <p class="lede">Press <kbd>Alt</kbd>+<kbd>Z</kbd> and drag over anything on your screen. <b>It’s on your clipboard before you let go</b>, ready to paste into a chat, an email, a ticket or an AI.</p>
         <div class="ctas" id="get">
           <a class="store-badge lg" data-store target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
-          <a class="btn btn-ghost" href="#describe">See why ↓</a>
+          <a class="btn btn-quiet" href="#describe">See why ↓</a>
         </div>
         <p class="fine alt">Work PC that blocks the Store? <a data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">Download the installer</a></p>
         <p class="dlmeta" data-dl-meta>Free · Early access · v0.3.1 · 2.7 MB</p>

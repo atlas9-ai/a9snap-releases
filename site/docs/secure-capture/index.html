@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Secure capture · A9 Snap Manual</title>
+<meta name="description" content="A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. It is a Pro feature.">
+<link rel="canonical" href="https://a9snap.com/docs/secure-capture/">
+<meta name="theme-color" content="#0B0C0E">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A9 Snap">
+<meta property="og:title" content="Secure capture · A9 Snap Manual">
+<meta property="og:description" content="A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. It is a Pro feature.">
+<meta property="og:url" content="https://a9snap.com/docs/secure-capture/">
+<meta property="og:image" content="https://a9snap.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/chrome.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+<body class="docs">
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="/" aria-label="A9 Snap home">
+        <svg class="mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span>
+      </a>
+      <div class="links">
+        <a href="/#how">How it works</a>
+        <a href="/#recent">Recent</a>
+        <a href="/#editor">Editor</a>
+        <a href="/#faq">FAQ</a>
+        <a class="nav-manual" href="/docs/" aria-current="page">Manual</a>
+        <a class="store-badge" data-store target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="docs-shell wrap">
+  <aside class="docs-side">
+    <button class="docs-toggle" type="button" aria-expanded="false" aria-controls="docs-nav">Manual menu</button>
+    <div id="docs-nav" class="docs-nav-wrap">
+      <form class="docs-search" role="search" action="/docs/" onsubmit="return false">
+        <label class="sr" for="docs-q">Search the manual</label>
+        <input id="docs-q" type="search" placeholder="Search the manual" autocomplete="off" spellcheck="false" aria-controls="docs-results" aria-describedby="docs-q-hint">
+        <span id="docs-q-hint" class="sr">Press the slash key to jump to search. Results appear below the box.</span>
+      </form>
+      <div id="docs-status" class="sr" role="status" aria-live="polite"></div>
+      <ul id="docs-results" class="docs-results" hidden></ul>
+      <nav class="docs-nav" aria-label="Manual">
+<div class="docs-group"><h2 class="docs-group-h">Start here</h2><ul><li><a href="/docs/">Getting started</a></li><li><a href="/docs/whats-new/">What's new</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li><li><a href="/docs/secure-capture/" aria-current="page">Secure capture</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Recent captures</h2><ul><li><a href="/docs/strip/">The recent captures strip</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/">Saving, Save as new and Revert</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li><li><a href="/docs/pro/">A9 Snap Pro</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Reference</h2><ul><li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li><li><a href="/docs/troubleshooting/">If something goes wrong</a></li><li><a href="/docs/privacy/">Privacy</a></li><li><a href="/docs/updates-and-channels/">Updates and channels</a></li></ul></div>
+      </nav>
+    </div>
+  </aside>
+  <main id="main" class="docs-main">
+    <article class="docs-article">
+      <p class="docs-crumb"><a href="/docs/">Manual</a> · Capture</p>
+      <h1>Secure capture</h1>
+      <p class="docs-lead">A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. It is a Pro feature.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.7.0</p>
+      <p>Some pictures should not end up in your screenshots folder, the strip, Windows&#39; clipboard history or a folder that syncs to the cloud: a password, a bank page, a private message. <strong>Secure capture</strong> is for those. It is part of <a href="/docs/pro/">A9 Snap Pro</a>.</p>
+<h2 id="take-a-secure-capture">Take a secure capture<a class="anchor" href="#take-a-secure-capture" aria-label="Link to Take a secure capture">#</a></h2>
+<ol>
+<li>Press <kbd>Alt</kbd>+<kbd>Z</kbd>.</li>
+<li>Tap <kbd>S</kbd>. A padlock appears on the outline, and the size says <strong>Secure</strong>, for example <em>Secure · 600 × 400</em>.</li>
+<li>Click a window, press <kbd>F</kbd> for the whole screen, or drag a region, as you always do.</li>
+</ol>
+<p>Tap <kbd>S</kbd> again to turn it off. It is never sticky: the next capture starts as a normal one.</p>
+<p>The toast says <strong>Secure · copied</strong> (or <strong>Secure · copied · saved</strong>) with a padlock. It shows no thumbnail and no <strong>Edit</strong> button, and clicking it does nothing, so it cannot lead to the strip.</p>
+<p>Without Pro, <kbd>S</kbd> does not switch secure on. The picker says <em>Secure capture is part of A9 Snap Pro</em>, and the capture is a normal one. When the picker closes, the Pro sheet opens once, then stays out of your way until the next time you start A9 Snap.</p>
+<h2 id="where-it-goes">Where it goes<a class="anchor" href="#where-it-goes" aria-label="Link to Where it goes">#</a></h2>
+<ul>
+<li><strong>The clipboard</strong>, with the formats that keep it out of Windows&#39; clipboard history (<kbd>Win</kbd>+<kbd>V</kbd>) and the cloud clipboard. With <strong>Also copy as file</strong> on and a file saved, the file&#39;s path rides along too.</li>
+<li><strong>The secure folder</strong>, unless you chose <strong>Clipboard only</strong>. The default is <code>%LOCALAPPDATA%\A9 Snap\Secure</code>, which is not synced. Files are numbered inside that folder only, with the same prefix and digits as your screenshots, so your screenshots folder&#39;s numbering and <strong>Next file</strong> never move.</li>
+</ul>
+<p>The secure folder is hidden and marked as not to be content-indexed, so Windows Search and Explorer&#39;s thumbnail cache leave it alone. Use <strong>Open</strong> in the settings below to see it.</p>
+<h2 id="what-a-secure-capture-never-does">What a secure capture never does<a class="anchor" href="#what-a-secure-capture-never-does" aria-label="Link to What a secure capture never does">#</a></h2>
+<ul>
+<li>It never appears in the <a href="/docs/strip/">strip</a>, in the Home window&#39;s recent captures, in search or in the app chips.</li>
+<li>It never notes which app or window it came from.</li>
+<li>It never opens the editor, even with <strong>Open the editor after every capture</strong> on. Editing a secure capture is not possible, because the editor keeps originals in the screenshots folder.</li>
+<li>The log says &quot;secure capture saved&quot; and the size and timing, and never a file name.</li>
+</ul>
+<h2 id="settings">Settings<a class="anchor" href="#settings" aria-label="Link to Settings">#</a></h2>
+<p>Open <strong>Saving</strong> in the Home window and find <strong>Secure screenshots</strong>. Without Pro the card shows a <strong>Pro</strong> badge, and clicking it opens the Pro sheet.</p>
+<ul>
+<li><strong>Where secure captures go.</strong> <strong>Secure folder</strong> (the default) or <strong>Clipboard only</strong>, which writes no file anywhere.</li>
+<li><strong>Secure folder.</strong> <strong>Browse…</strong> chooses another folder, but not your screenshots folder. A folder under OneDrive, Dropbox or another synced folder shows <em>This folder is synced to the cloud; secure captures would be uploaded</em>, because they would be. <strong>Open</strong> shows the folder in Explorer, and on the Microsoft Store version it shows the real folder, even though Windows keeps that version&#39;s AppData in its own place. <strong>Empty now</strong> asks first, in the window.</li>
+<li><strong>Clear the secure folder.</strong> <strong>Never</strong>, <strong>When A9 Snap quits</strong>, <strong>After 1 hour</strong>, <strong>After 24 hours</strong> or <strong>After 7 days</strong>. A picture that came due while A9 Snap was closed is cleared the next time it starts. <strong>Secure pictures are deleted for good, not to the Recycle Bin.</strong> This is the one place A9 Snap deletes without a way back, because a Recycle Bin copy would defeat the point. It only clears a folder it made itself, and only <code>.png</code> files directly in it: choose a folder that already holds other files and A9 Snap uses it but never clears it.</li>
+<li><strong>Clear the clipboard after.</strong> <strong>Off</strong> (the default), <strong>30 seconds</strong>, <strong>1 minute</strong> or <strong>5 minutes</strong>. A9 Snap clears the clipboard only if it still holds the secure picture. Anything you copied since is never cleared.</li>
+</ul>
+<h2 id="what-it-does-not-do">What it does not do<a class="anchor" href="#what-it-does-not-do" aria-label="Link to What it does not do">#</a></h2>
+<p>A secure capture is not encrypted, and it is not locked away: anyone who can open your Windows account can open the secure folder. It keeps a picture out of the places that would otherwise keep it, and it can delete it for you on a schedule. See <a href="/docs/privacy/">Privacy</a>.</p>
+<h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
+<ul>
+<li><a href="/docs/pro/">A9 Snap Pro</a></li>
+<li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li>
+<li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li>
+<li><a href="/docs/privacy/">Privacy</a></li>
+</ul>
+
+      <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
+      <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/pro/"><span class="docs-step-l">Previous</span><span>A9 Snap Pro</span></a><span></span></nav>
+    </article>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#take-a-secure-capture">Take a secure capture</a></li><li class="d2"><a href="#where-it-goes">Where it goes</a></li><li class="d2"><a href="#what-a-secure-capture-never-does">What a secure capture never does</a></li><li class="d2"><a href="#settings">Settings</a></li><li class="d2"><a href="#what-it-does-not-do">What it does not do</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+  </main>
+</div>
+<footer>
+  <div class="wrap">
+    <span class="brand foot-brand" role="img" aria-label="A9 Snap"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span><span class="by">An A9 Solutions product</span></span>
+    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a class="ver" data-ver href="/docs/whats-new/">v0.3.3</a></div>
+    <span class="mono">Point. Snap. Paste.</span>
+  </div>
+</footer>
+<script type="module" src="/js/docs.js"></script>
+<script src="/download.js" defer></script>
+</body>
+</html>

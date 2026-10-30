@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy · A9 Snap Manual</title>
-<meta name="description" content="Nothing leaves your PC except the update check. No account, no telemetry, no uploads.">
+<meta name="description" content="Nothing leaves your PC except the update check and, only if you use Pro, its license check. No account, no telemetry, no uploads.">
 <link rel="canonical" href="https://a9snap.com/docs/privacy/">
 <meta name="theme-color" content="#0B0C0E">
 <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A9 Snap">
 <meta property="og:title" content="Privacy · A9 Snap Manual">
-<meta property="og:description" content="Nothing leaves your PC except the update check. No account, no telemetry, no uploads.">
+<meta property="og:description" content="Nothing leaves your PC except the update check and, only if you use Pro, its license check. No account, no telemetry, no uploads.">
 <meta property="og:url" content="https://a9snap.com/docs/privacy/">
 <meta property="og:image" content="https://a9snap.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -57,7 +57,7 @@
 <div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Recent captures</h2><ul><li><a href="/docs/strip/">The recent captures strip</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/">Saving, Save as new and Revert</a></li></ul></div>
-<div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li><li><a href="/docs/pro/">A9 Snap Pro</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Reference</h2><ul><li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li><li><a href="/docs/troubleshooting/">If something goes wrong</a></li><li><a href="/docs/privacy/" aria-current="page">Privacy</a></li><li><a href="/docs/updates-and-channels/">Updates and channels</a></li></ul></div>
       </nav>
     </div>
@@ -66,21 +66,33 @@
     <article class="docs-article">
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Reference</p>
       <h1>Privacy</h1>
-      <p class="docs-lead">Nothing leaves your PC except the update check. No account, no telemetry, no uploads.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.5.2</p>
+      <p class="docs-lead">Nothing leaves your PC except the update check and, only if you use Pro, its license check. No account, no telemetry, no uploads.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.6.0</p>
       <p>A9 Snap is built to stay on your computer. This page lists everything it stores and everything it sends.</p>
 <h2 id="what-leaves-your-pc">What leaves your PC<a class="anchor" href="#what-leaves-your-pc" aria-label="Link to What leaves your PC">#</a></h2>
-<p>Only the update check, and the Microsoft Store version of A9 Snap does not even make that: the Store updates it. See <a href="#the-update-check">The update check</a>. A9 Snap has no account, no sign-in, no analytics and no crash reporting. It never uploads a screenshot anywhere.</p>
+<p>Two things, and Free needs only the first. The update check, which the Microsoft Store version of A9 Snap does not even make: the Store updates it. See <a href="#the-update-check">The update check</a>. And, if you buy or enter a key for <a href="/docs/pro/">A9 Snap Pro</a>, the license check. See <a href="#the-license-check">The license check</a>. A9 Snap has no account, no sign-in, no analytics and no crash reporting. It never uploads a screenshot anywhere.</p>
 <h2 id="the-update-check">The update check<a class="anchor" href="#the-update-check" aria-label="Link to The update check">#</a></h2>
 <p>On launch and every few hours, A9 Snap asks one public file whether a newer version exists. The file is <code>channels/dev.json</code> or <code>channels/stable.json</code>, depending on your <a href="/docs/updates-and-channels/">channel</a>, at <code>raw.githubusercontent.com</code> in the A9 Snap releases repository on GitHub. If there is a newer version, A9 Snap downloads the installer from that same repository&#39;s releases and checks its signature before it will install anything.</p>
 <p>Those requests carry the normal information any web request does, such as your IP address. They carry no screenshot, no file name and no setting.</p>
+<h2 id="the-license-check">The license check<a class="anchor" href="#the-license-check" aria-label="Link to The license check">#</a></h2>
+<p><strong>Free never makes a license check.</strong> Pro does, and only after you press <strong>Get Pro</strong>, <strong>Enter key</strong> or <strong>Restore purchase</strong>, or once a key is on your PC: then A9 Snap asks the license server at <code>a9voice.com</code> whether the key is still good, when it starts and once a day, never in the middle of a capture.</p>
+<p>What a check sends:</p>
+<ul>
+<li>the product name (<code>a9snap-pro</code>);</li>
+<li>your license key, once you have one;</li>
+<li>an identifier for this PC, which is a one-way hash of the Windows machine ID. The machine ID itself is never sent;</li>
+<li>a label for this PC, such as <code>PC 1a2b3c4d</code>, made from that hash. It is never your computer&#39;s name;</li>
+<li>for <strong>Get Pro</strong>, the same identifier, so the payment can be matched to this PC. Stripe takes your card details and email on its own page; A9 Snap never sees them.</li>
+</ul>
+<p>Those requests carry the normal information any web request does, such as your IP address. They carry no screenshot, no file name, no window title and no setting. The server stores your email and the payment from the purchase, and the PCs a key is on.</p>
+<p>If your PC is offline, Pro keeps working for 30 days from the last good answer. A refunded key stops working at the next check.</p>
 <h2 id="what-is-stored-on-your-pc">What is stored on your PC<a class="anchor" href="#what-is-stored-on-your-pc" aria-label="Link to What is stored on your PC">#</a></h2>
 <ul>
 <li><strong>Screenshots</strong> go to the clipboard and to your screenshots folder, and nowhere else. Thumbnails for the strip and the Home window are made in memory and never written to disk.</li>
 <li><strong>OCR</strong> uses Windows&#39; built-in recognizer on your PC. The picture goes to it in memory only, and the recognized text goes only to the clipboard when you ask for it. An OCR capture saves no PNG. There are no temporary image or text files and no recognized text in the log.</li>
 <li><strong>Originals of edited captures</strong> are kept in a hidden <code>.a9snap</code> folder inside your screenshots folder. After a blur, the saved file has the pixels destroyed but the original still holds them. See <a href="/docs/saving-and-revert/#blur-is-permanent-in-the-saved-file">Blur is permanent in the saved file</a>. Delete <code>.a9snap</code> before you share the whole folder.</li>
 <li><strong>Which app each capture came from</strong> is noted in <code>.a9snap\captures.json</code>, in the same hidden folder next to the originals. For each new capture it holds the file name, size and time, the app&#39;s name (such as Google Chrome) and the window&#39;s title, so the strip can search by them. <strong>Window titles can contain an email subject or a document&#39;s name.</strong> The notes stay in your screenshots folder, never leave this PC and never go into the log. Turn them off with <strong>Remember which app each capture came from</strong> in <a href="/docs/settings/#saving">Saving</a>, and press <strong>Clear</strong> there to delete what is already noted. Delete <code>.a9snap</code> before you share the whole folder. Secure capture, when it arrives, will never note them.</li>
-<li><strong>Settings</strong> are in <code>settings.json</code> in <code>%APPDATA%\ai.atlas9.a9snap</code>.</li>
+<li><strong>Settings</strong> are in <code>settings.json</code> in <code>%APPDATA%\ai.atlas9.a9snap</code>. A Pro key, if you have one, is kept beside it in <code>pro-license.json</code>.</li>
 <li><strong>The log</strong> is in the <code>logs</code> folder beside it. It records sizes, timings and status codes, never the content of a screenshot, a file or recognized text.</li>
 <li><strong>Start at login</strong> adds one startup entry for your Windows user, and a one-time Task Scheduler task when Windows ends your session. See <a href="/docs/start-at-login/">Start at login</a>.</li>
 </ul>
@@ -95,7 +107,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/troubleshooting/"><span class="docs-step-l">Previous</span><span>If something goes wrong</span></a><a class="docs-step next" href="/docs/updates-and-channels/"><span class="docs-step-l">Next</span><span>Updates and channels</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#what-leaves-your-pc">What leaves your PC</a></li><li class="d2"><a href="#the-update-check">The update check</a></li><li class="d2"><a href="#what-is-stored-on-your-pc">What is stored on your PC</a></li><li class="d2"><a href="#this-website">This website</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#what-leaves-your-pc">What leaves your PC</a></li><li class="d2"><a href="#the-update-check">The update check</a></li><li class="d2"><a href="#the-license-check">The license check</a></li><li class="d2"><a href="#what-is-stored-on-your-pc">What is stored on your PC</a></li><li class="d2"><a href="#this-website">This website</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

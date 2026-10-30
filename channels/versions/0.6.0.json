@@ -1,0 +1,13 @@
+{
+  "version": "0.6.0",
+  "notes": "- **A9 Snap Pro: the foundation.** A new **Pro** section in the Home window says whether this PC is **Free** or has **Pro**, and has **Get Pro, $14.99**, **Enter key** and **Restore purchase**, what Pro includes (Secure capture now; Search inside screenshots, Video capture and Scrolling capture coming) and the 14-day money-back guarantee. Pro is a one-time payment for up to 3 of your PCs with every update included. **Get Pro** opens the checkout in your browser and Pro turns on here, with no restart, as soon as the payment goes through; **Enter key** unlocks the same way with the key from the purchase email; a key already on three PCs shows the license server's message as it is, and **Deactivate this PC** frees a seat. A refunded key turns Pro off at the next check. There is no trial, and nothing you have today changes: Free needs no account and no license.\n- **A license check, for Pro only.** **Free never makes one.** Once a key is on the PC, A9 Snap asks the license server (a9voice.com) whether it is still good when it starts and once a day, never in the middle of a capture, and sends only the product name, the key, a one-way hash of the Windows machine ID and a label made from that hash: no screenshot, file name, window title or setting. If the PC is offline, Pro keeps working for 30 days from the last good answer. The installer now shows a short license that says so, and the privacy page lists exactly what is sent. The update check is still the only other network call.\n- **For Pro features to come:** every Pro feature will show one sheet when Pro is locked (*\"Secure capture is part of A9 Snap Pro\"*, with **Get Pro, $14.99**, **Enter key** and **Not now**), and a small **Pro** badge marks Pro features. No Pro feature ships in this version.",
+  "pub_date": "2026-10-30T15:56:57Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0FJU2J0UzFPdnNGdjcvaEJyMUZxMkc5cFRweUhRamhFY1hOS3dnY29jN0JmTmRkbVdFNzIrU3JIckdGcmdEdVU2WUszN0t3aGFjRHE3czYzcm50S1FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMzc1Nzk4CWZpbGU6QTkgU25hcF8wLjYuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC42LjAKUzFudngrWWp1NHFCYWNFRlorem5ic2VMMW1WcTFpNklqMXJxWWtlMTBHQWVpMzUzU0JjenMydFlhMS9XUjFTbVQ3VSswTFl2VzE2WUVUOUxJV2hHQlE9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.6.0/A9Snap_0.6.0_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "55602a5ed2e0fb8225e4bc81d50dbcd746a33e65807cb49a52ff572d0d988e75",
+  "installer_size": 3423006
+}

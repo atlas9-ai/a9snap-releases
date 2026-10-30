@@ -1,0 +1,13 @@
+{
+  "version": "0.7.1",
+  "notes": "- **A Secure capture button.** With Pro on, the Home window's sidebar has a **Secure capture** button under **Capture**, styled like **Recent captures** with a padlock and `Alt+Z, S`. It opens the picker with secure already on. The tray menu has a **Secure capture** item under **Capture region**, also only with Pro. Both appear and go the moment Pro does, with no restart; Free never sees them.\n- **The Pro page is now Pro features, and lists all eight.** Secure capture (included), then Search inside screenshots, Auto-redact, Video and GIF capture, Scrolling capture, Secure vault, Always secure for chosen apps and Send to your apps (coming to Pro). With Pro on, the top card says **Pro license activated** and \"This key is on 1 of 3 PCs.\", and the Secure capture row says how to use it, with a **How to use** link.\n- **How to use it, where you will look.** A **Secure capture** row on Shortcuts (with a Pro badge; without Pro it opens the Pro sheet) and a line under the hotkeys listing the picker's keys. The first time Pro turns on, the Home window says **Secure capture is ready. Press Alt+Z, then S.** with a **Try it** button (once per PC), and the picker's key hint comes back for the next 5 captures.\n- The manual has a **Pro features** page and a fuller **Secure capture** page.",
+  "pub_date": "2026-10-30T18:28:41Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb05SNVVVOHphNWt0OGttQStJdUd0MkhPSit3OVUvUy9JUmlhY0xpczRHYktiY3M3eDZjbng5RVhaWmpkVnBEbTBkQ3N6dTc4R1AzMjc4ZEFUTmdDdWdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMzg0OTAyCWZpbGU6QTkgU25hcF8wLjcuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC43LjEKY3BjOVBPMGoxRC9pTTB3Yng3ZDZhWnZvT0ZtYlJlMlpkc1FhK1lwNldVakp2U3JYMzdSUlByK28wUi9TbkNhZGo3VVZXeE9vcEVXMjJlcS9LUnRWQWc9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.7.1/A9Snap_0.7.1_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "face79937d7ae6334e37dba79cd340597f78af71e1e45e4e8de6d61e478806f2",
+  "installer_size": 3442691
+}

@@ -57,7 +57,7 @@
 <div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li><li><a href="/docs/secure-capture/" aria-current="page">Secure capture</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Recent captures</h2><ul><li><a href="/docs/strip/">The recent captures strip</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/">Saving, Save as new and Revert</a></li></ul></div>
-<div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li><li><a href="/docs/pro/">A9 Snap Pro</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li><li><a href="/docs/pro/">Pro features</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Reference</h2><ul><li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li><li><a href="/docs/troubleshooting/">If something goes wrong</a></li><li><a href="/docs/privacy/">Privacy</a></li><li><a href="/docs/updates-and-channels/">Updates and channels</a></li></ul></div>
       </nav>
     </div>
@@ -67,17 +67,23 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Capture</p>
       <h1>Secure capture</h1>
       <p class="docs-lead">A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. It is a Pro feature.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.7.0</p>
-      <p>Some pictures should not end up in your screenshots folder, the strip, Windows&#39; clipboard history or a folder that syncs to the cloud: a password, a bank page, a private message. <strong>Secure capture</strong> is for those. It is part of <a href="/docs/pro/">A9 Snap Pro</a>.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.7.1</p>
+      <p>Some pictures should not end up in your screenshots folder, the strip, Windows&#39; clipboard history or a folder that syncs to the cloud: a password, a bank page, a private message. <strong>Secure capture</strong> is for those. It is part of A9 Snap Pro: see <a href="/docs/pro/">Pro features</a>.</p>
 <h2 id="take-a-secure-capture">Take a secure capture<a class="anchor" href="#take-a-secure-capture" aria-label="Link to Take a secure capture">#</a></h2>
+<p>There are three ways to start one, and they all end in the same picker.</p>
+<p><strong>From the keyboard.</strong></p>
 <ol>
 <li>Press <kbd>Alt</kbd>+<kbd>Z</kbd>.</li>
 <li>Tap <kbd>S</kbd>. A padlock appears on the outline, and the size says <strong>Secure</strong>, for example <em>Secure · 600 × 400</em>.</li>
 <li>Click a window, press <kbd>F</kbd> for the whole screen, or drag a region, as you always do.</li>
 </ol>
+<p><strong>From the sidebar.</strong> With Pro on, the Home window has a <strong>Secure capture</strong> button under <strong>Capture</strong>, with <code>Alt+Z, S</code> on it. It opens the picker with secure already on, so skip step 2.</p>
+<p><figure class="shot"><img src="/img/docs/secure-capture-sidebar-1x.webp" srcset="/img/docs/secure-capture-sidebar-1x.webp 1x, /img/docs/secure-capture-sidebar.webp 2x" width="247" height="210" alt="The Home window's sidebar: Capture, then Secure capture with Alt+Z, S, then Recent captures" loading="lazy" decoding="async"><figcaption>With Pro on, the Secure capture button sits under Capture.</figcaption></figure></p>
+<p><strong>From the tray.</strong> With Pro on, the tray menu has <strong>Secure capture</strong> under <strong>Capture region</strong>. It does the same.</p>
+<p>If you changed the capture hotkey, the keys follow it: your hotkey, then <kbd>S</kbd>. The <a href="/docs/settings/#shortcuts">Shortcuts</a> page lists them too, and the picker&#39;s hint line says <em>S secure</em>. The first time Pro turns on, the hint comes back for your next 5 captures.</p>
 <p>Tap <kbd>S</kbd> again to turn it off. It is never sticky: the next capture starts as a normal one.</p>
 <p>The toast says <strong>Secure · copied</strong> (or <strong>Secure · copied · saved</strong>) with a padlock. It shows no thumbnail and no <strong>Edit</strong> button, and clicking it does nothing, so it cannot lead to the strip.</p>
-<p>Without Pro, <kbd>S</kbd> does not switch secure on. The picker says <em>Secure capture is part of A9 Snap Pro</em>, and the capture is a normal one. When the picker closes, the Pro sheet opens once, then stays out of your way until the next time you start A9 Snap.</p>
+<p>Without Pro there is no <strong>Secure capture</strong> button in the sidebar and no item in the tray, and <kbd>S</kbd> does not switch secure on. The picker says <em>Secure capture is part of A9 Snap Pro</em>, and the capture is a normal one. When the picker closes, the Pro sheet opens once, then stays out of your way until the next time you start A9 Snap.</p>
 <h2 id="where-it-goes">Where it goes<a class="anchor" href="#where-it-goes" aria-label="Link to Where it goes">#</a></h2>
 <ul>
 <li><strong>The clipboard</strong>, with the formats that keep it out of Windows&#39; clipboard history (<kbd>Win</kbd>+<kbd>V</kbd>) and the cloud clipboard. With <strong>Also copy as file</strong> on and a file saved, the file&#39;s path rides along too.</li>
@@ -92,7 +98,7 @@
 <li>The log says &quot;secure capture saved&quot; and the size and timing, and never a file name.</li>
 </ul>
 <h2 id="settings">Settings<a class="anchor" href="#settings" aria-label="Link to Settings">#</a></h2>
-<p>Open <strong>Saving</strong> in the Home window and find <strong>Secure screenshots</strong>. Without Pro the card shows a <strong>Pro</strong> badge, and clicking it opens the Pro sheet.</p>
+<p>Open <strong>Saving</strong> in the Home window and find <strong>Secure screenshots</strong> (its <strong>?</strong> opens this page). Without Pro the card, and the <strong>Secure capture</strong> row on the Shortcuts page, show a <strong>Pro</strong> badge, and clicking either opens the Pro sheet.</p>
 <ul>
 <li><strong>Where secure captures go.</strong> <strong>Secure folder</strong> (the default) or <strong>Clipboard only</strong>, which writes no file anywhere.</li>
 <li><strong>Secure folder.</strong> <strong>Browse…</strong> chooses another folder, but not your screenshots folder. A folder under OneDrive, Dropbox or another synced folder shows <em>This folder is synced to the cloud; secure captures would be uploaded</em>, because they would be. <strong>Open</strong> shows the folder in Explorer, and on the Microsoft Store version it shows the real folder, even though Windows keeps that version&#39;s AppData in its own place. <strong>Empty now</strong> asks first, in the window.</li>
@@ -103,14 +109,14 @@
 <p>A secure capture is not encrypted, and it is not locked away: anyone who can open your Windows account can open the secure folder. It keeps a picture out of the places that would otherwise keep it, and it can delete it for you on a schedule. See <a href="/docs/privacy/">Privacy</a>.</p>
 <h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
 <ul>
-<li><a href="/docs/pro/">A9 Snap Pro</a></li>
+<li><a href="/docs/pro/">Pro features</a></li>
 <li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li>
 <li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li>
 <li><a href="/docs/privacy/">Privacy</a></li>
 </ul>
 
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
-      <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/pro/"><span class="docs-step-l">Previous</span><span>A9 Snap Pro</span></a><span></span></nav>
+      <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/pro/"><span class="docs-step-l">Previous</span><span>Pro features</span></a><span></span></nav>
     </article>
     <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#take-a-secure-capture">Take a secure capture</a></li><li class="d2"><a href="#where-it-goes">Where it goes</a></li><li class="d2"><a href="#what-a-secure-capture-never-does">What a secure capture never does</a></li><li class="d2"><a href="#settings">Settings</a></li><li class="d2"><a href="#what-it-does-not-do">What it does not do</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>

@@ -7,9 +7,17 @@
   "w": 1180,
   "h": 820
  },
+ "pro-features-page": {
+  "w": 728,
+  "h": 506
+ },
  "saving-and-revert-unsaved": {
   "w": 590,
   "h": 242
+ },
+ "secure-capture-sidebar": {
+  "w": 247,
+  "h": 210
  },
  "settings-notifications": {
   "w": 728,
@@ -21,7 +29,7 @@
  },
  "settings-shortcuts": {
   "w": 728,
-  "h": 359
+  "h": 475
  },
  "settings-strip": {
   "w": 728,

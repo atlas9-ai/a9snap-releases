@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Settings</p>
       <h1>Settings sections</h1>
       <p class="docs-lead">Every setting, section by section, in the order the Home window lists them, with what each one does and its default.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.6</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.5.2</p>
       <p>Every setting is in the Home window&#39;s menu of sections. Each section has a <strong>?</strong> button at the top right that opens its manual page. A change is saved the moment you make it, and A9 Snap checks it. If a value is not allowed, a line under the setting says why and the setting goes back to what it was. For the window itself, see <a href="/docs/home-window/">The Home window</a>.</p>
 <h2 id="shortcuts">Shortcuts<a class="anchor" href="#shortcuts" aria-label="Link to Shortcuts">#</a></h2>
 <p><figure class="shot"><img src="/img/docs/settings-shortcuts-1x.webp" srcset="/img/docs/settings-shortcuts-1x.webp 1x, /img/docs/settings-shortcuts.webp 2x" width="728" height="359" alt="The Shortcuts section: the capture, OCR capture and recent captures hotkeys, and Start at login" loading="lazy" decoding="async"><figcaption>The Shortcuts section.</figcaption></figure></p>
@@ -90,13 +90,15 @@
 <ul>
 <li><strong>Screenshots folder</strong> is where pictures are saved. Default <code>Desktop\Screenshots</code>. <strong>Browse…</strong> picks another, <strong>Open</strong> shows it, <strong>Use the default folder</strong> goes back.</li>
 <li><strong>File name</strong> has <strong>Prefix</strong> (default <code>snag_</code>) and <strong>Digits</strong> (default 4, from 0 to 6). A line shows <strong>Next file</strong>.</li>
+<li><strong>Remember which app each capture came from</strong> notes the app and window title of each new capture so the <a href="/docs/strip/#search-by-app-and-window-title">strip</a> can search by them. On by default. Window titles can contain an email subject or a document&#39;s name; they stay in the hidden <code>.a9snap</code> folder in your screenshots folder and never leave this PC. Turning it off stops new notes and keeps the old ones; <strong>Clear</strong> next to it deletes them. See <a href="/docs/privacy/">Privacy</a>.</li>
 <li><strong>Also copy as file</strong> puts the saved file on the clipboard next to the picture. Off by default.</li>
 </ul>
 <p><a href="/docs/where-screenshots-go/">Where screenshots go</a> explains the numbering in full.</p>
 <h2 id="strip-and-editor">Strip and editor<a class="anchor" href="#strip-and-editor" aria-label="Link to Strip and editor">#</a></h2>
 <p><figure class="shot"><img src="/img/docs/settings-strip-1x.webp" srcset="/img/docs/settings-strip-1x.webp 1x, /img/docs/settings-strip.webp 2x" width="728" height="216" alt="The Strip and editor section: Captures in the strip and Open the editor after every capture" loading="lazy" decoding="async"><figcaption>The Strip and editor section.</figcaption></figure></p>
 <ul>
-<li><strong>Captures in the strip</strong> is how many of the newest captures the <a href="/docs/strip/">strip</a> shows: 6, 9 or 12. Default 12.</li>
+<li><strong>Captures in the strip</strong> is how many of the newest captures the <a href="/docs/strip/">strip</a> shows: 6, 9, 12, 18 or 24. Default 12. A search finds all of them, however many.</li>
+<li><strong>Per row</strong> is how many of them sit in one row: 4, 6, 8 or 12. Default 6, so 12 captures make two rows of six. A narrow screen gets fewer to a row, and a short one scrolls.</li>
 <li><strong>Open the editor after every capture</strong> opens the <a href="/docs/mark-up-a-screenshot/">editor</a> on each capture as you take it. Off by default. When it is off, press <kbd>E</kbd> in the strip or click <strong>Edit</strong> on the note.</li>
 </ul>
 <h2 id="notifications">Notifications<a class="anchor" href="#notifications" aria-label="Link to Notifications">#</a></h2>

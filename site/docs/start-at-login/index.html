@@ -67,10 +67,12 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Settings</p>
       <h1>Start at login</h1>
       <p class="docs-lead">A9 Snap can start by itself when you sign in to Windows, so your hotkey is always ready. Here is how it behaves, and what to do when Windows says no.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.6</p>
-      <p>Start at login is on for a new install. A9 Snap starts straight into the tray: no window opens and nothing asks you anything. If you had turned it off before, it stays off.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.5.2</p>
+      <p>Start at login is on for a new install, in the downloaded version and the Microsoft Store version alike. A9 Snap starts straight into the tray: no window opens and nothing asks you anything. If you had turned it off before, it stays off.</p>
 <h2 id="the-microsoft-store-version">The Microsoft Store version<a class="anchor" href="#the-microsoft-store-version" aria-label="Link to The Microsoft Store version">#</a></h2>
-<p>The Microsoft Store version starts at login through Windows&#39; own startup task instead of a startup entry, and it is <strong>off</strong> for a new install: switch <strong>Start at login</strong> on yourself. The same switch turns it on and off, and <strong>Settings › Apps › Startup</strong> in Windows shows it as <strong>A9 Snap</strong> with its own switch. If you turn it off there, A9 Snap says so and <strong>Fix in Windows</strong> opens that page, exactly as below. The restart recovery described at the bottom of this page works the same way.</p>
+<p>The Microsoft Store version starts at login through Windows&#39; own startup task instead of a startup entry, because a Store app&#39;s startup entry would never reach Windows. It is <strong>on</strong> for a new install, the same as the downloaded version, but the Store doesn&#39;t launch the app for you: <strong>open A9 Snap once after installing</strong>, and that first launch switches the startup task on. <strong>Settings › Apps › Startup</strong> in Windows then shows <strong>A9 Snap</strong> with its switch on.</p>
+<p>The <strong>Start at login</strong> switch turns the task on and off. If you turn it off in Windows, A9 Snap says so and <strong>Fix in Windows</strong> opens that page, exactly as below; if an administrator&#39;s policy turned it off, the same line shows, and A9 Snap never tries to override either. A login start is quiet, as with the downloaded version: no window, only the tray icon.</p>
+<p>The restart recovery described at the bottom of this page works the same way in the Store version: the one-time task starts A9 Snap through its app execution alias (<code>a9snap.exe</code> in your <code>WindowsApps</code> folder), because Task Scheduler can&#39;t start a Store app by the path of its program file.</p>
 <h2 id="turn-it-on-or-off">Turn it on or off<a class="anchor" href="#turn-it-on-or-off" aria-label="Link to Turn it on or off">#</a></h2>
 <ol>
 <li>Open the Home window and choose <strong>Shortcuts</strong>.</li>

@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Reference</p>
       <h1>Privacy</h1>
       <p class="docs-lead">Nothing leaves your PC except the update check. No account, no telemetry, no uploads.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.6</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.5.2</p>
       <p>A9 Snap is built to stay on your computer. This page lists everything it stores and everything it sends.</p>
 <h2 id="what-leaves-your-pc">What leaves your PC<a class="anchor" href="#what-leaves-your-pc" aria-label="Link to What leaves your PC">#</a></h2>
 <p>Only the update check, and the Microsoft Store version of A9 Snap does not even make that: the Store updates it. See <a href="#the-update-check">The update check</a>. A9 Snap has no account, no sign-in, no analytics and no crash reporting. It never uploads a screenshot anywhere.</p>
@@ -79,6 +79,7 @@
 <li><strong>Screenshots</strong> go to the clipboard and to your screenshots folder, and nowhere else. Thumbnails for the strip and the Home window are made in memory and never written to disk.</li>
 <li><strong>OCR</strong> uses Windows&#39; built-in recognizer on your PC. The picture goes to it in memory only, and the recognized text goes only to the clipboard when you ask for it. An OCR capture saves no PNG. There are no temporary image or text files and no recognized text in the log.</li>
 <li><strong>Originals of edited captures</strong> are kept in a hidden <code>.a9snap</code> folder inside your screenshots folder. After a blur, the saved file has the pixels destroyed but the original still holds them. See <a href="/docs/saving-and-revert/#blur-is-permanent-in-the-saved-file">Blur is permanent in the saved file</a>. Delete <code>.a9snap</code> before you share the whole folder.</li>
+<li><strong>Which app each capture came from</strong> is noted in <code>.a9snap\captures.json</code>, in the same hidden folder next to the originals. For each new capture it holds the file name, size and time, the app&#39;s name (such as Google Chrome) and the window&#39;s title, so the strip can search by them. <strong>Window titles can contain an email subject or a document&#39;s name.</strong> The notes stay in your screenshots folder, never leave this PC and never go into the log. Turn them off with <strong>Remember which app each capture came from</strong> in <a href="/docs/settings/#saving">Saving</a>, and press <strong>Clear</strong> there to delete what is already noted. Delete <code>.a9snap</code> before you share the whole folder. Secure capture, when it arrives, will never note them.</li>
 <li><strong>Settings</strong> are in <code>settings.json</code> in <code>%APPDATA%\ai.atlas9.a9snap</code>.</li>
 <li><strong>The log</strong> is in the <code>logs</code> folder beside it. It records sizes, timings and status codes, never the content of a screenshot, a file or recognized text.</li>
 <li><strong>Start at login</strong> adds one startup entry for your Windows user, and a one-time Task Scheduler task when Windows ends your session. See <a href="/docs/start-at-login/">Start at login</a>.</li>

@@ -1,11 +1,11 @@
-/* The Download buttons always point at the newest Dev build, with no site redeploy.
+/* The version text on the page follows the newest Dev build, with no site redeploy.
  *
- * index.html ships a working static link (the newest release's version-less installer) and a static
- * "Free · Early access · v… · … MB" line. This script only upgrades them from the Dev channel manifest, the same file
- * the app's update check reads. If the fetch fails, or the manifest is not what we expect, nothing changes: the
- * static link stays, so the button is never dead.
+ * index.html ships a static "Free · Early access · v… · … MB" line and a static footer version. This script only
+ * upgrades them from the Dev channel manifest, the same file the app's update check reads. If the fetch fails, or the
+ * manifest is not what we expect, nothing changes. It never touches a link: the installer buttons ([data-dl]) point at
+ * the license server's /download/snap/go, which counts the click and redirects to the newest installer (js/track.js tags them).
  *
- * Marked in the page: [data-dl] (a link: its href), [data-dl-meta] (an element: its text), [data-ver] (the footer's "v0.3.2" badge).
+ * Marked in the page: [data-dl-meta] (an element: its text), [data-ver] (the footer's "v0.3.2" badge).
  * A plain script (no module system): it runs itself on load and leaves its functions on self.a9download for
  * site/download.test.mjs, which runs it in a sandbox.
  */
@@ -17,12 +17,11 @@
   // raw.githubusercontent.com answers with Access-Control-Allow-Origin: *, so a9snap.com may read it. (Pages does
   // not serve channels/ on this domain, and a copy there would go stale.)
   var MANIFEST = "https://raw.githubusercontent.com/atlas9-ai/a9snap-releases/main/channels/dev.json";
-  var ASSET = "A9Snap-Setup-x64.exe";
-  // Only ever link to a release of our own releases repo, whatever the manifest says.
+  // Only trust a manifest that points at a release of our own releases repo.
   var RELEASE = /^(https:\/\/github\.com\/atlas9-ai\/a9snap-releases\/releases\/download\/v\d+\.\d+\.\d+[0-9A-Za-z.-]*\/)[^/]+$/;
   var VERSION = /^\d+\.\d+\.\d+[0-9A-Za-z.-]*$/;
 
-  // The manifest to { href, text }, or null when it is not usable.
+  // The manifest to { text, version }, or null when it is not usable.
   function describe(manifest) {
     try {
       var p = manifest.platforms["windows-x86_64"];
@@ -31,7 +30,7 @@
       var text = "Free · Early access · v" + manifest.version;
       var size = manifest.installer_size;
       if (typeof size === "number" && size > 0) text += " · " + (size / 1048576).toFixed(1) + " MB";
-      return { href: rel[1] + ASSET, text: text, version: "v" + manifest.version };
+      return { text: text, version: "v" + manifest.version };
     } catch (e) {
       return null;
     }
@@ -47,7 +46,6 @@
       .then(function (manifest) {
         var d = describe(manifest);
         if (!d) return false;
-        Array.prototype.forEach.call(doc.querySelectorAll("[data-dl]"), function (a) { a.href = d.href; });
         Array.prototype.forEach.call(doc.querySelectorAll("[data-dl-meta]"), function (el) { el.textContent = d.text; });
         Array.prototype.forEach.call(doc.querySelectorAll("[data-ver]"), function (el) { el.textContent = d.version; });
         return true;

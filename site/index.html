@@ -325,7 +325,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         <a href="#editor">Editor</a>
         <a href="#faq">FAQ</a>
         <a class="nav-manual" href="/docs/">Manual</a>
-        <a class="store-badge" data-store target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
+        <a class="store-badge" data-store data-pl="nav" target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct&amp;cid=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
       </div>
     </nav>
   </div>
@@ -339,10 +339,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         <h1 style="margin-top:18px"><span style="display:block">Point.</span><span class="snap" style="display:block">Snap.</span><span style="display:block">Paste.</span></h1>
         <p class="lede">Press <kbd>Alt</kbd>+<kbd>Z</kbd> and drag over anything on your screen. <b>It’s on your clipboard before you let go</b>, ready to paste into a chat, an email, a ticket or an AI.</p>
         <div class="ctas" id="get">
-          <a class="store-badge lg" data-store target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
+          <a class="store-badge lg" data-store data-pl="hero" target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct&amp;cid=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
           <a class="btn btn-quiet" href="#describe">See why ↓</a>
         </div>
-        <p class="fine alt">Work PC that blocks the Store? <a data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">Download the installer</a></p>
+        <p class="fine alt">Work PC that blocks the Store? <a data-dl data-pl="hero-installer" href="https://a9voice.com/download/snap/go?pl=hero-installer">Download the installer</a></p>
         <p class="dlmeta" data-dl-meta>Free · Early access · v0.3.1 · 2.7 MB</p>
         <p class="fine install">The installer from this page may make Windows say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. The Microsoft Store version skips that step.</p>
         <p class="fine">Windows 10 and 11.</p>
@@ -581,8 +581,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       <div class="head"><p class="eyebrow">Questions</p><h2>Short answers.</h2></div>
       <div class="faq">
         <details open><summary>Is it really free?</summary><p>Yes. Capture, the loupe, numbered files, recent captures and the editor are free for good. No subscription, ever.</p></details>
-        <details><summary>Does it send my screenshots anywhere?</summary><p>No. Files go to the folder you pick. The only thing A9 Snap sends is a check for updates.</p></details>
-        <details><summary>Is it safe to install?</summary><p>Yes. Early builds aren’t signed with a Windows certificate yet, so Windows may say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. The Microsoft Store version avoids that step. There’s no account, and nothing leaves your PC except the update check. The <a href="/docs/getting-started/">manual</a> shows each screen.</p></details>
+        <details><summary>Does it send my screenshots anywhere?</summary><p>No. Files go to the folder you pick. The app sends nothing beyond a check for updates and, only if you buy Pro, its license check. This website counts visits and download clicks without cookies. <a href="/docs/privacy/#this-website">Privacy</a> has the details.</p></details>
+        <details><summary>Is it safe to install?</summary><p>Yes. Early builds aren’t signed with a Windows certificate yet, so Windows may say it protected your PC. Click <b>More info</b>, then <b>Run anyway</b>. The Microsoft Store version avoids that step. There’s no account, and the app sends nothing beyond the update check (and Pro’s license check, if you buy Pro). The <a href="/docs/getting-started/">manual</a> shows each screen.</p></details>
         <details><summary>Two monitors? 150% scaling?</summary><p>Yes. Every monitor is captured at its real resolution, and the selection lands on the pixels you see.</p></details>
         <details><summary>Can I change Alt+Z?</summary><p>Yes, in Settings. If another app already owns a shortcut, A9 Snap tells you instead of failing quietly. <a href="/docs/settings/#shortcuts">Shortcuts in the manual</a> lists every key.</p></details>
         <details><summary>Mac or Linux?</summary><p>Windows 10 and 11 for now.</p></details>
@@ -596,8 +596,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       <div class="closer frame">
         <p class="q">Point. <span>Snap.</span> Paste.</p>
         <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-          <a class="store-badge lg" data-store target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
-          <span class="fine alt" style="margin:0">Work PC that blocks the Store? <a data-dl href="https://github.com/atlas9-ai/a9snap-releases/releases/latest/download/A9Snap-Setup-x64.exe">Download the installer</a></span>
+          <a class="store-badge lg" data-store data-pl="end" target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct&amp;cid=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
+          <span class="fine alt" style="margin:0">Work PC that blocks the Store? <a data-dl data-pl="end-installer" href="https://a9voice.com/download/snap/go?pl=end-installer">Download the installer</a></span>
           <span class="fine" style="margin:0">Free · No account · Capture will never be a subscription</span>
         </div>
       </div>
@@ -778,5 +778,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 })();
 </script>
 <script src="/download.js" defer></script>
+<script src="/js/track.js" defer></script>
 </body>
 </html>

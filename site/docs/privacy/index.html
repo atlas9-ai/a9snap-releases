@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy · A9 Snap Manual</title>
-<meta name="description" content="Nothing leaves your PC except the update check and, only if you use Pro, its license check. No account, no telemetry, no uploads.">
+<meta name="description" content="The app sends nothing beyond the update check and, only if you use Pro, its license check. No account, no telemetry in the app, no uploads. The website counts visits without cookies.">
 <link rel="canonical" href="https://a9snap.com/docs/privacy/">
 <meta name="theme-color" content="#0B0C0E">
 <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A9 Snap">
 <meta property="og:title" content="Privacy · A9 Snap Manual">
-<meta property="og:description" content="Nothing leaves your PC except the update check and, only if you use Pro, its license check. No account, no telemetry, no uploads.">
+<meta property="og:description" content="The app sends nothing beyond the update check and, only if you use Pro, its license check. No account, no telemetry in the app, no uploads. The website counts visits without cookies.">
 <meta property="og:url" content="https://a9snap.com/docs/privacy/">
 <meta property="og:image" content="https://a9snap.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +36,7 @@
         <a href="/#editor">Editor</a>
         <a href="/#faq">FAQ</a>
         <a class="nav-manual" href="/docs/" aria-current="page">Manual</a>
-        <a class="store-badge" data-store target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
+        <a class="store-badge" data-store data-pl="nav" target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct&amp;cid=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
       </div>
     </nav>
   </div>
@@ -66,8 +66,8 @@
     <article class="docs-article">
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Reference</p>
       <h1>Privacy</h1>
-      <p class="docs-lead">Nothing leaves your PC except the update check and, only if you use Pro, its license check. No account, no telemetry, no uploads.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.7.0</p>
+      <p class="docs-lead">The app sends nothing beyond the update check and, only if you use Pro, its license check. No account, no telemetry in the app, no uploads. The website counts visits without cookies.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.7.1</p>
       <p>A9 Snap is built to stay on your computer. This page lists everything it stores and everything it sends.</p>
 <h2 id="what-leaves-your-pc">What leaves your PC<a class="anchor" href="#what-leaves-your-pc" aria-label="Link to What leaves your PC">#</a></h2>
 <p>Two things, and Free needs only the first. The update check, which the Microsoft Store version of A9 Snap does not even make: the Store updates it. See <a href="#the-update-check">The update check</a>. And, if you buy or enter a key for <a href="/docs/pro/">A9 Snap Pro</a>, the license check. See <a href="#the-license-check">The license check</a>. A9 Snap has no account, no sign-in, no analytics and no crash reporting. It never uploads a screenshot anywhere.</p>
@@ -98,7 +98,14 @@
 <li><strong>Start at login</strong> adds one startup entry for your Windows user, and a one-time Task Scheduler task when Windows ends your session. See <a href="/docs/start-at-login/">Start at login</a>.</li>
 </ul>
 <h2 id="this-website">This website<a class="anchor" href="#this-website" aria-label="Link to This website">#</a></h2>
-<p>The manual loads its own fonts and scripts from a9snap.com. It has no analytics and no cookies. The home page loads its fonts from Google Fonts and reads the newest version number from the same GitHub file that the app uses.</p>
+<p>The app and this website are separate. <strong>The app sends nothing beyond the update check and, for Pro, the license check</strong> above. Nothing on this page changes that.</p>
+<p>The website counts how it is used, without cookies and without anything that identifies you:</p>
+<ul>
+<li><strong>Visits and where they came from.</strong> When you open a page, the site&#39;s own script remembers, for that browser tab only, the campaign tags on the link you followed (such as <code>utm_source</code>), the address of the site that sent you (the host name only, never the full address) and the first page you landed on. It sends that to the license server at <code>a9voice.com</code> once per visit, so the count says, for example, &quot;12 visits from a link tagged newsletter&quot;. It stores nothing on your PC beyond that tab&#39;s memory, which goes away when you close the tab, and it sets no cookie.</li>
+<li><strong>Download clicks.</strong> The <strong>Download the installer</strong> link goes through the same server, which counts the click with the same tags and then sends you on to the installer. A click on the <strong>Microsoft Store</strong> badge is counted the same way, and the badge&#39;s link carries a campaign name (such as <code>newsletter</code>, or <code>direct</code>) so the Store can tell its own installs apart.</li>
+<li><strong>A cookieless page count.</strong> The site also uses Cloudflare Web Analytics, which counts page views without cookies.</li>
+</ul>
+<p>None of these counts stores your IP address, and none can tell you apart from anyone else who came the same way. They carry no screenshot, no setting and nothing from the app. The manual&#39;s fonts and scripts come from a9snap.com. The home page loads its fonts from Google Fonts and reads the newest version number from the same GitHub file that the app uses.</p>
 <h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
 <ul>
 <li><a href="/docs/updates-and-channels/">Updates and channels</a></li>
@@ -120,5 +127,6 @@
 </footer>
 <script type="module" src="/js/docs.js"></script>
 <script src="/download.js" defer></script>
+<script src="/js/track.js" defer></script>
 </body>
 </html>

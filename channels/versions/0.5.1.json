@@ -1,0 +1,13 @@
+{
+  "version": "0.5.1",
+  "notes": "- **Search the recent captures strip.** The strip still opens on your 12 newest, but a **Search captures** box at the top (press **Ctrl+F** or **/**) looks through every capture in your screenshots folder: type part of a file name, in any case, and the newest matches appear, with \"Showing 12 of 48\" when there are more. The **Today**, **This week** and **Edited** chips under the box narrow it further and combine with the text. **Esc** in the box clears it first; a second **Esc** closes the strip. Picking, copying, dragging, editing and deleting (with Undo) work the same on the results, and the search starts empty each time the strip opens. The box does not take the keyboard until you ask for it, so **E**, **Enter**, **Delete** and the arrow keys work on the cards as before.",
+  "pub_date": "2026-10-30T11:25:15Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb09sUzFXcGRSVTVqMVJFd3owenF5K3hTOXV1YkR2OHJIT01ibjgyb3VzMncxdXhiVlhKQ0VqRk5ZZ0NxdXNHMEkzWjM0UVRMUnhsa1R6TWtaRU5PL3dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMzU5NDk4CWZpbGU6QTkgU25hcF8wLjUuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC41LjEKZ0piS2tSeWxxbkxXdmgzNkZxZGRmQjg2OVZqMTlWZTMwR3F0d3FmKy9jQStlT0lHL0NTeEZtMDdnVlB3cW5tWDR5TnE2ZDhwNzRwVkhhTjkyY2JJQVE9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.5.1/A9Snap_0.5.1_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "c0650352976b3fd27bae10cad860d688414fbcd5d89d36062d98ee2d099df332",
+  "installer_size": 2873207
+}

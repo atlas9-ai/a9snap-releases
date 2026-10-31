@@ -1,0 +1,13 @@
+{
+  "version": "0.8.1",
+  "notes": "- **Numbered steps in the editor (Free).** Press **N**, then click: each click drops the next circle, 1, 2, 3 …, in the current colour and width. Drag while you place one to pull a pointer tail out of it. Steps are shapes like the others: select, move, recolour, resize the tail (drag it back onto the circle to remove it). **Delete a step and the rest renumber; undo and redo bring the numbers back.**\n- **Stamps (Free).** Press **M**: a check, a cross, a question, an exclamation or a star, drawn by A9 Snap in its colours (no emoji, so they look the same everywhere). Click to place, drag a corner handle to resize (it stays square), pick another in the row to swap.\n- **Drop shadow (Free).** A **Shadow** button in the editor adds a soft shadow and a 40-pixel see-through margin around the saved picture and the clipboard copy (a program that only takes a plain bitmap gets the picture on white). It is part of the document, so undo works and it counts as a change. **Drop shadow in the editor** (Settings > Strip and editor, off by default) makes new pictures start with it on.\n- **A deleted newest number now stays taken after a restart.** Deleting the newest capture from A9 Snap keeps its number reserved in `.a9snap\\floor.json`, so the next capture and **Next file** never go backwards, restart or not. Files you delete in Explorer still follow the folder.\n- **Clear the edit originals.** Saving shows **Edit originals: 23 files, 41 MB · kept so Revert works. They still hold anything you blurred.** with **Clear**, which asks first and sends them to the Recycle Bin. **Revert** is then unavailable for those captures; they keep their Volt dot (`.a9snap\\edited.json` remembers which captures were edited).\n- The manual's Mark up a screenshot, Keyboard shortcuts, Settings, Saving and Revert, Where screenshots go and Privacy pages cover it.",
+  "pub_date": "2026-10-31T16:17:38Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0JFSGtCTFBXV0FidXVKak91bndrWVFQRkRaQmh5VXhvaFVSTmJuZFpwcVhMQU1jd3YxZTJkY0w0MElzR0t5MmlHZHdXVmcxK1QxTUY1UkNPZmtFdndZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNDYzNDQxCWZpbGU6QTkgU25hcF8wLjguMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC44LjEKVUd6bXpPcDhFNjhOMEJVcXdUazRQaWF2M0xTcnZoRmFnVTgrTHNHQ1F1d3EvelgrREVQSmdYSXJXUWhRNWU5RGNxL1ZUUGdQTDdzMXhPNEwrcENKQ3c9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.8.1/A9Snap_0.8.1_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "7197591aaabc984f9d547376e5dc5264da9698b08ce8331166add7daccbacddc",
+  "installer_size": 3493675
+}

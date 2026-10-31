@@ -1,0 +1,13 @@
+{
+  "version": "0.8.0",
+  "notes": "- **Search inside screenshots, the second Pro feature.** With Pro, the strip's search box (**Ctrl+F** or **/**) also finds a capture by the words *in* the picture, an error message, an order number, a name, as well as by file name, app and window title. A capture that matched by its words shows a one-line **snippet** under its name, with what you typed in Volt (`…payment for Order 4417 failed…`), and the same line in its tooltip. Without Pro nothing is read; a search that finds nothing adds **Search the words inside screenshots with Pro**, which opens the Pro sheet.\n- **Read on your PC, in the background.** After each capture is saved, a low-priority worker reads its text with the same on-device Windows text recognition Alt+X uses; it never runs on the capture's clock. Captures from before Pro was on are read gradually, newest first, a few a minute (faster when the PC is left alone), until the folder is covered. An edited capture is read again after you save it; a deleted one leaves the index and **Undo** reads it again. Secure captures are never read or indexed.\n- **Where the words are kept.** In `.a9snap\\text.json` inside your screenshots folder, next to `captures.json` and the edit originals, keyed by file name, size and time so an edited or replaced file never carries old words. **They are text from your screenshots**: they stay on this PC, never go in the log and are never sent anywhere. **Saving > Search inside screenshots** (a Pro badge without Pro) turns the reading on or off, shows how far it is (**Read 412 of 1,280 captures**, then **All captures read**), and **Clear text index** deletes the words after asking. Turning it off stops reading and deletes the index.\n- The **Pro features** page lists Search inside screenshots as **Included**, with how to use it and a **How to use** link. The manual's strip, Settings, Pro features and Privacy pages cover it.",
+  "pub_date": "2026-10-31T14:54:38Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0ZrSVdwZnU0RnhJK3dGUUd6TlRVUFdBRUlYVHFVNmNiYVJ5TUQ5MUVuN2FSOVhhVHViaEFxaTNwOVBJK0FqRGJuQkpSanA4YWRhUVp5dDNEU3c2aUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNDU4NDYxCWZpbGU6QTkgU25hcF8wLjguMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC44LjAKbWJtdnZzVDlhcXd6Y2IxSmpZUTFvTmx6MXNvTjNpLzVqb0QwNCtXSTE1M0hBMVhiL2ZPOWxsZlAxUXduZlZOY2JKZHU2WUcwU3habkZPK0h5NEtXQ1E9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.8.0/A9Snap_0.8.0_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "a8d58a01b753ec6ae3e643715e9ae978f47d8117e1aac9e7372f950a9be21421",
+  "installer_size": 3475243
+}

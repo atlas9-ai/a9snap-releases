@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Secure capture · A9 Snap Manual</title>
-<meta name="description" content="A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. It is a Pro feature.">
+<meta name="description" content="A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. The Secure vault keeps those files encrypted, and Always secure makes chosen apps secure for you. It is a Pro feature.">
 <link rel="canonical" href="https://a9snap.com/docs/secure-capture/">
 <meta name="theme-color" content="#0B0C0E">
 <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A9 Snap">
 <meta property="og:title" content="Secure capture · A9 Snap Manual">
-<meta property="og:description" content="A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. It is a Pro feature.">
+<meta property="og:description" content="A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. The Secure vault keeps those files encrypted, and Always secure makes chosen apps secure for you. It is a Pro feature.">
 <meta property="og:url" content="https://a9snap.com/docs/secure-capture/">
 <meta property="og:image" content="https://a9snap.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -66,8 +66,8 @@
     <article class="docs-article">
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Capture</p>
       <h1>Secure capture</h1>
-      <p class="docs-lead">A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. It is a Pro feature.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.7.1</p>
+      <p class="docs-lead">A secure capture goes to the clipboard and a folder of its own, and nowhere else. It stays out of the strip, the Home window, Windows' clipboard history and Windows Search. The Secure vault keeps those files encrypted, and Always secure makes chosen apps secure for you. It is a Pro feature.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.11.0</p>
       <p>Some pictures should not end up in your screenshots folder, the strip, Windows&#39; clipboard history or a folder that syncs to the cloud: a password, a bank page, a private message. <strong>Secure capture</strong> is for those. It is part of A9 Snap Pro: see <a href="/docs/pro/">Pro features</a>.</p>
 <h2 id="take-a-secure-capture">Take a secure capture<a class="anchor" href="#take-a-secure-capture" aria-label="Link to Take a secure capture">#</a></h2>
 <p>There are three ways to start one, and they all end in the same picker.</p>
@@ -97,16 +97,52 @@
 <li>It never opens the editor, even with <strong>Open the editor after every capture</strong> on. Editing a secure capture is not possible, because the editor keeps originals in the screenshots folder.</li>
 <li>The log says &quot;secure capture saved&quot; and the size and timing, and never a file name.</li>
 </ul>
+<h2 id="secure-vault">Secure vault<a class="anchor" href="#secure-vault" aria-label="Link to Secure vault">#</a></h2>
+<p>By default a secure capture is an ordinary PNG in the secure folder, which anyone at your PC can open. The <strong>Secure vault</strong> keeps it encrypted instead.</p>
+<ol>
+<li>In <strong>Saving</strong>, under <strong>Secure screenshots</strong>, turn on <strong>Encrypt secure captures (Secure vault)</strong>. It is off by default.</li>
+<li>Take secure captures as usual. They are written as <code>.a9vault</code> files, never as a PNG, so Explorer and Windows Search only ever see encrypted files. The clipboard copy at the moment you capture is unchanged: it still stays out of Windows&#39; clipboard history and the cloud clipboard.</li>
+<li>If secure PNGs are already in the folder when you turn it on, A9 Snap offers <strong>Encrypt existing secure captures</strong>. It encrypts each one and then deletes the PNG for good. You can choose <strong>Not now</strong> and use the button later.</li>
+</ol>
+<p>Each file has a key of its own, and that key is locked with your Windows account (DPAPI) before it is stored, so the file opens only for you, on this PC. The encryption is AES-256-GCM, so a file that was changed, even by one byte, refuses to open.</p>
+<h3 id="open-the-vault">Open the vault<a class="anchor" href="#open-the-vault" aria-label="Link to Open the vault">#</a></h3>
+<p>Use <strong>Open vault</strong> under <strong>Secure screenshots</strong>, the <strong>Secure vault</strong> row on the <strong>Pro features</strong> page, or <strong>Secure vault</strong> in the tray menu (Pro). Windows asks first:</p>
+<ul>
+<li><strong>Windows Hello</strong> (face, fingerprint or PIN), or</li>
+<li>the <strong>Windows sign-in</strong>, if Hello isn&#39;t set up on this PC.</li>
+</ul>
+<p>The vault window shows a thumbnail of each file, decrypted in memory only, with:</p>
+<ul>
+<li><strong>Copy.</strong> The picture goes on the clipboard, kept out of Windows&#39; clipboard history and the cloud clipboard, and cleared by <strong>Clear the clipboard after</strong> if you set it.</li>
+<li><strong>Export as PNG.</strong> A Save dialog asks where. The file you save there is an ordinary PNG, and yours to look after.</li>
+<li><strong>Delete.</strong> Asks first, then deletes <strong>for good</strong>: the file is overwritten and removed, not sent to the Recycle Bin.</li>
+</ul>
+<p>The vault <strong>locks itself after 2 minutes without use, when you lock your PC</strong> (<kbd>Win</kbd>+<kbd>L</kbd>) and when you close the window; locking closes the window. Opening it again asks Windows again. <kbd>Esc</kbd> or <strong>Lock now</strong> locks it at once.</p>
+<p><strong>Clear the secure folder</strong> and <strong>Empty now</strong> work on vault files too, and delete them for good.</p>
+<h3 id="if-you-lose-your-windows-account">If you lose your Windows account<a class="anchor" href="#if-you-lose-your-windows-account" aria-label="Link to If you lose your Windows account">#</a></h3>
+<p>The key of each file is tied to your Windows account. If that account is deleted or its profile is reset, or you move the files to another PC or another Windows user, <strong>the vault files can&#39;t be opened again, and A9 Snap can&#39;t get them back.</strong> Export the pictures you need as PNGs first. A password reset that keeps your profile is fine; a reinstall of Windows that doesn&#39;t is not.</p>
+<h2 id="always-secure-for-chosen-apps">Always secure for chosen apps<a class="anchor" href="#always-secure-for-chosen-apps" aria-label="Link to Always secure for chosen apps">#</a></h2>
+<p>Some apps should never be one forgotten key press away from your screenshots folder: a password manager, a bank, a private chat. List them and A9 Snap makes the capture secure for you.</p>
+<ol>
+<li>In <strong>Saving</strong>, under <strong>Secure screenshots</strong>, find <strong>Always secure for these apps</strong> and press <strong>Add app</strong>.</li>
+<li>Pick an app you have captured before, an app with a window open now, or choose <strong>Browse…</strong> for an <code>.exe</code>.</li>
+<li>Press <strong>Remove</strong> next to an app to take it off the list.</li>
+</ol>
+<p>From then on, a capture whose source belongs to a listed app starts in secure mode. The source is the same one a capture notes: the window you clicked, the window in front when you take the whole screen (<kbd>F</kbd>), or the window under the middle of a region you drag. Before you let go, the picker&#39;s size line says <strong>Secure</strong> and the app&#39;s name, for example <em>Secure · Password Manager · 640 × 480</em>, and the padlock shows.</p>
+<p>Press <kbd>S</kbd> to take that one capture normally instead; <kbd>S</kbd> again puts it back. On any other app <kbd>S</kbd> still turns secure on, as always. Apps are told apart by the program, not by the window&#39;s title, so a window that renames itself is still the same app. If you press <kbd>R</kbd> to record, the recording goes ahead: the list applies to pictures.</p>
+<p>The list is kept in A9 Snap&#39;s settings. Nothing about a secure capture is written to <code>captures.json</code> or anywhere else.</p>
 <h2 id="settings">Settings<a class="anchor" href="#settings" aria-label="Link to Settings">#</a></h2>
 <p>Open <strong>Saving</strong> in the Home window and find <strong>Secure screenshots</strong> (its <strong>?</strong> opens this page). Without Pro the card, and the <strong>Secure capture</strong> row on the Shortcuts page, show a <strong>Pro</strong> badge, and clicking either opens the Pro sheet.</p>
 <ul>
 <li><strong>Where secure captures go.</strong> <strong>Secure folder</strong> (the default) or <strong>Clipboard only</strong>, which writes no file anywhere.</li>
 <li><strong>Secure folder.</strong> <strong>Browse…</strong> chooses another folder, but not your screenshots folder. A folder under OneDrive, Dropbox or another synced folder shows <em>This folder is synced to the cloud; secure captures would be uploaded</em>, because they would be. <strong>Open</strong> shows the folder in Explorer, and on the Microsoft Store version it shows the real folder, even though Windows keeps that version&#39;s AppData in its own place. <strong>Empty now</strong> asks first, in the window.</li>
-<li><strong>Clear the secure folder.</strong> <strong>Never</strong>, <strong>When A9 Snap quits</strong>, <strong>After 1 hour</strong>, <strong>After 24 hours</strong> or <strong>After 7 days</strong>. A picture that came due while A9 Snap was closed is cleared the next time it starts. <strong>Secure pictures are deleted for good, not to the Recycle Bin.</strong> This is the one place A9 Snap deletes without a way back, because a Recycle Bin copy would defeat the point. It only clears a folder it made itself, and only <code>.png</code> files directly in it: choose a folder that already holds other files and A9 Snap uses it but never clears it.</li>
+<li><strong>Clear the secure folder.</strong> <strong>Never</strong>, <strong>When A9 Snap quits</strong>, <strong>After 1 hour</strong>, <strong>After 24 hours</strong> or <strong>After 7 days</strong>. A picture that came due while A9 Snap was closed is cleared the next time it starts. <strong>Secure pictures are deleted for good, not to the Recycle Bin.</strong> This is the one place A9 Snap deletes without a way back, because a Recycle Bin copy would defeat the point. It only clears a folder it made itself, and only <code>.png</code> and <code>.a9vault</code> files directly in it: choose a folder that already holds other files and A9 Snap uses it but never clears it.</li>
+<li><strong>Encrypt secure captures (Secure vault).</strong> See <a href="#secure-vault">Secure vault</a>. <strong>Open vault</strong> opens the vault window; a line says how many pictures are in it. <strong>Encrypt existing secure captures</strong> appears when PNGs are waiting in the folder.</li>
+<li><strong>Always secure for these apps.</strong> See <a href="#always-secure-for-chosen-apps">Always secure for chosen apps</a>.</li>
 <li><strong>Clear the clipboard after.</strong> <strong>Off</strong> (the default), <strong>30 seconds</strong>, <strong>1 minute</strong> or <strong>5 minutes</strong>. A9 Snap clears the clipboard only if it still holds the secure picture. Anything you copied since is never cleared.</li>
 </ul>
 <h2 id="what-it-does-not-do">What it does not do<a class="anchor" href="#what-it-does-not-do" aria-label="Link to What it does not do">#</a></h2>
-<p>A secure capture is not encrypted, and it is not locked away: anyone who can open your Windows account can open the secure folder. It keeps a picture out of the places that would otherwise keep it, and it can delete it for you on a schedule. See <a href="/docs/privacy/">Privacy</a>.</p>
+<p>Without the Secure vault, a secure capture is not encrypted and not locked away: anyone who can open your Windows account can open the secure folder. It keeps a picture out of the places that would otherwise keep it, and it can delete it for you on a schedule. With the vault on, the files are encrypted for your Windows account, but anyone who is signed in as you can still ask for them, and the vault asks Windows Hello (or your sign-in) each time. A picture you export, or paste somewhere, is no longer protected. See <a href="/docs/privacy/">Privacy</a>.</p>
 <h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
 <ul>
 <li><a href="/docs/pro/">Pro features</a></li>
@@ -118,7 +154,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/pro/"><span class="docs-step-l">Previous</span><span>Pro features</span></a><a class="docs-step next" href="/docs/auto-redact/"><span class="docs-step-l">Next</span><span>Auto-redact</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#take-a-secure-capture">Take a secure capture</a></li><li class="d2"><a href="#where-it-goes">Where it goes</a></li><li class="d2"><a href="#what-a-secure-capture-never-does">What a secure capture never does</a></li><li class="d2"><a href="#settings">Settings</a></li><li class="d2"><a href="#what-it-does-not-do">What it does not do</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#take-a-secure-capture">Take a secure capture</a></li><li class="d2"><a href="#where-it-goes">Where it goes</a></li><li class="d2"><a href="#what-a-secure-capture-never-does">What a secure capture never does</a></li><li class="d2"><a href="#secure-vault">Secure vault</a></li><li class="d3"><a href="#open-the-vault">Open the vault</a></li><li class="d3"><a href="#if-you-lose-your-windows-account">If you lose your Windows account</a></li><li class="d2"><a href="#always-secure-for-chosen-apps">Always secure for chosen apps</a></li><li class="d2"><a href="#settings">Settings</a></li><li class="d2"><a href="#what-it-does-not-do">What it does not do</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

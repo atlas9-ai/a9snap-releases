@@ -54,7 +54,7 @@
       <ul id="docs-results" class="docs-results" hidden></ul>
       <nav class="docs-nav" aria-label="Manual">
 <div class="docs-group"><h2 class="docs-group-h">Start here</h2><ul><li><a href="/docs/">Getting started</a></li><li><a href="/docs/whats-new/">What's new</a></li></ul></div>
-<div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li><li><a href="/docs/secure-capture/">Secure capture</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li><li><a href="/docs/secure-capture/">Secure capture</a></li><li><a href="/docs/record-video/">Record video and GIF</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Recent captures</h2><ul><li><a href="/docs/strip/">The recent captures strip</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/">Saving, Save as new and Revert</a></li><li><a href="/docs/auto-redact/">Auto-redact</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li><li><a href="/docs/pro/">Pro features</a></li></ul></div>
@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Reference</p>
       <h1>Keyboard shortcuts</h1>
       <p class="docs-lead">Every key A9 Snap uses, what each does, its default, and where you can change it.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.9.0</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.10.0</p>
       <p>A9 Snap has two kinds of keys. <strong>Global hotkeys</strong> work from any app, even when no A9 Snap window is open. You can change these. <strong>Window keys</strong> work only while the strip or the editor is in front. These are fixed.</p>
 <p>Keys are written like <kbd>Alt</kbd>+<kbd>Z</kbd>, which means hold <kbd>Alt</kbd> and press <kbd>Z</kbd>.</p>
 <h2 id="global-hotkeys">Global hotkeys<a class="anchor" href="#global-hotkeys" aria-label="Link to Global hotkeys">#</a></h2>
@@ -76,6 +76,7 @@
 <tr><td>Capture hotkey</td><td><kbd>Alt</kbd>+<kbd>Z</kbd></td><td>Freezes the screen. Click a window, press <kbd>F</kbd> for the whole screen, or drag a region.</td></tr>
 <tr><td>OCR capture hotkey</td><td><kbd>Alt</kbd>+<kbd>X</kbd></td><td>Copies recognized text from a region, without saving a picture.</td></tr>
 <tr><td>Recent captures hotkey</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td>Opens the <a href="/docs/strip/">strip</a>. Press it again to close the strip.</td></tr>
+<tr><td>Record video</td><td><kbd>Alt</kbd>+<kbd>Z</kbd>, then <kbd>R</kbd></td><td><a href="/docs/record-video/">Records an area</a> as an MP4 (Pro). Press <kbd>Alt</kbd>+<kbd>Z</kbd> again to stop. It follows your capture hotkey.</td></tr>
 <tr><td>Secure capture</td><td><kbd>Alt</kbd>+<kbd>Z</kbd>, then <kbd>S</kbd></td><td>Takes a <a href="/docs/secure-capture/">secure capture</a> (Pro). It follows your capture hotkey, and the Home window and the tray have a <strong>Secure capture</strong> item that does the same.</td></tr>
 </tbody></table></div>
 <h2 id="while-you-pick-after-alt-z-or-alt-x">While you pick (after <kbd>Alt</kbd>+<kbd>Z</kbd> or <kbd>Alt</kbd>+<kbd>X</kbd>)<a class="anchor" href="#while-you-pick-after-alt-z-or-alt-x" aria-label="Link to While you pick (after Alt + Z or Alt + X )">#</a></h2>
@@ -84,6 +85,7 @@
 <tr><td><kbd>F</kbd></td><td>Takes the whole monitor the pointer is on.</td></tr>
 <tr><td>Drag</td><td>Takes the region you drag.</td></tr>
 <tr><td><kbd>S</kbd></td><td>Turns <a href="/docs/secure-capture/">secure capture</a> on or off for this capture (Pro, <kbd>Alt</kbd>+<kbd>Z</kbd> only). The outline gets a padlock and the size says <strong>Secure</strong>.</td></tr>
+<tr><td><kbd>R</kbd></td><td>Records the area instead of taking a picture (Pro, <kbd>Alt</kbd>+<kbd>Z</kbd> only). The size says <strong>Record</strong>. Not together with <kbd>S</kbd>. See <a href="/docs/record-video/">Record video and GIF</a>.</td></tr>
 <tr><td><kbd>Esc</kbd></td><td>Cancels. Nothing is copied or saved.</td></tr>
 <tr><td>Right-click</td><td>Cancels.</td></tr>
 </tbody></table></div>
@@ -94,7 +96,7 @@
 <tr><td>Arrow keys, <kbd>Home</kbd>, <kbd>End</kbd></td><td>Move the focus ring.</td></tr>
 <tr><td><kbd>Space</kbd></td><td>Picks or unpicks the focused capture.</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd></td><td>Picks all of them.</td></tr>
-<tr><td><kbd>Enter</kbd> or <kbd>Ctrl</kbd>+<kbd>C</kbd></td><td>Copies the picked captures, or the focused one if none are picked.</td></tr>
+<tr><td><kbd>Enter</kbd> or <kbd>Ctrl</kbd>+<kbd>C</kbd></td><td>Copies the picked captures, or the focused one if none are picked. On a recording or a GIF, <kbd>Enter</kbd> plays it in your default player instead.</td></tr>
 <tr><td><kbd>E</kbd></td><td>Opens the picked capture, or the focused one, in the editor.</td></tr>
 <tr><td><kbd>Delete</kbd></td><td>Moves the picked captures, or the focused one, to the Recycle Bin. The note has an <strong>Undo</strong> button.</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd> or <kbd>/</kbd></td><td><a href="/docs/strip/#search-your-captures">Searches</a>: puts the keyboard in the search box.</td></tr>

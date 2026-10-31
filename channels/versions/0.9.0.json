@@ -1,0 +1,13 @@
+{
+  "version": "0.9.0",
+  "notes": "- **Auto-redact (Pro).** A9 Snap reads the words in a picture with the same on-device Windows text recognition as Copy text and blurs the email addresses, phone numbers and card numbers it finds (card numbers are Luhn-checked, 13 to 19 digits, spaces or dashes allowed; dates, versions and order numbers are left alone). IP addresses and long key-like strings are on the list in Saving but **off** by default. Each match becomes one rectangle over its words, a few pixels larger.\n- **Redact in the editor (R).** A **Redact** button (and the key **R**) puts an ordinary Blur over every match: select, move, delete, undo the whole thing with one Ctrl+Z. A note says **Blurred 3 items: 2 emails, 1 phone number.**, or **Nothing to redact found.** Free sees the button with a **Pro** badge, which opens the Pro sheet.\n- **Copy redacted in the strip.** Right-click a capture, **Copy redacted** (Pro): a blurred copy goes on the clipboard and the file is not changed.\n- **Redact every capture before it's copied** (Saving, Pro, off by default). The clipboard copy and the saved file are blurred; the untouched original is kept in the hidden `.a9snap` folder like an edit's, so Revert brings it back and **Clear** on Edit originals removes it. It adds a moment before the picture is on the clipboard: about 1 second for a full 1920 x 1080 screen of text, about 0.2 seconds for an 800 x 450 region, on the test PC. If Windows can't read the picture it is copied as it is and the note says so. Secure captures are never redacted.\n- The Pro features page lists Auto-redact as **Included** with how to use it; the manual has a new Auto-redact page, and Keyboard shortcuts, Settings, Privacy, the strip and the editor pages cover it. What it finds is never logged, only how many items.",
+  "pub_date": "2026-10-31T17:40:41Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0VFYVViV1hxTjN1Y1lzRGNzWjRwUzF5Rk1NNDdwc1Vib3JieWpxcWNSZHRrUmtzOVRKWmswL2lEd1pRU1V4UnNzVUpPL25kdkt3OVJoVDNqb0RvUXdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNDY4NDIxCWZpbGU6QTkgU25hcF8wLjkuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC45LjAKb2psTGxhTk9HZG1GWFdXeDlsclcvS2dvMExTZTEyUmhrbWxPMURHclRxRWlGZ1gvdWZIZGFBcGJYQ0R5d3FVKzlKcm9tSVBXbTZnMUFhU25UN1NmREE9PQo=",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.9.0/A9Snap_0.9.0_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "1c4be9b38d2434c110dc0c84f50032e44027112a3124aa89b250d7aee042e6c4",
+  "installer_size": 3525426
+}

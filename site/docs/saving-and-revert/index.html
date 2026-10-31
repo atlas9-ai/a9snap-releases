@@ -56,7 +56,7 @@
 <div class="docs-group"><h2 class="docs-group-h">Start here</h2><ul><li><a href="/docs/">Getting started</a></li><li><a href="/docs/whats-new/">What's new</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li><li><a href="/docs/secure-capture/">Secure capture</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Recent captures</h2><ul><li><a href="/docs/strip/">The recent captures strip</a></li></ul></div>
-<div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/" aria-current="page">Saving, Save as new and Revert</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/" aria-current="page">Saving, Save as new and Revert</a></li><li><a href="/docs/auto-redact/">Auto-redact</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li><li><a href="/docs/pro/">Pro features</a></li></ul></div>
 <div class="docs-group"><h2 class="docs-group-h">Reference</h2><ul><li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li><li><a href="/docs/troubleshooting/">If something goes wrong</a></li><li><a href="/docs/privacy/">Privacy</a></li><li><a href="/docs/updates-and-channels/">Updates and channels</a></li></ul></div>
       </nav>
@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Editor</p>
       <h1>Saving, Save as new and Revert</h1>
       <p class="docs-lead">Save over the capture, save as a new numbered file, or go back to the original. Here is exactly what each one does to your files.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.8.1</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.9.0</p>
       <p>When you finish drawing, you have two ways to save and one way back. This page explains each, and what happens to the untouched original.</p>
 <h2 id="save-over-the-capture">Save over the capture<a class="anchor" href="#save-over-the-capture" aria-label="Link to Save over the capture">#</a></h2>
 <p>Press <kbd>Ctrl</kbd>+<kbd>S</kbd> or click <strong>Done</strong>.</p>
@@ -106,6 +106,7 @@
 <li>The strip and the Home window show an edited capture with a small Volt dot.</li>
 <li>Deleting a capture with the trash can or <kbd>Delete</kbd> sends its hidden original to the Recycle Bin with it, and <strong>Undo</strong> brings both back. Deleting the file in Explorer leaves the original behind.</li>
 <li><strong>Save as new</strong> creates a file with no original of its own, because the plain capture is still there.</li>
+<li>A capture saved by <strong>Redact every capture before it&#39;s copied</strong> is kept the same way: the file is the blurred picture and its original is the untouched one, so <strong>Revert</strong> brings the original back. See <a href="/docs/auto-redact/">Auto-redact</a>.</li>
 </ul>
 <h2 id="blur-is-permanent-in-the-saved-file">Blur is permanent in the saved file<a class="anchor" href="#blur-is-permanent-in-the-saved-file" aria-label="Link to Blur is permanent in the saved file">#</a></h2>
 <p>A blur turns the area into flat blocks in the file you save. The pixels it hid are gone from that file. But the original, which is the picture before any edit, still holds them, and it stays in <code>.a9snap</code> until you Revert or delete it.</p>

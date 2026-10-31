@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mark up a screenshot · A9 Snap Manual</title>
-<meta name="description" content="Open a capture in the editor and add an arrow, a box, some text, a highlight, a blur or a crop, then send it.">
+<meta name="description" content="Open a capture in the editor and add an arrow, a box, some text, numbered steps, a stamp, a highlight, a blur or a crop, then send it.">
 <link rel="canonical" href="https://a9snap.com/docs/mark-up-a-screenshot/">
 <meta name="theme-color" content="#0B0C0E">
 <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A9 Snap">
 <meta property="og:title" content="Mark up a screenshot · A9 Snap Manual">
-<meta property="og:description" content="Open a capture in the editor and add an arrow, a box, some text, a highlight, a blur or a crop, then send it.">
+<meta property="og:description" content="Open a capture in the editor and add an arrow, a box, some text, numbered steps, a stamp, a highlight, a blur or a crop, then send it.">
 <meta property="og:url" content="https://a9snap.com/docs/mark-up-a-screenshot/">
 <meta property="og:image" content="https://a9snap.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -66,9 +66,9 @@
     <article class="docs-article">
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Editor</p>
       <h1>Mark up a screenshot</h1>
-      <p class="docs-lead">Open a capture in the editor and add an arrow, a box, some text, a highlight, a blur or a crop, then send it.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.5</p>
-      <p>The editor is deliberately small. It has seven tools and nothing more, so marking up a screenshot takes a few seconds. Everything you draw stays editable until you save.</p>
+      <p class="docs-lead">Open a capture in the editor and add an arrow, a box, some text, numbered steps, a stamp, a highlight, a blur or a crop, then send it.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.8.1</p>
+      <p>The editor is deliberately small. It has nine tools and nothing more, so marking up a screenshot takes a few seconds. Everything you draw stays editable until you save.</p>
 <p><figure class="shot"><img src="/img/docs/mark-up-a-screenshot-editor-1x.webp" srcset="/img/docs/mark-up-a-screenshot-editor-1x.webp 1x, /img/docs/mark-up-a-screenshot-editor.webp 2x" width="1180" height="820" alt="The editor with a box around a button, an arrow pointing at it and a short label" loading="lazy" decoding="async"><figcaption>The editor on a mock capture: a box, an arrow and a text label, with the toolbar above.</figcaption></figure></p>
 <h2 id="open-a-capture-in-the-editor">Open a capture in the editor<a class="anchor" href="#open-a-capture-in-the-editor" aria-label="Link to Open a capture in the editor">#</a></h2>
 <p>Pick whichever is closest:</p>
@@ -94,10 +94,20 @@
 <tr><td>Ellipse</td><td><kbd>E</kbd></td><td>Drag out an oval outline.</td></tr>
 <tr><td>Highlight</td><td><kbd>H</kbd></td><td>Drag over what matters. It paints a translucent band, Volt by default.</td></tr>
 <tr><td>Text</td><td><kbd>T</kbd></td><td>Click, type, then press <kbd>Enter</kbd> to finish. <kbd>Shift</kbd>+<kbd>Enter</kbd> starts a new line. <kbd>Esc</kbd> cancels. The width sets the text size.</td></tr>
+<tr><td>Steps</td><td><kbd>N</kbd></td><td>Each click drops the next numbered circle (1, 2, 3 …) in the current colour and width. Drag while you place one to pull a pointer tail out of it.</td></tr>
+<tr><td>Stamps</td><td><kbd>M</kbd></td><td>Pick a stamp (check, cross, question, exclamation or star) from the row that appears, then click to place it. Drag instead of clicking to size it as you place it.</td></tr>
 <tr><td>Blur</td><td><kbd>U</kbd></td><td>Drag over what to hide. It turns the area into flat blocks.</td></tr>
 <tr><td>Crop</td><td><kbd>C</kbd></td><td>Drag the region to keep, adjust it with the handles, then press <kbd>Enter</kbd>. <kbd>Esc</kbd> cancels.</td></tr>
 </tbody></table></div>
 <p>To fix a text, double-click it. Text uses Geist with a soft dark outline, so it reads on any background.</p>
+<h3 id="steps">Steps<a class="anchor" href="#steps" aria-label="Link to Steps">#</a></h3>
+<p>Steps are for showing someone how to do something. Click where step 1 goes, then step 2, and so on: the numbers count the steps in the order you placed them. The width sets the circle&#39;s size, and the number is black or white, whichever reads on the colour.</p>
+<p>Drag while you press to add a <strong>pointer tail</strong> that points at what the step is about. Select a step to move it, change its colour or width, or drag the end of its tail; drag the tail back onto the circle to remove it. <strong>Delete a step and the rest renumber</strong> (the step after 2 becomes 2), and undo and redo bring the old numbers back.</p>
+<h3 id="stamps">Stamps<a class="anchor" href="#stamps" aria-label="Link to Stamps">#</a></h3>
+<p>The stamps are drawn by A9 Snap in its own colours, not emoji, so they look the same everywhere: a check (Volt), a cross (Nine Red), a question (Blue), an exclamation (White) and a star (Volt). Pick one from the row that appears while the tool is on, then click to place it at a medium size. Select a stamp to move it, drag a corner handle to resize it (it stays square), change its colour, or, with the Select tool, click another stamp in the row to swap it.</p>
+<h3 id="drop-shadow">Drop shadow<a class="anchor" href="#drop-shadow" aria-label="Link to Drop shadow">#</a></h3>
+<p>The <strong>Shadow</strong> button in the top bar adds a soft shadow and a 40-pixel see-through margin around the picture you save, and around the copy on the clipboard. It is part of the document, so undo brings it back out, and with a crop the shadow goes around the cropped picture. The margin makes the saved file larger than the capture; the footer says so while it is on. Programs that can read a transparent PNG (chat apps, Word, browsers) show the shadow over their own background; a program that can only take a plain bitmap gets the picture on white.</p>
+<p>Turn on <strong>Drop shadow in the editor</strong> in <a href="/docs/settings/#strip-and-editor">Strip and editor</a> to have every picture open with the shadow on. It is off by default.</p>
 <h3 id="blur">Blur<a class="anchor" href="#blur" aria-label="Link to Blur">#</a></h3>
 <p>Blur pixelates for real. The saved file holds flat blocks where the area was, not the picture with a layer on top, so nobody can lift the blur off later. Before you save, undo still brings the pixels back. After you save, see <a href="/docs/saving-and-revert/#blur-is-permanent-in-the-saved-file">the note on originals</a>.</p>
 <h3 id="crop">Crop<a class="anchor" href="#crop" aria-label="Link to Crop">#</a></h3>
@@ -120,7 +130,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/strip/"><span class="docs-step-l">Previous</span><span>The recent captures strip</span></a><a class="docs-step next" href="/docs/saving-and-revert/"><span class="docs-step-l">Next</span><span>Saving, Save as new and Revert</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#open-a-capture-in-the-editor">Open a capture in the editor</a></li><li class="d2"><a href="#draw-something">Draw something</a></li><li class="d2"><a href="#the-tools">The tools</a></li><li class="d3"><a href="#blur">Blur</a></li><li class="d3"><a href="#crop">Crop</a></li><li class="d2"><a href="#copy-text">Copy text</a></li><li class="d2"><a href="#undo-redo-and-zoom">Undo, redo and zoom</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#open-a-capture-in-the-editor">Open a capture in the editor</a></li><li class="d2"><a href="#draw-something">Draw something</a></li><li class="d2"><a href="#the-tools">The tools</a></li><li class="d3"><a href="#steps">Steps</a></li><li class="d3"><a href="#stamps">Stamps</a></li><li class="d3"><a href="#drop-shadow">Drop shadow</a></li><li class="d3"><a href="#blur">Blur</a></li><li class="d3"><a href="#crop">Crop</a></li><li class="d2"><a href="#copy-text">Copy text</a></li><li class="d2"><a href="#undo-redo-and-zoom">Undo, redo and zoom</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Settings</p>
       <h1>Settings sections</h1>
       <p class="docs-lead">Every setting, section by section, in the order the Home window lists them, with what each one does and its default.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.7.1</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.8.1</p>
       <p>Every setting is in the Home window&#39;s menu of sections. Each section has a <strong>?</strong> button at the top right that opens its manual page. A change is saved the moment you make it, and A9 Snap checks it. If a value is not allowed, a line under the setting says why and the setting goes back to what it was. For the window itself, see <a href="/docs/home-window/">The Home window</a>.</p>
 <h2 id="shortcuts">Shortcuts<a class="anchor" href="#shortcuts" aria-label="Link to Shortcuts">#</a></h2>
 <p><figure class="shot"><img src="/img/docs/settings-shortcuts-1x.webp" srcset="/img/docs/settings-shortcuts-1x.webp 1x, /img/docs/settings-shortcuts.webp 2x" width="728" height="475" alt="The Shortcuts section: the capture, OCR capture and recent captures hotkeys, and Start at login" loading="lazy" decoding="async"><figcaption>The Shortcuts section.</figcaption></figure></p>
@@ -93,6 +93,7 @@
 <li><strong>File name</strong> has <strong>Prefix</strong> (default <code>snag_</code>) and <strong>Digits</strong> (default 4, from 0 to 6). A line shows <strong>Next file</strong>.</li>
 <li><strong>Search inside screenshots</strong> (Pro) reads the words in each capture on this PC so the <a href="/docs/strip/#search-inside-screenshots-pro">strip</a> can find a capture by what is in it. On by default with Pro; without Pro the row shows a <strong>Pro</strong> badge and opens the Pro sheet. A line under it says how far the reading is (<strong>Read 412 of 1,280 captures</strong>, then <strong>All captures read</strong>), and <strong>Clear text index</strong> deletes the words read so far, after asking. The index holds text from your screenshots, in the hidden <code>.a9snap</code> folder in your screenshots folder, and never leaves this PC. Turning the setting off stops reading and deletes the index. Secure captures are never read. See <a href="/docs/privacy/">Privacy</a>.</li>
 <li><strong>Remember which app each capture came from</strong> notes the app and window title of each new capture so the <a href="/docs/strip/#search-by-app-and-window-title">strip</a> can search by them. On by default. Window titles can contain an email subject or a document&#39;s name; they stay in the hidden <code>.a9snap</code> folder in your screenshots folder and never leave this PC. Turning it off stops new notes and keeps the old ones; <strong>Clear</strong> next to it deletes them. See <a href="/docs/privacy/">Privacy</a>.</li>
+<li><strong>Edit originals</strong> says how many untouched originals the <a href="/docs/mark-up-a-screenshot/">editor</a> has kept so <strong>Revert</strong> works and how much room they take (<strong>23 files, 41 MB</strong>). They still hold anything you blurred. <strong>Clear</strong> asks first, then sends them to the Recycle Bin. After that <strong>Revert</strong> is gone for those captures; the edited pictures stay as they are and keep their Volt dot.</li>
 <li><strong>Also copy as file</strong> puts the saved file on the clipboard next to the picture. Off by default.</li>
 </ul>
 <p><a href="/docs/where-screenshots-go/">Where screenshots go</a> explains the numbering in full.</p>
@@ -101,6 +102,7 @@
 <ul>
 <li><strong>Captures in the strip</strong> is how many of the newest captures the <a href="/docs/strip/">strip</a> shows: 6, 9, 12, 18 or 24. Default 12. A search finds all of them, however many.</li>
 <li><strong>Per row</strong> is how many of them sit in one row: 4, 6, 8 or 12. Default 6, so 12 captures make two rows of six. A narrow screen gets fewer to a row, and a short one scrolls.</li>
+<li><strong>Drop shadow in the editor</strong> starts each picture in the <a href="/docs/mark-up-a-screenshot/#drop-shadow">editor</a> with the shadow on: a soft shadow and a see-through margin around the saved picture. Off by default; the editor&#39;s <strong>Shadow</strong> button switches it per picture.</li>
 <li><strong>Open the editor after every capture</strong> opens the <a href="/docs/mark-up-a-screenshot/">editor</a> on each capture as you take it. Off by default. When it is off, press <kbd>E</kbd> in the strip or click <strong>Edit</strong> on the note.</li>
 </ul>
 <h2 id="notifications">Notifications<a class="anchor" href="#notifications" aria-label="Link to Notifications">#</a></h2>

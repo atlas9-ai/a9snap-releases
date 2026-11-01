@@ -67,7 +67,7 @@
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Reference</p>
       <h1>If something goes wrong</h1>
       <p class="docs-lead">Fixes for the problems people hit most: a hotkey that does nothing, a picture that won't paste, a missing tray icon, and an update that fails.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.3.6</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.13.1</p>
       <p>Find your problem below. If none of it helps, the <a href="#where-the-log-file-is">log file</a> says what A9 Snap did.</p>
 <h2 id="a-hotkey-is-taken-by-another-app">A hotkey is taken by another app<a class="anchor" href="#a-hotkey-is-taken-by-another-app" aria-label="Link to A hotkey is taken by another app">#</a></h2>
 <p><strong>What you see:</strong> pressing <kbd>Alt</kbd>+<kbd>Z</kbd> does nothing, the tray icon wears a warning badge, and Settings says <strong>Alt+Z is taken by another app. Pick another.</strong></p>
@@ -112,6 +112,19 @@
 <li>Make sure your network or firewall allows <code>raw.githubusercontent.com</code> and <code>github.com</code>. See <a href="/docs/privacy/#the-update-check">Privacy</a>.</li>
 <li>If it still fails, download the installer again from <a href="/">a9snap.com</a> and run it. It updates your copy and keeps your settings.</li>
 </ol>
+<h2 id="alt-z-is-slow-to-appear-or-the-screen-freezes-for-a-moment">Alt+Z is slow to appear, or the screen freezes for a moment<a class="anchor" href="#alt-z-is-slow-to-appear-or-the-screen-freezes-for-a-moment" aria-label="Link to Alt+Z is slow to appear, or the screen freezes for a moment">#</a></h2>
+<p>A9 Snap times every capture. For each one it adds a line that starts with <code>capture timing:</code> to the <a href="#where-the-log-file-is">log file</a>. The line says how many milliseconds each step took, from the moment you pressed the hotkey to the moment the picker was on screen. When a capture takes longer than 300 milliseconds, a second line follows. It starts with <code>slow capture:</code> and names the slowest step.</p>
+<p>To see what happened at the time it stalled, open the log, search for <code>slow capture</code>, and look at the line closest to the time you noticed it. The step names are:</p>
+<ul>
+<li><code>grab</code> is reading the screen. It takes longer on big monitors and on setups with several of them.</li>
+<li><code>windows</code> is making the list of windows that a click can pick.</li>
+<li><code>secure</code> is checking whether the window in front is on your Always secure list.</li>
+<li><code>layout</code> is getting the picker windows ready. It is long when you plugged in or removed a monitor, or changed its size, since the last capture.</li>
+<li><code>post</code> and <code>paint</code> are handing the picture to the picker and drawing it. A slow <code>post</code> means A9 Snap&#39;s own window thread was busy.</li>
+<li><code>show</code> is putting the picker on screen.</li>
+</ul>
+<p>Two flags on the line help too: <code>resumed=yes</code> means the PC woke from sleep since the last capture, and <code>unlocked=yes</code> means you unlocked it.</p>
+<p><strong>These lines hold timings only.</strong> They have times, picture sizes in pixels, screen scales and counts. They never have a picture, a window title, an app name or a file name, and for Always secure they say only whether the window in front matched (<code>yes</code> or <code>no</code>). They stay in the log on your PC. A9 Snap sends them nowhere.</p>
 <h2 id="where-the-log-file-is">Where the log file is<a class="anchor" href="#where-the-log-file-is" aria-label="Link to Where the log file is">#</a></h2>
 <p>A9 Snap writes a log to <code>a9snap.log</code> in this folder:</p>
 <p><code>%APPDATA%\ai.atlas9.a9snap\logs</code></p>
@@ -127,7 +140,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/keyboard-shortcuts/"><span class="docs-step-l">Previous</span><span>Keyboard shortcuts</span></a><a class="docs-step next" href="/docs/privacy/"><span class="docs-step-l">Next</span><span>Privacy</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#a-hotkey-is-taken-by-another-app">A hotkey is taken by another app</a></li><li class="d2"><a href="#nothing-is-on-the-clipboard-or-it-wont-paste">Nothing is on the clipboard, or it won't paste</a></li><li class="d2"><a href="#ocr-finds-no-text-or-cannot-start">OCR finds no text or cannot start</a></li><li class="d2"><a href="#the-picture-wasnt-saved">The picture wasn't saved</a></li><li class="d2"><a href="#the-next-number-is-wrong">The next number is wrong</a></li><li class="d2"><a href="#a9-snap-did-not-start-after-a-restart">A9 Snap did not start after a restart</a></li><li class="d2"><a href="#i-cant-find-the-tray-icon">I can't find the tray icon</a></li><li class="d2"><a href="#windows-says-it-protected-your-pc">Windows says it protected your PC</a></li><li class="d2"><a href="#an-update-failed">An update failed</a></li><li class="d2"><a href="#where-the-log-file-is">Where the log file is</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#a-hotkey-is-taken-by-another-app">A hotkey is taken by another app</a></li><li class="d2"><a href="#nothing-is-on-the-clipboard-or-it-wont-paste">Nothing is on the clipboard, or it won't paste</a></li><li class="d2"><a href="#ocr-finds-no-text-or-cannot-start">OCR finds no text or cannot start</a></li><li class="d2"><a href="#the-picture-wasnt-saved">The picture wasn't saved</a></li><li class="d2"><a href="#the-next-number-is-wrong">The next number is wrong</a></li><li class="d2"><a href="#a9-snap-did-not-start-after-a-restart">A9 Snap did not start after a restart</a></li><li class="d2"><a href="#i-cant-find-the-tray-icon">I can't find the tray icon</a></li><li class="d2"><a href="#windows-says-it-protected-your-pc">Windows says it protected your PC</a></li><li class="d2"><a href="#an-update-failed">An update failed</a></li><li class="d2"><a href="#alt-z-is-slow-to-appear-or-the-screen-freezes-for-a-moment">Alt+Z is slow to appear, or the screen freezes for a moment</a></li><li class="d2"><a href="#where-the-log-file-is">Where the log file is</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

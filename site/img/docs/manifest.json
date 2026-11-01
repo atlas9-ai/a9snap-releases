@@ -9,7 +9,7 @@
  },
  "pro-features-page": {
   "w": 728,
-  "h": 506
+  "h": 835
  },
  "saving-and-revert-unsaved": {
   "w": 590,
@@ -17,31 +17,35 @@
  },
  "secure-capture-sidebar": {
   "w": 247,
-  "h": 210
- },
- "settings-notifications": {
-  "w": 728,
   "h": 144
  },
- "settings-saving": {
-  "w": 728,
-  "h": 374
- },
- "settings-shortcuts": {
-  "w": 728,
-  "h": 475
- },
- "settings-strip": {
+ "settings-general": {
   "w": 728,
   "h": 216
  },
+ "settings-saving": {
+  "w": 713,
+  "h": 1503
+ },
+ "settings-secure": {
+  "w": 713,
+  "h": 792
+ },
+ "settings-shortcuts": {
+  "w": 728,
+  "h": 403
+ },
+ "settings-strip": {
+  "w": 728,
+  "h": 378
+ },
  "settings-updates": {
   "w": 728,
-  "h": 287
+  "h": 288
  },
  "start-at-login-blocked": {
   "w": 728,
-  "h": 330
+  "h": 258
  },
  "strip-selected": {
   "w": 1548,

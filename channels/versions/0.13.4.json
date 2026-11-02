@@ -1,0 +1,13 @@
+{
+  "version": "0.13.4",
+  "notes": "- **The Pro features page fits again.** With nine features, the list on a Free PC ran past the bottom of the window at 1000 x 680. It now sits in three columns and shows without scrolling.",
+  "pub_date": "2026-11-02T11:29:01Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb05nNk1LNjhyaHZQcERQM0hJU3ZJcU40MzI4M0VEbFRqQkxMbS9OeUsxMDU0b09mVjNTRTVCdDN6L3hPd2RrNnVOOS9wTmNMbk9JZUJBMGw2N2xCbVF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjE4OTIyCWZpbGU6QTkgU25hcF8wLjEzLjRfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuNAplU3lReGNxbmdjcmtiems5N1JIdTJOekV5ekhTenU4Sko4dXlSa1JUbVNpQ1ErcFJkRUQ0cGhTTjUxYmtFb2VLNkhFZ2pMbjlaT0Z0M1U2c1RneFRBQT09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.4/A9Snap_0.13.4_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "dbc64314a35f972da37ec23ca82f4e879a47c1b83b6415a783b1be795ae7d3ba",
+  "installer_size": 3712746
+}

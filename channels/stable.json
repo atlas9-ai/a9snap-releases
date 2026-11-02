@@ -1,13 +1,13 @@
 {
-  "version": "0.13.0",
-  "notes": "- **Send to your apps (Pro).** A new **Share** button opens **Windows' own Share sheet** on a capture, so any app that accepts shares is one click away: mail, chat, team apps, nearby sharing. It is on the **confirmation note** (next to **Edit**, and next to **Save as GIF** and **Show in folder** on a recording's note), in the **strip** (press **H**, or right-click a card and choose **Share…**; several picked captures go together), and in the **editor's top bar** (a changed picture is saved over the capture, as **Done** does, then the saved file is shared; with nothing changed the capture is shared as it is; the editor stays open). A picture goes as a file and, for apps that take pictures, as the picture itself; a recording or GIF goes as a file. Windows already shows the apps you used last at the top of the sheet, and **Email** is among its targets, so A9 Snap keeps no list of its own.\n- **Nothing leaves A9 Snap by itself:** no account, no connection and no network call. A9 Snap gives Windows the file and the app you pick takes it from there. A secure capture has no Share button. Without Pro the buttons carry a **PRO** badge and open the Pro sheet. The Pro features page lists **Send to your apps** as **Included** with how to use it. New manual page **Share to your apps**; Keyboard shortcuts, the strip, the editor, Pro features and Privacy cover it. The log says how many files, never a name.",
-  "pub_date": "2026-11-01T00:30:57Z",
+  "version": "0.13.2",
+  "notes": "**0.13.2**\n- **The side column is for doing things.**\n- **Secure folder and Secure vault are one place.**\n- **Check for updates is one click from anywhere.**\n\n**0.13.1**\n- **Alt+Z shows the picker sooner.**\n- **A slow or stuck Alt+Z now leaves a trace.**\n- **A second Alt+Z while the picker is opening or open**\n\nFull release notes: https://github.com/atlas9-ai/a9snap-releases/releases",
+  "pub_date": "2026-11-01T23:59:35Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0k1SXlRYVU1cXFJS29QdWhRSGw5YjM3bUtERnduRWpWQUdpZnZjcHcrZkg2Wk5vd29OY3lsbEhkWWpjM0hZV052NG5rMDNpZDh2anc4VVMwa3JjYXc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNDkzMDM4CWZpbGU6QTkgU25hcF8wLjEzLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuMApqMXNiOW9JVDJKN3RlNlJMazYrUFE4Wkh5NWFBckNtZlkrUjBkNmpQMS9iN0Q5UzIyT3EveHRHTVVrNHl2bmUzbmtHVzROb1RRdnRXTGkrQW1jTnhDQT09Cg==",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.0/A9Snap_0.13.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb01ob3Y0cG9FSStIR2s1WVhOVDd3YWtPYy9lYWhlVEVmKzQ2S0o4WjByNldCUEdZOTFmVGsvbHBLRlFUdWZyelJvblg4REFJRlhlQ1hwbHVweDBEMWdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTc3NTU2CWZpbGU6QTkgU25hcF8wLjEzLjJfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuMgoyWDF1TWRMMU5pMFdWZS9EQTdJd2VvNHlNcTBqdG4ycUlSdE51Ukk4dXBzZzRDNDYvQXkxekNoWVpBVUFtU1I2RGphQ05OeENmeWYrYTI2VjBnckdCUT09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.2/A9Snap_0.13.2_x64-setup.exe"
     }
   },
-  "installer_sha256": "370f2e69b768750a099ae7ed46037759236d73f792d8689ed7a9277158a22ddb",
-  "installer_size": 3695765
+  "installer_sha256": "8cec8b99ce2b6c0143675bc43ff21800c7ae213e7a91bf13e74265ed8f301b89",
+  "installer_size": 3711605
 }

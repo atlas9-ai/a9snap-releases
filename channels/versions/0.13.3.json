@@ -1,0 +1,13 @@
+{
+  "version": "0.13.3",
+  "notes": "- **Copy text (Alt+X) is now part of A9 Snap Pro.** Window, region and full-screen capture, the strip and the editor stay free. Without Pro, **Alt+X**, **Copy text** in Quick capture and the tray's **OCR capture** open the Pro sheet instead of the picker: nothing is read, nothing is copied and no error shows. Existing free installs are not grandfathered: Pro is a one-time $14.99 purchase with a 14-day money-back guarantee. Copy text on a picture you already took (the strip's right-click menu, the editor's **Copy text** button) stays free.\n- **Where it shows.** **Copy text** in Quick capture and the **OCR capture hotkey** row in Settings carry the **PRO** badge without Pro. The **Pro features** page lists it as the ninth feature, with how to use it. The manual (Take a screenshot, Keyboard shortcuts, Settings, Home window, Pro features, Privacy) and the README say so.\n- **The capture timing line** now says `pro=yes` or `pro=no` (the cached license state; the Alt+X check never uses the network).",
+  "pub_date": "2026-11-02T11:02:14Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb04wYVNzS3BKQ1M3Sm1IMzB6THFaNE4raDhqMzBMMi9KaXBUMHVLd25zZWxvYTdVVmkvTzNza1JVQWpyWTFhWWNOK2Voc0xnMDEzaDRnVlpIY3J1SlFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjE3MzEzCWZpbGU6QTkgU25hcF8wLjEzLjNfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuMwp5bGtpcjdkT1plRjBxVnB1M043dWFyU0ZoUlBoOHh4VTdPNkx3SW4xQVc4UVFibmxuT2FHRTMyQjFGOGEwa09oWkVqeUIzWk9mazRaV2lHeWl1SCtBZz09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.3/A9Snap_0.13.3_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "e6cd1baa139f8a39f749bb1444bb26fe2cf388247c43f7602f00888510726d0c",
+  "installer_size": 3712876
+}

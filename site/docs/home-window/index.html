@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Home window · A9 Snap Manual</title>
-<meta name="description" content="The one window A9 Snap has: your actions on the left, your newest captures in the middle, and every setting a click away.">
+<meta name="description" content="The one window A9 Snap has: your actions on the left, your newest captures in the middle, a Quick capture page, and every setting a click away.">
 <link rel="canonical" href="https://a9snap.com/docs/home-window/">
 <meta name="theme-color" content="#0B0C0E">
 <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A9 Snap">
 <meta property="og:title" content="The Home window · A9 Snap Manual">
-<meta property="og:description" content="The one window A9 Snap has: your actions on the left, your newest captures in the middle, and every setting a click away.">
+<meta property="og:description" content="The one window A9 Snap has: your actions on the left, your newest captures in the middle, a Quick capture page, and every setting a click away.">
 <meta property="og:url" content="https://a9snap.com/docs/home-window/">
 <meta property="og:image" content="https://a9snap.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -66,8 +66,8 @@
     <article class="docs-article">
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Settings</p>
       <h1>The Home window</h1>
-      <p class="docs-lead">The one window A9 Snap has: your actions on the left, your newest captures in the middle, and every setting a click away.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.13.3</p>
+      <p class="docs-lead">The one window A9 Snap has: your actions on the left, your newest captures in the middle, a Quick capture page, and every setting a click away.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.13.5</p>
       <p>Open the Home window by double-clicking the tray icon, or by choosing <strong>Settings</strong> in the tray menu. It always opens on Home, however you left it. Closing the window does not quit A9 Snap: it keeps waiting in the tray.</p>
 <p><figure class="shot"><img src="/img/docs/home-window-overview-1x.webp" srcset="/img/docs/home-window-overview-1x.webp 1x, /img/docs/home-window-overview.webp 2x" width="1000" height="680" alt="The Home window with the actions on the left and six captures in the middle" loading="lazy" decoding="async"><figcaption>The Home window on mock captures.</figcaption></figure></p>
 <h2 id="the-left-side">The left side<a class="anchor" href="#the-left-side" aria-label="Link to The left side">#</a></h2>
@@ -77,7 +77,7 @@
 <li><strong>Editor</strong> opens your newest capture in the <a href="/docs/mark-up-a-screenshot/">editor</a>. It is dimmed until you have a capture.</li>
 <li><strong>Folder</strong> opens your screenshots folder in Explorer.</li>
 <li><strong>Secure</strong> (Pro only, beside Editor and Folder) opens the <a href="/docs/secure-capture/#settings">secure folder</a> in Explorer. With <strong>Encrypt the secure folder</strong> on, the button reads <strong>Vault</strong> and opens the vault: Windows asks for Windows Hello first.</li>
-<li><strong>Quick capture</strong> is a short list of one-click items, each with its keys beside it. <strong>Recent captures</strong> opens the <a href="/docs/strip/">strip</a>. <strong>Window</strong> opens the picker: click a window. <strong>Full screen</strong> takes the screen the pointer is on at once, like <kbd>F</kbd> in the picker. <strong>Scrolling</strong> and <strong>Record video</strong> open the picker with <kbd>L</kbd> or <kbd>R</kbd> already on. <strong>Copy text</strong> is the OCR capture: it copies the text in a region and saves no picture. All three are <a href="/docs/pro/">Pro</a> features, so without Pro they carry a <strong>PRO</strong> badge and open the Pro sheet.</li>
+<li>The <strong>menu</strong> has three rows, and a row only ever changes what the window shows: <strong>Home</strong>, <strong>Quick capture</strong> and <strong>Settings</strong>. Nothing in the menu takes a picture. The row you are on has a Volt bar. Use the up and down arrow keys to walk them. <strong>Quick capture</strong> opens <a href="#quick-capture">its own page</a>, described below.</li>
 <li><strong>Settings</strong> swaps the menu for the list of settings: <strong>General</strong>, <strong>Shortcuts</strong>, <strong>Saving</strong>, <strong>Secure screenshots</strong>, <strong>Strip and editor</strong>, <strong>Pro</strong> and <strong>Updates and about</strong>. Click one, or use the up and down arrow keys. The list is headed <strong>‹ Settings</strong>: click it, or press <kbd>Esc</kbd> or <kbd>Alt</kbd>+<kbd>Left</kbd>, to go back to Home. A <strong>Search settings</strong> box above the list finds a setting by its name or what it says under it; press <kbd>Enter</kbd> or click a result and the window shows that section with the setting lit for a moment. See <a href="/docs/settings/">Settings sections</a>.</li>
 <li><strong>Manual</strong> opens this manual in your browser. It sits under the menu.</li>
 <li>When an update is waiting, a card appears with <strong>Update now</strong>. It restarts A9 Snap and takes a few seconds.</li>
@@ -90,6 +90,20 @@
 <li><strong>Saving to</strong> shows your screenshots folder and <strong>Next file</strong>, the name the next capture will get.</li>
 <li><strong>After a capture</strong> says what happens when you let go: <strong>Copied as an image</strong>, <strong>Copied as image and file</strong>, and <strong>Opens in the editor</strong> if you turned that on.</li>
 </ul>
+<h2 id="quick-capture">Quick capture<a class="anchor" href="#quick-capture" aria-label="Link to Quick capture">#</a></h2>
+<p>The <strong>Quick capture</strong> row opens a page of seven tiles, four across and three below. Each tile is one button with a small picture of what it takes, its name, its keys and a line about it. Click a tile (or move to it with the arrow keys and press <kbd>Enter</kbd>) and it starts that way of capturing, exactly as its keys do. Moving the focus with the arrows starts nothing.</p>
+<p><figure class="shot"><img src="/img/docs/quick-capture-page-1x.webp" srcset="/img/docs/quick-capture-page-1x.webp 1x, /img/docs/quick-capture-page.webp 2x" width="1000" height="680" alt="The Quick capture page: seven tiles, each with a picture, its keys and a line about it" loading="lazy" decoding="async"><figcaption>The Quick capture page. Without Pro the four Pro tiles carry a PRO badge.</figcaption></figure></p>
+<ul>
+<li><strong>Region</strong> (<kbd>Alt</kbd>+<kbd>Z</kbd>): the picker, to drag a box.</li>
+<li><strong>Window</strong> (<kbd>Alt</kbd>+<kbd>Z</kbd>, then click): the picker, to click a window.</li>
+<li><strong>Full screen</strong> (<kbd>Alt</kbd>+<kbd>Z</kbd>, then <kbd>F</kbd>): takes the screen the pointer is on at once, with no picker.</li>
+<li><strong>Scrolling</strong> (<kbd>Alt</kbd>+<kbd>Z</kbd>, then <kbd>L</kbd>): the picker with <kbd>L</kbd> already on. <a href="/docs/scrolling-capture/">Scrolling capture</a>.</li>
+<li><strong>Record video</strong> (<kbd>Alt</kbd>+<kbd>Z</kbd>, then <kbd>R</kbd>): the picker with <kbd>R</kbd> already on. <a href="/docs/record-video/">Record video and GIF</a>.</li>
+<li><strong>Copy text</strong> (<kbd>Alt</kbd>+<kbd>X</kbd>): the picker for the OCR capture. It copies the text in a region and saves no picture.</li>
+<li><strong>Secure capture</strong> (<kbd>Alt</kbd>+<kbd>Z</kbd>, then <kbd>S</kbd>): the picker with <kbd>S</kbd> already on. <a href="/docs/secure-capture/">Secure capture</a>.</li>
+</ul>
+<p>The keys on each tile are your own hotkeys: change one in <a href="/docs/settings/#shortcuts">Settings</a> and the tile follows. The last four tiles are <a href="/docs/pro/">Pro</a> features. Without Pro they carry a <strong>PRO</strong> badge, a click opens the Pro sheet for that feature (never a picker), and a row under the tiles says <strong>Four of these are part of A9 Snap Pro.</strong> with <strong>Get Pro, $14.99</strong>. With Pro the badges and that row are gone.</p>
+<p>Under the tiles, <strong>Open recent captures</strong> opens the <a href="/docs/strip/">strip</a> and shows its hotkey. The <strong>?</strong> button, and <kbd>F1</kbd> on this page, open <a href="/docs/take-a-screenshot/">Take a screenshot</a>.</p>
 <h2 id="delete-a-screenshot">Delete a screenshot<a class="anchor" href="#delete-a-screenshot" aria-label="Link to Delete a screenshot">#</a></h2>
 <p>Point at a capture in <strong>Recent captures</strong> and a small red <strong>trash can</strong> appears in the top-right corner of its picture. It also shows when the capture has the keyboard focus. Click it, or press <kbd>Delete</kbd> with the capture focused, and:</p>
 <ol>
@@ -113,7 +127,7 @@
       <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/saving-and-revert/"><span class="docs-step-l">Previous</span><span>Saving, Save as new and Revert</span></a><a class="docs-step next" href="/docs/settings/"><span class="docs-step-l">Next</span><span>Settings sections</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#the-left-side">The left side</a></li><li class="d2"><a href="#the-middle">The middle</a></li><li class="d2"><a href="#delete-a-screenshot">Delete a screenshot</a></li><li class="d2"><a href="#the-buttons-and-f1">The ? buttons and F1</a></li><li class="d2"><a href="#the-size-of-the-window">The size of the window</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#the-left-side">The left side</a></li><li class="d2"><a href="#the-middle">The middle</a></li><li class="d2"><a href="#quick-capture">Quick capture</a></li><li class="d2"><a href="#delete-a-screenshot">Delete a screenshot</a></li><li class="d2"><a href="#the-buttons-and-f1">The ? buttons and F1</a></li><li class="d2"><a href="#the-size-of-the-window">The size of the window</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>

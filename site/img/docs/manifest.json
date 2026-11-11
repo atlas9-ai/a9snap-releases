@@ -11,6 +11,10 @@
   "w": 728,
   "h": 835
  },
+ "quick-capture-page": {
+  "w": 1000,
+  "h": 680
+ },
  "saving-and-revert-unsaved": {
   "w": 590,
   "h": 242

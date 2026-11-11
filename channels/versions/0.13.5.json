@@ -1,0 +1,13 @@
+{
+  "version": "0.13.5",
+  "notes": "- **Quick capture is its own page.** The side column's menu is now three rows, **Home**, **Quick capture** and **Settings**, and a row only ever changes what the window shows: nothing in the menu takes a picture any more. The six one-click items that sat under a small grey heading (where **Full screen** took a picture the moment you clicked it) are gone from the column.\n- **Seven tiles, each with a picture.** The **Quick capture** page shows Region, Window, Full screen, Scrolling, Record video, Copy text and Secure capture as tiles, four across, each with a small drawing of what it takes, its keys (your own hotkeys) and one line about it. A click, **Enter** or **Space** starts that mode exactly as its keys do; the arrow keys only move the focus. Without Pro, the four Pro tiles carry a **PRO** badge and open the Pro sheet for that feature, and a row under the tiles offers **Get Pro, $14.99**. **Open recent captures** (the strip) and its hotkey moved there too. The **?** button and F1 open Take a screenshot in the manual.\n- **The Pro sheet opens where you are.** Choosing a Pro feature without Pro (a tile, a hotkey, the tray) now puts the sheet over the page the window is showing, instead of sending the window back to Home first.\n- The Copy text how-to, the manual (Home window, Pro features, Take a screenshot) and the README no longer say a mode is \"in Quick capture\" in the side column.",
+  "pub_date": "2026-11-11T19:45:02Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0c0VTRnamJua0JaRlp5OE4reVMxWTQyc1BFUVRHZWxFK0FwdHRMZk9pc0o5dk5mUUV6TENBa1lzRnI4MGRUUUpnTlp4bytienJqU2NVcHg5VlRMZ0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDI2Mjc5CWZpbGU6QTkgU25hcF8wLjEzLjVfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuNQozd1NmNGREZnVnQmpabGcvNi9WeGhmU0o0U2Vpcnh4MHhPV1lWQWh4OTNaNmVQSkEvK2RlSkh4ZmpRaFNMMHRnTHViWXhjMzN1K2kyUGRyd2ViREZEUT09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.5/A9Snap_0.13.5_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "7c33d4c5ce461c5d470ac713d1ce04d576b3960f27bdf18926be49a78333b0ad",
+  "installer_size": 3715644
+}

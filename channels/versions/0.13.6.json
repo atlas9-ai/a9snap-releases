@@ -1,0 +1,13 @@
+{
+  "version": "0.13.6",
+  "notes": "- **A9 Snap itself is unchanged in this version.** Only the build automation changed: when a new version is merged, the step that starts its release now names the repository it works on instead of relying on files an earlier job left behind (0.13.5's release had to be started by hand because of that). Running the step again after a failure now starts the release if the version's tag exists on that commit and no release run does, and never moves a tag. If the release can't be started, the step fails and prints the command to run by hand.",
+  "pub_date": "2026-11-12T13:33:14Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0Erc05qK1JTd3hObmVzdWNEU04wVEFvTjlmRStadUZVNU9kcHhaNitrWFpUcmdRTjByQWNJN3BqSjN0RmcxU0FuRW80N2ZUTnZRcXRYd3BmTldhYkFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDkwMzY5CWZpbGU6QTkgU25hcF8wLjEzLjZfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuNgpOQVJnWDZqVEhKVUJvT0NZT3I0K01EWE4wS2Y2VjhNbElSelFkcm56SWtJc0Z1RGllei9QbWgzZTJIUGI4NjFLWC9BT1l0UnNURDBhbjhZbmVoMGNEZz09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.6/A9Snap_0.13.6_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "b6be68d1e8a8c706857761fbd03961dd2db02750a95d616912ad3921cc74ee96",
+  "installer_size": 3715002
+}

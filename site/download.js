@@ -1,8 +1,10 @@
 /* The version text on the page follows the newest Dev build, with no site redeploy.
  *
- * index.html ships a static "Free · Early access · v… · … MB" line and a static footer version. This script only
- * upgrades them from the Dev channel manifest, the same file the app's update check reads. If the fetch fails, or the
- * manifest is not what we expect, nothing changes. It never touches a link: the installer buttons ([data-dl]) point at
+ * index.html ships a static "Free · Early access · v…" line and a static footer version, both written by the build from
+ * the app's own version. This script only ever RAISES them from the Dev channel manifest, the same file the app's update
+ * check reads: a manifest newer than the page's version replaces the version (and adds the installer size); one with the
+ * same version adds the installer size; an older one changes nothing. If the fetch fails, or the manifest is not what we
+ * expect, nothing changes. It never touches a link: the installer buttons ([data-dl]) point at
  * the license server's /download/snap/go, which counts the click and redirects to the newest installer (js/track.js tags them).
  *
  * Marked in the page: [data-dl-meta] (an element: its text), [data-ver] (the footer's "v0.3.2" badge).
@@ -20,6 +22,20 @@
   // Only trust a manifest that points at a release of our own releases repo.
   var RELEASE = /^(https:\/\/github\.com\/atlas9-ai\/a9snap-releases\/releases\/download\/v\d+\.\d+\.\d+[0-9A-Za-z.-]*\/)[^/]+$/;
   var VERSION = /^\d+\.\d+\.\d+[0-9A-Za-z.-]*$/;
+
+  // "0.13.6" or "v0.13.6-beta" to [0, 13, 6], or null when it does not start like a version.
+  function parts(v) {
+    var m = /^v?(\d+)\.(\d+)\.(\d+)/.exec(String(v || ""));
+    return m ? [Number(m[1]), Number(m[2]), Number(m[3])] : null;
+  }
+
+  // 1 when a is a newer version than b, 0 when the numbers are equal, -1 when older, null when either can't be read.
+  function compare(a, b) {
+    var x = parts(a), y = parts(b);
+    if (!x || !y) return null;
+    for (var i = 0; i < 3; i++) if (x[i] !== y[i]) return x[i] > y[i] ? 1 : -1;
+    return 0;
+  }
 
   // The manifest to { text, version }, or null when it is not usable.
   function describe(manifest) {
@@ -46,13 +62,22 @@
       .then(function (manifest) {
         var d = describe(manifest);
         if (!d) return false;
-        Array.prototype.forEach.call(doc.querySelectorAll("[data-dl-meta]"), function (el) { el.textContent = d.text; });
-        Array.prototype.forEach.call(doc.querySelectorAll("[data-ver]"), function (el) { el.textContent = d.version; });
-        return true;
+        var changed = false;
+        // The version line: newer replaces it; the same version only gains the installer size; older or unreadable is left alone.
+        Array.prototype.forEach.call(doc.querySelectorAll("[data-dl-meta]"), function (el) {
+          var shown = /v\d+\.\d+\.\d+[0-9A-Za-z.-]*/.exec(el.textContent);
+          var c = shown ? compare(manifest.version, shown[0]) : null;
+          var same = c === 0 && shown[0] === d.version;
+          if (c === 1 || same) { el.textContent = d.text; changed = true; }
+        });
+        Array.prototype.forEach.call(doc.querySelectorAll("[data-ver]"), function (el) {
+          if (compare(manifest.version, el.textContent) === 1) { el.textContent = d.version; changed = true; }
+        });
+        return changed;
       })
       .catch(function () { return false; })
       .then(function (ok) { if (timer) clearTimeout(timer); return ok; });
   }
 
-  return { MANIFEST: MANIFEST, describe: describe, run: run };
+  return { MANIFEST: MANIFEST, describe: describe, compare: compare, run: run };
 });

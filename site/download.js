@@ -1,11 +1,11 @@
 /* The version text on the page follows the newest Dev build, with no site redeploy.
  *
- * index.html ships a static "Free · Early access · v…" line and a static footer version, both written by the build from
- * the app's own version. This script only ever RAISES them from the Dev channel manifest, the same file the app's update
- * check reads: a manifest newer than the page's version replaces the version (and adds the installer size); one with the
- * same version adds the installer size; an older one changes nothing. If the fetch fails, or the manifest is not what we
- * expect, nothing changes. It never touches a link: the installer buttons ([data-dl]) point at
- * the license server's /download/snap/go, which counts the click and redirects to the newest installer (js/track.js tags them).
+ * index.html ships a static "Free · Windows 10 and 11 · v…" line and a static footer version, both written by the build
+ * from the app's own version. This script only ever RAISES them from the Dev channel manifest, the same file the app's
+ * update check reads: a manifest newer than the page's version replaces the version; one with the same version or an
+ * older one changes nothing. If the fetch fails, or the manifest is not what we expect, nothing changes. It never touches
+ * a link: the installer button ([data-dl], on the install page) points at the license server's /download/snap/go, which
+ * counts the click and redirects to the newest installer (js/track.js tags it).
  *
  * Marked in the page: [data-dl-meta] (an element: its text), [data-ver] (the footer's "v0.3.2" badge).
  * A plain script (no module system): it runs itself on load and leaves its functions on self.a9download for
@@ -43,10 +43,7 @@
       var p = manifest.platforms["windows-x86_64"];
       var rel = RELEASE.exec(p.url);
       if (!rel || !VERSION.test(manifest.version)) return null;
-      var text = "Free · Early access · v" + manifest.version;
-      var size = manifest.installer_size;
-      if (typeof size === "number" && size > 0) text += " · " + (size / 1048576).toFixed(1) + " MB";
-      return { text: text, version: "v" + manifest.version };
+      return { text: "Free · Windows 10 and 11 · v" + manifest.version, version: "v" + manifest.version };
     } catch (e) {
       return null;
     }
@@ -63,12 +60,11 @@
         var d = describe(manifest);
         if (!d) return false;
         var changed = false;
-        // The version line: newer replaces it; the same version only gains the installer size; older or unreadable is left alone.
+        // The version line: a newer version replaces it; the same, older or unreadable is left alone.
         Array.prototype.forEach.call(doc.querySelectorAll("[data-dl-meta]"), function (el) {
           var shown = /v\d+\.\d+\.\d+[0-9A-Za-z.-]*/.exec(el.textContent);
           var c = shown ? compare(manifest.version, shown[0]) : null;
-          var same = c === 0 && shown[0] === d.version;
-          if (c === 1 || same) { el.textContent = d.text; changed = true; }
+          if (c === 1) { el.textContent = d.text; changed = true; }
         });
         Array.prototype.forEach.call(doc.querySelectorAll("[data-ver]"), function (el) {
           if (compare(manifest.version, el.textContent) === 1) { el.textContent = d.version; changed = true; }

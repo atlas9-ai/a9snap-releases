@@ -77,6 +77,10 @@ body.searching .docs-nav { display: none; }
 .docs-article pre { margin: 0 0 18px; padding: 16px 18px; background: var(--graphite); border: 1px solid var(--line); border-radius: 12px; overflow-x: auto; }
 .docs-article pre code { background: none; border: 0; padding: 0; font-size: 13.5px; line-height: 1.6; }
 .docs-article a.store-badge { margin: 4px 0 10px; }
+.docs-article a.btn { text-decoration: none; margin: 4px 0 10px; }
+.docs-article a.btn-volt, .docs-article a.btn-volt:hover { color: var(--volt-ink); }
+.docs-article a.btn-volt:hover { filter: brightness(1.08); }
+.docs-article a.btn .dlicon { flex: none; }
 .docs-article details { background: var(--graphite); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 0 0 18px; }
 .docs-article details[open] > summary { margin-bottom: 12px; }
 .docs-article summary { cursor: pointer; color: var(--bone); font-weight: 600; font-size: 16px; }

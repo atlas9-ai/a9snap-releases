@@ -6,8 +6,9 @@
  *  - tags the installer links ([data-dl], which go through /download/snap/go there) with those facts;
  *  - tags the Microsoft Store links ([data-store]) with a campaign id (cid), so the Store's own acquisitions report
  *    can be read by it, and sends a `store_click` beacon when one is clicked (the navigation is never delayed);
- *  - counts a click on Get Pro ([data-pro-get], the home page's Pro section) the same way, as a `store_click` with its
- *    own placement (`pro-get`): the Worker's /e takes only `visit` and `store_click` for a9snap.com;
+ *  - fills the Get Pro form ([data-checkout], the home page's Pro section, a real POST to the license server's
+ *    /checkout/web) with the same tags (src med ct cmp ref land int dv) as hidden inputs at submit time. It sends no
+ *    beacon for that button: the Worker counts the checkout itself. Without JavaScript the form posts product and pl alone;
  *  - the internal switch: ?a9v-internal=1 once per browser (=0 clears it) marks this browser's visits int=1,
  *    so the owner's own visits are marked, not counted.
  * It never throws and never blocks the page (it is deferred, and every step is guarded). The same rules as
@@ -101,6 +102,19 @@
     return u.toString();
   }
 
+  // The Get Pro form's attribution: the visit's tags as hidden inputs, replaced on every submit (so a second try never doubles them).
+  function fillForm(doc, form, seen, flags) {
+    Array.prototype.slice.call(form.querySelectorAll("input[data-attr]")).forEach(function (n) { n.parentNode.removeChild(n); });
+    tags(seen, flags).forEach(function (v, k) {
+      var i = doc.createElement("input");
+      i.type = "hidden";
+      i.name = k;
+      i.value = v;
+      i.setAttribute("data-attr", "");
+      form.appendChild(i);
+    });
+  }
+
   // The session's stored facts and whether this is its first page: { seen, first }. `store` is sessionStorage or
   // anything shaped like it. When the facts can't be stored (private mode) first is false: sending a visit on every
   // page would count one person many times.
@@ -157,16 +171,21 @@
     doc.addEventListener("click", function (e) {
       try {
         if (e.button > 0) return;
-        var a = e.target && e.target.closest ? e.target.closest("a[data-store], [data-pro-get]") : null;
+        var a = e.target && e.target.closest ? e.target.closest("a[data-store]") : null;
         if (!a) return;
-        // Get Pro (a <summary> that opens the three steps) counts when it opens, not when it closes again.
-        var d = a.hasAttribute && a.hasAttribute("data-pro-get") && a.closest ? a.closest("details") : null;
-        if (d && d.open) return;
         send(win, beaconUrl("store_click", seen, flags, { pl: a.getAttribute("data-pl") }));
       } catch (err) { /* never get in the way of the link */ }
+    });
+
+    // Get Pro: the form posts to the license server itself. Here only the visit's tags are added, just before it goes.
+    doc.addEventListener("submit", function (e) {
+      try {
+        var f = e.target;
+        if (f && f.hasAttribute && f.hasAttribute("data-checkout")) fillForm(doc, f, seen, flags);
+      } catch (err) { /* the form posts with product and pl alone */ }
     });
     return true;
   }
 
-  return { ENDPOINT: ENDPOINT, tag: tag, sanitize: sanitize, cid: cid, refHost: refHost, landPath: landPath, capture: capture, tags: tags, beaconUrl: beaconUrl, dlHref: dlHref, storeHref: storeHref, session: session, run: run };
+  return { ENDPOINT: ENDPOINT, tag: tag, sanitize: sanitize, cid: cid, refHost: refHost, landPath: landPath, capture: capture, tags: tags, beaconUrl: beaconUrl, dlHref: dlHref, storeHref: storeHref, fillForm: fillForm, session: session, run: run };
 });

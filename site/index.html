@@ -289,15 +289,9 @@ section.band{padding-block:96px;border-top:1px solid var(--line)}
 .terms li::before{content:"✓ ";color:var(--volt)}
 .buy{display:flex;flex-direction:column;gap:12px;max-width:440px;flex:1 1 320px}
 .buy .acts{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}
-.getpro summary{list-style:none;display:inline-flex;justify-content:flex-start;gap:10px;cursor:pointer}
-.getpro summary::after{content:none}
-.getpro summary:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
-.getpro{background:transparent;border:0;padding:0;border-radius:0}
-.getpro[open]{flex:1 0 100%}
-.getsteps{margin:16px 0 4px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;counter-reset:gs;font-size:15px}
-.getsteps li{counter-increment:gs;display:flex;gap:12px;align-items:baseline}
-.getsteps li::before{content:counter(gs);font-family:var(--mono);color:var(--volt);flex:none;width:16px}
-.getsteps b{color:var(--bone);font-weight:600}
+.getpro{margin:0}
+.getpro button{cursor:pointer}
+.getpro button:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
 @media (max-width:980px){.procards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.procards{grid-template-columns:minmax(0,1fr)}.prolist{grid-template-columns:minmax(0,1fr)}.offer{padding:28px}}
 
@@ -645,17 +639,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         </div>
         <div class="buy">
           <div class="acts">
-            <details class="getpro" id="getpro">
-              <summary class="btn btn-volt lg" data-pro-get data-pl="pro-get">Get Pro in the app</summary>
-              <ol class="getsteps">
-                <li><span><b>Install A9 Snap.</b> From the Microsoft Store or the installer, <a href="#get">at the top of this page</a>. Free works right away.</span></li>
-                <li><span><b>Open Pro features.</b> In the Home window, open <b>Settings</b>, then <b>Pro</b>.</span></li>
-                <li><span><b>Get Pro, $14.99.</b> Press the button. Your browser opens the checkout, and Pro turns on in the app when the payment goes through.</span></li>
-              </ol>
-            </details>
+            <form class="getpro" id="getpro" method="post" action="https://a9voice.com/checkout/web" data-checkout>
+              <input type="hidden" name="product" value="a9snap-pro">
+              <input type="hidden" name="pl" value="site-pro">
+              <button class="btn btn-volt lg" type="submit">Get Pro, $14.99</button>
+            </form>
             <a class="btn btn-ghost" href="/docs/pro/">How Pro works</a>
           </div>
-          <p class="fine" style="margin:0">Paid through Stripe. Your key arrives by email; enter it under Pro features in the app.</p>
+          <p class="fine" style="margin:0">Paid through Stripe. Your key arrives by email. Already have A9 Snap? You can also buy in the app under <b>Settings › Pro</b>.</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,13 @@
+{
+  "version": "0.14.1",
+  "notes": "- **The picker is hidden before its frozen picture is cleared.** When a capture finished, each screen could flash black for a moment. The picker windows were told to hide, but the hide only took effect once the rest of the release had been handled, and by then each screen's frozen picture had already been cleared, so the window showed its black background. Now every picker window is hidden first (the call returns once it has taken effect), and only then are the pictures cleared, on release, on Esc and for secure, recording, scrolling and Copy text captures alike. Nothing is slower. The log gets one new line per picker, `picker closed: how=commit|cancel ... hidden=…ms cleared=…ms`, which says how long after the release the windows were hidden and the pictures cleared (numbers only). This was fixed from reading the code, not from seeing the flash, so it is not yet confirmed on a PC that showed it.",
+  "pub_date": "2026-11-24T23:57:40Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0dvRm50WDQ0UEF6OGdXclBVVGNoWlhxRG5FSmpKb0ZIektndDZoTlFoSVIrN3lOSk5PSlkwSkhMQ1MrSHNIck5GNEp2T2I0Z2Z3bVFGa2QyZU81aEFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTY0NjQxCWZpbGU6QTkgU25hcF8wLjE0LjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTQuMQp5cHN4czZmTlZnTzZGSm1iV2RIMXRjTjZDNm55ZEtveUtNRXkzZjU1d2dtSkc1Q05zSi85L1V6d2pjd2I1aUN5UVBLN2hkRnEwNDVBTkR4VTJ1OGlEUT09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.14.1/A9Snap_0.14.1_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "7ba9f9d3251cc0d5397a99d4ae826520ff5f706866ee911d1593db5453f1b138",
+  "installer_size": 3799898
+}

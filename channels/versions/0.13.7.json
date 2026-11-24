@@ -1,0 +1,13 @@
+{
+  "version": "0.13.7",
+  "notes": "- **New default file name: `SNAP-0001.png`.** The default prefix is now `SNAP-` instead of `snag_`, so a new install names its first capture `SNAP-0001.png`. A prefix you already have saved is not touched, and no existing file is renamed. If your settings never stored a prefix, new captures start at `SNAP-0001.png` in the same folder, next to your older files.",
+  "pub_date": "2026-11-24T16:24:57Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0Iza25XQ0xpZEE5Y250K1dKQW5VSVZTUG5USk8zRnR6L0pZRmdXRCtiaml3NWN5bTQrWHcrNWo3QmNXb1Y2eUJjZmF1MVhQa0tlWDFNZFA5OEFqT2djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTM3NDYzCWZpbGU6QTkgU25hcF8wLjEzLjdfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuNwpnZ3FsbklmYThQVnZBQ1hPN2pTUDUzeE5ZUzZuVWRldVdXeThaNGxkZ0xPZ1BLL3orT1ErREpFNXFNV1J5cVg2dkxKZ3ljUU9nM1R6Qno3SmVlV01Edz09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.7/A9Snap_0.13.7_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "d5b11aba9790d0b6e1d40c481596e8d2b5996e63ea0424ab3590c84701297f2c",
+  "installer_size": 3722281
+}

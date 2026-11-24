@@ -1,13 +1,13 @@
 {
-  "version": "0.13.6",
-  "notes": "- **A9 Snap itself is unchanged in this version.** Only the build automation changed: when a new version is merged, the step that starts its release now names the repository it works on instead of relying on files an earlier job left behind (0.13.5's release had to be started by hand because of that). Running the step again after a failure now starts the release if the version's tag exists on that commit and no release run does, and never moves a tag. If the release can't be started, the step fails and prints the command to run by hand.",
-  "pub_date": "2026-11-12T13:33:14Z",
+  "version": "0.13.7",
+  "notes": "- **New default file name: `SNAP-0001.png`.** The default prefix is now `SNAP-` instead of `snag_`, so a new install names its first capture `SNAP-0001.png`. A prefix you already have saved is not touched, and no existing file is renamed. If your settings never stored a prefix, new captures start at `SNAP-0001.png` in the same folder, next to your older files.",
+  "pub_date": "2026-11-24T16:24:57Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0Erc05qK1JTd3hObmVzdWNEU04wVEFvTjlmRStadUZVNU9kcHhaNitrWFpUcmdRTjByQWNJN3BqSjN0RmcxU0FuRW80N2ZUTnZRcXRYd3BmTldhYkFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDkwMzY5CWZpbGU6QTkgU25hcF8wLjEzLjZfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuNgpOQVJnWDZqVEhKVUJvT0NZT3I0K01EWE4wS2Y2VjhNbElSelFkcm56SWtJc0Z1RGllei9QbWgzZTJIUGI4NjFLWC9BT1l0UnNURDBhbjhZbmVoMGNEZz09Cg==",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.6/A9Snap_0.13.6_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0Iza25XQ0xpZEE5Y250K1dKQW5VSVZTUG5USk8zRnR6L0pZRmdXRCtiaml3NWN5bTQrWHcrNWo3QmNXb1Y2eUJjZmF1MVhQa0tlWDFNZFA5OEFqT2djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTM3NDYzCWZpbGU6QTkgU25hcF8wLjEzLjdfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuNwpnZ3FsbklmYThQVnZBQ1hPN2pTUDUzeE5ZUzZuVWRldVdXeThaNGxkZ0xPZ1BLL3orT1ErREpFNXFNV1J5cVg2dkxKZ3ljUU9nM1R6Qno3SmVlV01Edz09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.7/A9Snap_0.13.7_x64-setup.exe"
     }
   },
-  "installer_sha256": "b6be68d1e8a8c706857761fbd03961dd2db02750a95d616912ad3921cc74ee96",
-  "installer_size": 3715002
+  "installer_sha256": "d5b11aba9790d0b6e1d40c481596e8d2b5996e63ea0424ab3590c84701297f2c",
+  "installer_size": 3722281
 }

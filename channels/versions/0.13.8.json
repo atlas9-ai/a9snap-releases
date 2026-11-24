@@ -1,0 +1,13 @@
+{
+  "version": "0.13.8",
+  "notes": "- **Prefix and Digits take effect when you change them.** Since 0.1.1 the next file copied the style of the highest-numbered file already in the folder, so a folder with `SNAP-019.png` and Digits set to 4 still got `SNAP-020.png`. Now, once you change **Prefix** or **Digits**, new captures (pictures, recordings, GIFs, scrolling captures and secure captures) are named with them: `SNAP-0020.png`. The number still comes from the folder (the highest plus one: it never restarts and is never used twice) and a number that needs more digits is written in full. Nothing changes until you change one of the two: an install that never touches them keeps following the folder, and no existing file is renamed. **Next file** shows the real name as you change them, and a line under **File name** says when the folder's own style is still in charge. The Digits help text now reads \"How many digits the number has, padded with zeros. 0 means no padding.\"",
+  "pub_date": "2026-11-24T17:38:54Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0d4N3Q3VEc2MVBCU2taZ0lTNWpZT25TVTI1MjBRa3dFeXlaSnoycnRhZGdqR1Q0RmNvRThZYVdabUZ1NldSYzhCdkg1dU9GNEltUGdqbXc3ME5kM0FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTQxOTEyCWZpbGU6QTkgU25hcF8wLjEzLjhfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTMuOAp0dzMrMmJwRUNoNmpMYmg3d0dwdFVEODVSeDlsU1gzZnh3KzdjNi9oZ0krVmFRWElqc0JkQkRWTUxjMTN3SlBmb29JczdMd0RBc2JKRWxPS0tGay9EUT09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.13.8/A9Snap_0.13.8_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "bde8e7b469e0f8b68d24d8fecb2e6d761cbbbdbb279e50ef3c58bfb8ef63c4b6",
+  "installer_size": 3723915
+}

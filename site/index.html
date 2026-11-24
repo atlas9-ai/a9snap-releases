@@ -407,7 +407,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
           <div class="sel frame" id="sel"><span class="dims mono" id="dims">640 × 220</span></div>
           <div class="bull" id="bull"></div>
           <div class="loupe" id="loupe"><div class="zoom" id="zoom"></div><div class="grid"></div><div class="pix"></div><div class="xy" id="xy">x 812 · y 466</div></div>
-          <div class="toast" id="toast"><span class="ok"><svg width="10" height="10" aria-hidden="true"><use href="#ok"/></svg></span><span>Copied · <span class="mono" id="fname">snag_0042.png</span></span></div>
+          <div class="toast" id="toast"><span class="ok"><svg width="10" height="10" aria-hidden="true"><use href="#ok"/></svg></span><span>Copied · <span class="mono" id="fname">SNAP-0042.png</span></span></div>
         </div>
         <div class="hint"><span>Try it: drag across the screen above.</span><span>Or press <kbd>Alt</kbd>+<kbd>Z</kbd></span></div>
       </div>
@@ -457,7 +457,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
           <div class="b them">Where’s the export button?</div>
           <div class="b me shot">
             <div class="img"><i style="left:8%;top:18%;width:42%"></i><i style="left:8%;top:44%;width:60%"></i><i style="left:8%;top:66%;width:34%"></i><span class="gear"></span><span class="ring"></span></div>
-            <span class="meta">snag_0043.png · pasted</span>
+            <span class="meta">SNAP-0043.png · pasted</span>
             <span>This one.</span>
           </div>
           <div class="b them">Got it. Thanks!</div>
@@ -483,7 +483,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         </div>
         <div class="chat" aria-label="Example: a screenshot pasted into an AI chat">
           <div class="msg">
-            <div class="att"><div class="pv"></div><div><div class="mono" style="font-size:13px">snag_0043.png</div><div style="font-size:12px;color:var(--steel)">640 × 220 · pasted</div></div></div>
+            <div class="att"><div class="pv"></div><div><div class="mono" style="font-size:13px">SNAP-0043.png</div><div style="font-size:12px;color:var(--steel)">640 × 220 · pasted</div></div></div>
             <span>Why is this card getting declined?</span>
           </div>
           <p class="reply">A 402 here usually means the saved card expired. Open Billing › Payment methods and…</p>
@@ -785,7 +785,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   screen.addEventListener('pointerdown',function(e){ e.preventDefault(); screen.setPointerCapture(e.pointerId); start=local(e); setSel(start.x,start.y,0,0); });
   screen.addEventListener('pointerup',function(){ if(!start) return; var r=rect; start=null;
     if(!r||r.w<4||r.h<4){ rest(); return; }  // a click without a drag cancels, like the app
-    n+=1; fname.textContent='snag_'+pad(n)+'.png';
+    n+=1; fname.textContent='SNAP-'+pad(n)+'.png';
     toast.classList.add('pop'); setTimeout(function(){toast.classList.remove('pop');},220); });
   // Alt+Z on the page: jump to the demo and arm the crosshair
   document.addEventListener('keydown',function(e){

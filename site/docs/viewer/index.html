@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The picture viewer · A9 Snap Manual</title>
+<meta name="description" content="Double-click any picture and A9 Snap shows it at once, in a window the size of the picture, with the rest of the folder one wheel-click away. Then edit it, copy it or send it. It is free, it writes nothing about what you look at, and it never makes itself your default app.">
+<link rel="canonical" href="https://a9snap.com/docs/viewer/">
+<meta name="theme-color" content="#0B0C0E">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A9 Snap">
+<meta property="og:title" content="The picture viewer · A9 Snap Manual">
+<meta property="og:description" content="Double-click any picture and A9 Snap shows it at once, in a window the size of the picture, with the rest of the folder one wheel-click away. Then edit it, copy it or send it. It is free, it writes nothing about what you look at, and it never makes itself your default app.">
+<meta property="og:url" content="https://a9snap.com/docs/viewer/">
+<meta property="og:image" content="https://a9snap.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/chrome.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+<body class="docs">
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="/" aria-label="A9 Snap home">
+        <svg class="mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span>
+      </a>
+      <div class="links">
+        <a href="/#how">How it works</a>
+        <a href="/#recent">Recent</a>
+        <a href="/#editor">Editor</a>
+        <a href="/#pro">Pro</a>
+        <a href="/#faq">FAQ</a>
+        <a class="nav-manual" href="/docs/" aria-current="page">Manual</a>
+        <a class="store-badge" data-store data-pl="nav" target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9PCRH2K2J7B5?mode=direct&amp;cid=direct"><img src="/img/microsoft-store-badge-dark.svg" width="161" height="44" alt="Download from Microsoft Store"></a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="docs-shell wrap">
+  <aside class="docs-side">
+    <button class="docs-toggle" type="button" aria-expanded="false" aria-controls="docs-nav">Manual menu</button>
+    <div id="docs-nav" class="docs-nav-wrap">
+      <form class="docs-search" role="search" action="/docs/" onsubmit="return false">
+        <label class="sr" for="docs-q">Search the manual</label>
+        <input id="docs-q" type="search" placeholder="Search the manual" autocomplete="off" spellcheck="false" aria-controls="docs-results" aria-describedby="docs-q-hint">
+        <span id="docs-q-hint" class="sr">Press the slash key to jump to search. Results appear below the box.</span>
+      </form>
+      <div id="docs-status" class="sr" role="status" aria-live="polite"></div>
+      <ul id="docs-results" class="docs-results" hidden></ul>
+      <nav class="docs-nav" aria-label="Manual">
+<div class="docs-group"><h2 class="docs-group-h">Start here</h2><ul><li><a href="/docs/">Getting started</a></li><li><a href="/docs/install/">Install A9 Snap</a></li><li><a href="/docs/whats-new/">What's new</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Capture</h2><ul><li><a href="/docs/take-a-screenshot/">Take a screenshot</a></li><li><a href="/docs/where-screenshots-go/">Where screenshots go</a></li><li><a href="/docs/secure-capture/">Secure capture</a></li><li><a href="/docs/record-video/">Record video and GIF</a></li><li><a href="/docs/scrolling-capture/">Scrolling capture</a></li><li><a href="/docs/share/">Share to your apps</a></li><li><a href="/docs/viewer/" aria-current="page">The picture viewer</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Recent captures</h2><ul><li><a href="/docs/strip/">The recent captures strip</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Editor</h2><ul><li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li><li><a href="/docs/saving-and-revert/">Saving, Save as new and Revert</a></li><li><a href="/docs/auto-redact/">Auto-redact</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Settings</h2><ul><li><a href="/docs/home-window/">The Home window</a></li><li><a href="/docs/settings/">Settings sections</a></li><li><a href="/docs/start-at-login/">Start at login</a></li><li><a href="/docs/pro/">Pro features</a></li></ul></div>
+<div class="docs-group"><h2 class="docs-group-h">Reference</h2><ul><li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li><li><a href="/docs/troubleshooting/">If something goes wrong</a></li><li><a href="/docs/privacy/">Privacy</a></li><li><a href="/docs/updates-and-channels/">Updates and channels</a></li></ul></div>
+      </nav>
+    </div>
+  </aside>
+  <main id="main" class="docs-main">
+    <article class="docs-article">
+      <p class="docs-crumb"><a href="/docs/">Manual</a> · Capture</p>
+      <h1>The picture viewer</h1>
+      <p class="docs-lead">Double-click any picture and A9 Snap shows it at once, in a window the size of the picture, with the rest of the folder one wheel-click away. Then edit it, copy it or send it. It is free, it writes nothing about what you look at, and it never makes itself your default app.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.14.0</p>
+      <p>The viewer is for pictures that did not come from A9 Snap: a photo from your phone, a download, a logo, a diagram. It opens quickly, shows the picture at its own size, and puts the same tools you use on captures one key away. It is part of the free app.</p>
+<h2 id="open-a-picture">Open a picture<a class="anchor" href="#open-a-picture" aria-label="Link to Open a picture">#</a></h2>
+<p>First choose A9 Snap in Windows (see <a href="#choose-a9-snap-in-windows">Choose A9 Snap in Windows</a> below), then double-click a picture in Explorer. You can also right-click a picture and choose <strong>Open with</strong>, then <strong>A9 Snap</strong>, without choosing anything first.</p>
+<ul>
+<li>If A9 Snap is already running, it shows the picture in the <strong>viewer</strong> window at once. If it is not, it starts, shows the picture first and then finishes starting up, and stays in the tray as after any start.</li>
+<li>Select several pictures and press <kbd>Enter</kbd>: the viewer shows the first one.</li>
+<li>One viewer window is used for everything. Opening another picture replaces the one on screen. Closing the window hides it; it is kept ready for the next one.</li>
+</ul>
+<p>A9 Snap opens <strong>PNG, JPG, GIF, WebP, AVIF, BMP, ICO, SVG, TIFF and HEIC</strong> pictures. An animated GIF or WebP plays. An SVG is shown as a picture only: nothing in it runs. A photo&#39;s stored rotation is respected, so a phone picture is upright. TIFF and HEIC are read by Windows itself; if your PC has no decoder for a type, the window says which type it cannot open and what Windows needs (for HEIC, the free <strong>HEIF Image Extensions</strong> from the Microsoft Store), and the wheel still moves to the next picture. A picture that cannot be read (damaged, locked or gone) shows its name and the reason in the window.</p>
+<h2 id="size-and-place">Size and place<a class="anchor" href="#size-and-place" aria-label="Link to Size and place">#</a></h2>
+<p>By default the window fits the picture. A picture smaller than your screen opens at 100%, never scaled up: one picture pixel is one screen pixel, so it is sharp at any display scale. A bigger one is scaled down to fit inside 90% of the screen&#39;s usable area. The window opens in the middle of the monitor your pointer is on, and never smaller than its title bar needs.</p>
+<p>Change this with <strong>Viewer window</strong> in <a href="/docs/settings/#viewer">Settings</a>: <strong>Fit each picture</strong> (the default) or <strong>Keep my size and place</strong>, where the window stays where and how big you left it and each picture fits inside it.</p>
+<h2 id="moving-and-zooming">Moving and zooming<a class="anchor" href="#moving-and-zooming" aria-label="Link to Moving and zooming">#</a></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Table"><table><thead><tr><th scope="col">Do this</th><th scope="col">What happens</th></tr></thead><tbody>
+<tr><td>Mouse wheel</td><td>The next or previous picture in the same folder.</td></tr>
+<tr><td><kbd>Ctrl</kbd>+wheel</td><td>Zooms in and out around the pointer.</td></tr>
+<tr><td><kbd>Left</kbd> / <kbd>Right</kbd>, <kbd>PgUp</kbd> / <kbd>PgDn</kbd></td><td>Previous and next picture.</td></tr>
+<tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>The first and the last picture.</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>0</kbd></td><td>Fits the picture to the window.</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>1</kbd></td><td>Shows it at 100%.</td></tr>
+<tr><td>Drag</td><td>Moves a zoomed picture around.</td></tr>
+<tr><td>Double-click or <kbd>F11</kbd></td><td>Full screen on and off.</td></tr>
+<tr><td><kbd>Esc</kbd></td><td>Leaves full screen, then closes the window.</td></tr>
+<tr><td><kbd>Delete</kbd></td><td>Sends the file to the Recycle Bin. A note offers <strong>Undo</strong> (also <kbd>Ctrl</kbd>+<kbd>Z</kbd>). It is never deleted for good.</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>C</kbd></td><td>Copies the picture and the file, as a capture is copied.</td></tr>
+<tr><td><kbd>E</kbd></td><td>Edits the picture. See below.</td></tr>
+<tr><td><kbd>F1</kbd></td><td>Opens this page.</td></tr>
+</tbody></table></div>
+<p><strong>Mouse wheel in the viewer</strong> in <a href="/docs/settings/#viewer">Settings</a> swaps the wheel and <kbd>Ctrl</kbd>+wheel, if you would rather zoom with the wheel alone.</p>
+<p>Pictures come in <strong>name order, the way Explorer sorts names</strong>: <code>2</code> comes before <code>10</code>. After the last picture the wheel wraps to the first. Only picture types count; videos are skipped. The next and previous pictures are read ahead, so a step shows at once.</p>
+<p>The title bar shows the file name, where it is in the folder (&quot;12 of 48&quot;), its size in pixels and the zoom. Nothing else is on screen until you move the pointer: then arrows appear at the sides.</p>
+<h2 id="the-right-click-menu">The right-click menu<a class="anchor" href="#the-right-click-menu" aria-label="Link to The right-click menu">#</a></h2>
+<p>Right-click the picture for <strong>Edit</strong>, <strong>Copy</strong>, <strong>Copy text</strong>, <strong>Redact</strong>, <strong>Share</strong>, <strong>Show in folder</strong> and <strong>Delete</strong>. <strong>Copy text</strong>, <strong>Redact</strong> and <strong>Share</strong> are part of <a href="/docs/pro/">A9 Snap Pro</a>: without it they carry a small <strong>PRO</strong> badge and open the Pro sheet. <strong>Redact</strong> copies the picture with its email addresses, phone numbers and card numbers blurred; the file is not changed. See <a href="/docs/auto-redact/">Auto-redact</a>.</p>
+<p>You can also drag the picture out of the window and drop the file into another app, as in the <a href="/docs/strip/">strip</a>. While you are zoomed in, a drag moves the picture instead; hold <kbd>Alt</kbd> to carry the file out.</p>
+<h2 id="edit-a-picture-that-is-not-a-capture">Edit a picture that is not a capture<a class="anchor" href="#edit-a-picture-that-is-not-a-capture" aria-label="Link to Edit a picture that is not a capture">#</a></h2>
+<p>Press <kbd>E</kbd> on a <strong>capture</strong> (a numbered file in your screenshots folder) and the <a href="/docs/mark-up-a-screenshot/">editor</a> opens on it, as it does everywhere else.</p>
+<p>Press <kbd>E</kbd> on <strong>any other picture</strong> and the editor opens on a <strong>copy</strong>. Saving always writes the <strong>next numbered capture</strong> in your screenshots folder, named like any capture, and copies it. There is no &quot;save over the same file&quot;: your original is never changed, and no <code>.a9snap</code> folder is made next to it. TIFF and HEIC pictures are turned into PNG for the editor.</p>
+<h2 id="choose-a9-snap-in-windows">Choose A9 Snap in Windows<a class="anchor" href="#choose-a9-snap-in-windows" aria-label="Link to Choose A9 Snap in Windows">#</a></h2>
+<p>Windows lets only you decide which app opens your pictures, so A9 Snap never makes itself the default. What it does is tell Windows that it <strong>can</strong> open these types, so it appears under <strong>Open with</strong> and in Windows&#39; Default apps list. Installing A9 Snap changes nothing about what opens your pictures today, and uninstalling removes what it added.</p>
+<p>In <a href="/docs/settings/#viewer">Settings</a>, the <strong>Viewer</strong> section has <strong>Choose A9 Snap in Windows</strong>. It opens Windows&#39; Default apps page for A9 Snap, where you pick the picture types you want it to open, and it lists the types that open with A9 Snap now. On the Microsoft Store version A9 Snap offers the same types through its package.</p>
+<h2 id="privacy">Privacy<a class="anchor" href="#privacy" aria-label="Link to Privacy">#</a></h2>
+<p>The viewer reads the picture and the names of the other files in its folder, and writes nothing: no thumbnails, no list of what you viewed, no index. The log says the type, the sizes and the times, never a file or folder name. Secure captures and the secure vault are never opened by the viewer. The viewer makes no network call.</p>
+<h2 id="see-also">See also<a class="anchor" href="#see-also" aria-label="Link to See also">#</a></h2>
+<ul>
+<li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li>
+<li><a href="/docs/strip/">The strip</a></li>
+<li><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+<li><a href="/docs/settings/">Settings sections</a></li>
+</ul>
+
+      <p class="docs-help">Something missing or wrong? <a href="https://github.com/atlas9-ai/a9snap-releases/issues/new">Report an issue</a>.</p>
+      <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/share/"><span class="docs-step-l">Previous</span><span>Share to your apps</span></a><span></span></nav>
+    </article>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#open-a-picture">Open a picture</a></li><li class="d2"><a href="#size-and-place">Size and place</a></li><li class="d2"><a href="#moving-and-zooming">Moving and zooming</a></li><li class="d2"><a href="#the-right-click-menu">The right-click menu</a></li><li class="d2"><a href="#edit-a-picture-that-is-not-a-capture">Edit a picture that is not a capture</a></li><li class="d2"><a href="#choose-a9-snap-in-windows">Choose A9 Snap in Windows</a></li><li class="d2"><a href="#privacy">Privacy</a></li><li class="d2"><a href="#see-also">See also</a></li></ul></nav>
+  </main>
+</div>
+<footer>
+  <div class="wrap">
+    <span class="brand foot-brand" role="img" aria-label="A9 Snap"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span><span class="by">An A9 Solutions product</span></span>
+    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a class="ver" data-ver href="/docs/whats-new/">v0.14.0</a></div>
+    <span class="mono">Point. Snap. Paste.</span>
+  </div>
+</footer>
+<script type="module" src="/js/docs.js"></script>
+<script src="/download.js" defer></script>
+<script src="/js/track.js" defer></script>
+</body>
+</html>

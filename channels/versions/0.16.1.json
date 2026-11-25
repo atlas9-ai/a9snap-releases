@@ -1,0 +1,13 @@
+{
+  "version": "0.16.1",
+  "notes": "- **Fixed: Trim made a diagonal smear of most recordings.** A video whose width is not a multiple of 16 (nearly every recording of a region you drag, for example 780 wide) came out of Trim with the right length and sound but a picture sheared into diagonal streaks, because each decoded row was read as exactly as wide as the picture while the decoder pads its rows. Trim now reads the row width and layout the decoder reports for every frame, for any width and height. The original was never touched; trim the recording again from the original.\n- **The same fix for a video's thumbnail and Save as GIF.** They read frames the same way, so the strip's thumbnail for such a video and a GIF made from it were sheared too; both are right now. Save this frame was never affected (the player draws that picture).\n- **A frame layout A9 Snap can't read stops the job with a plain message** (\"A9 Snap can't read how this video's picture is stored, so nothing was made.\") and writes no file: it never saves a video it can't vouch for.\n- **Tests.** A new end-to-end script, `scripts/e2e/trim-picture.mjs`, trims videos at 780 x 1080, 1278 x 718, 642 x 362 and 1280 x 720 (made by ffmpeg and recorded by A9 Snap) and compares the pictures with the original's by SSIM, along with Save this frame and the strip's thumbnail; the 0.16.0 tests only checked length and sound, and used 1280 wide, where the decoder's rows are as wide as the picture.",
+  "pub_date": "2026-11-25T19:19:42Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0JBOTQrOXZLaHh6S2FSQlBlZmVQL25YblhtSTJuUElrREo0dXBGd3VRbFAwMFZTQzE4TUlZZno3bCtLVWYyTnhmdXM1UGV1VW9nNTVEWFNHKzF3THdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjM0MzYwCWZpbGU6QTkgU25hcF8wLjE2LjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTYuMQpzaWxXbXF5WHc4d1NoejFSUk1MNDczdm1teUdidFF2WHFSdWpmbllpN1BBK3Q5bGNaNUJ2d0k1eis2MS90S3VnckkrMTBQand4c2JjMlpVVWZVV25BUT09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.16.1/A9Snap_0.16.1_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "2e645dc46eb7af6f1a7548785a624dca0e4c602d0a87a1c943a8d16c578b19a4",
+  "installer_size": 3895502
+}

@@ -1,13 +1,13 @@
 {
-  "version": "0.14.1",
-  "notes": "**0.14.1**\n- **The picker is hidden before its frozen picture is cleared.**\n\n**0.14.0**\n- **A9 Snap now opens your pictures.**\n- **The whole folder is a wheel-click away.**\n- **PNG, JPG, GIF and WebP (animated ones play), AVIF, BMP, ICO and SVG**\n- **Right-click**\n- **E on a picture that isn't a capture**\n- **A9 Snap offers itself and never takes over.**\n- **Nothing is written about what you look at.**\n- **Speed: two of the three targets were missed on the test PC.**\n\nFull release notes: https://github.com/atlas9-ai/a9snap-releases/releases",
-  "pub_date": "2026-11-24T23:57:40Z",
+  "version": "0.14.2",
+  "notes": "**0.14.2**\n- **The picker no longer plays Windows' window animation.** When you released a selection, Windows faded the full-screen picker out with its own close animation (the one **Animation effects** in Windows' Accessibility settings controls). The picker shows a frozen picture of your screen, so the fade looked like the whole screen lifting off, and the tail of it was a black sheet on every monitor. The picker windows (and the outline round a recording or scrolling capture) now have that animation switched off for themselves, so they open and close at once whatever your Animation effects setting is. Other windows are unchanged. The log says `picker windows: 3 made, window animation turned off on 3` at start. 0.14.1's change (hide the windows first, then clear them) stays: it was correct, but it was not what you saw. This was found from a log and a setting, not from seeing it here: it is not yet confirmed on a PC that showed it.\n\nFull release notes: https://github.com/atlas9-ai/a9snap-releases/releases",
+  "pub_date": "2026-11-25T02:17:14Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0dvRm50WDQ0UEF6OGdXclBVVGNoWlhxRG5FSmpKb0ZIektndDZoTlFoSVIrN3lOSk5PSlkwSkhMQ1MrSHNIck5GNEp2T2I0Z2Z3bVFGa2QyZU81aEFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTY0NjQxCWZpbGU6QTkgU25hcF8wLjE0LjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTQuMQp5cHN4czZmTlZnTzZGSm1iV2RIMXRjTjZDNm55ZEtveUtNRXkzZjU1d2dtSkc1Q05zSi85L1V6d2pjd2I1aUN5UVBLN2hkRnEwNDVBTkR4VTJ1OGlEUT09Cg==",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.14.1/A9Snap_0.14.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb01RRDNLekFQSGlmckxsRmUyT1VvaXZ2NVlXYUdOQ1g1enhsWUp6TVFLcTBaUVFhRUQ5Q082cmxDWkJBY0puNElIUWQzK3ZSSSsxdXlYeUhrQ1hZemdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTczMDE2CWZpbGU6QTkgU25hcF8wLjE0LjJfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTQuMgpxWTRoUWE1ODRPdFJyK3R2UGxyYTVTUnRkZzNmdFJGYkN1c0dKQ0dJWEtFbHBTWHVwcHNML2FuNEJ1c3FFOWZjMDBJNWVBMXFTTmZVb0JFTm1VWExDQT09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.14.2/A9Snap_0.14.2_x64-setup.exe"
     }
   },
-  "installer_sha256": "7ba9f9d3251cc0d5397a99d4ae826520ff5f706866ee911d1593db5453f1b138",
-  "installer_size": 3799898
+  "installer_sha256": "6ebc451bb2abdcda28c427e6196f7b41a980c4299239824ee0d872be875751b5",
+  "installer_size": 3798341
 }

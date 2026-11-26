@@ -1,13 +1,13 @@
 {
-  "version": "0.17.0",
-  "notes": "**0.17.0**\n- **Edit pictures inside A9 View.**\n- **Any picture, safely.**\n- **Unsaved edits are never lost by accident.**\n- **Zoom and pan keep working.**\n- **Two keys differ from the editor window.**\n- **Setting.**\n- **Nothing extra is written.**\n\n**0.16.2**\n- **The Pro list has Trim videos.**\n- **a9snap.com says what is new.**\n- **A Store rating card, for the Microsoft Store version only.**\n- **Rate A9 Snap in the Microsoft Store.**\n- **Left out for now: Suggest a feature.**\n- **Manual and privacy.**\n- **Tests.**\n\nFull release notes: https://github.com/atlas9-ai/a9snap-releases/releases",
-  "pub_date": "2026-11-26T02:39:53Z",
+  "version": "0.17.1",
+  "notes": "**0.17.1**\n- **Suggest a feature.** The tray menu has a new **Suggest a feature** item, and **Updates and about** has a row of the same name with **Open the page**. Both open a9snap.com/feedback in your browser, in the installer copy and the Microsoft Store version alike. The link carries your version number and nothing else.\n- **a9snap.com/feedback.** A short page that says what helps in a suggestion (what you were trying to do, what got in the way, a screenshot if it helps) with one button that opens your email app, addressed to support@a9snap.com with the subject \"A9 Snap suggestion\" and the app's version when you came from the app. You write the email and send it yourself. The page has no form, no visit count and no analytics, and loads nothing from other sites.\n- **How to reach A9 Snap.** support@a9snap.com is in the website's footer and in a new **Contact A9 Snap** section of the manual's help page. The line at the bottom of every manual page now points there (it used to ask you to file an issue report online).\n- **Privacy.** The privacy page says what the feedback link does: it sends nothing from your PC.\n\nFull release notes: https://github.com/atlas9-ai/a9snap-releases/releases",
+  "pub_date": "2026-11-26T16:18:23Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb1BoNG1VVUhCSUVmbm9iTy9VL0hTcUFlaDhvanp4RmhkUEVEcldjRXJKSzdJNjNkdXRaakIzMS96RlNvelpuSDR1THVra05PUmQ4WnRMbmVlNFlyYndjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjYwNzczCWZpbGU6QTkgU25hcF8wLjE3LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTcuMApBN1NyU3Bkd2lhamluT0hza2o4VlBWQ1hHVnZjT2ZFUmt6LzRIdnpORGhKdVZtNDRzSVlCcmoweG1CMUk1dDIyTXdmeGdHb3hLRy9HQ3ZGcTRpbW1Edz09Cg==",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.17.0/A9Snap_0.17.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0ZtRXVUZG85Q1JJQU4vNzVBck9jOFcrSmhQK2RvbE1EckxYeWJ3bWlqa3kyMXRicjBQUEZmUm5jSUNWa1JTRGVqNkFxeklIMnI4L0N0NUdQSmhHa2djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzA5ODg0CWZpbGU6QTkgU25hcF8wLjE3LjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTcuMQpsUTRPVCtBeStQc2xnWUl0VmxuUzVGREFuM2gzSHltcERGNDRCOWgvUHM0QWtYQ1RldVJlaE5hc1c4WkU4YjNZSzFhVzdCcWoxVnhmd1pUb3Z3YjhBdz09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.17.1/A9Snap_0.17.1_x64-setup.exe"
     }
   },
-  "installer_sha256": "6d2cf14542d6c7fb292e6ecbf4148f8d19d9647e1852ff4ed23282f1799635cd",
-  "installer_size": 3933557
+  "installer_sha256": "a57057b9ef0dd5572ebc427c2c0b3ea8a66ba7a83dca2f681c0d65e1d860a495",
+  "installer_size": 3936853
 }

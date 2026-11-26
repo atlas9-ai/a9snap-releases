@@ -1,13 +1,13 @@
 {
-  "version": "0.16.1",
-  "notes": "**0.16.1**\n- **Fixed: Trim made a diagonal smear of most recordings.**\n- **The same fix for a video's thumbnail and Save as GIF.**\n- **A frame layout A9 Snap can't read stops the job with a plain message**\n- **Tests.**\n\n**0.16.0**\n- **A9 View plays videos.**\n- **Controls.**\n- **Save this frame (free).**\n- **Trim (Pro).**\n- **A9 Snap's own recordings open here.**\n- **What a video shows.**\n- **A video A9 View can't play**\n- **Read as it plays, let go the moment it stops.**\n- **Settings.**\n\nFull release notes: https://github.com/atlas9-ai/a9snap-releases/releases",
-  "pub_date": "2026-11-25T19:19:42Z",
+  "version": "0.17.0",
+  "notes": "**0.17.0**\n- **Edit pictures inside A9 View.**\n- **Any picture, safely.**\n- **Unsaved edits are never lost by accident.**\n- **Zoom and pan keep working.**\n- **Two keys differ from the editor window.**\n- **Setting.**\n- **Nothing extra is written.**\n\n**0.16.2**\n- **The Pro list has Trim videos.**\n- **a9snap.com says what is new.**\n- **A Store rating card, for the Microsoft Store version only.**\n- **Rate A9 Snap in the Microsoft Store.**\n- **Left out for now: Suggest a feature.**\n- **Manual and privacy.**\n- **Tests.**\n\nFull release notes: https://github.com/atlas9-ai/a9snap-releases/releases",
+  "pub_date": "2026-11-26T02:39:53Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0JBOTQrOXZLaHh6S2FSQlBlZmVQL25YblhtSTJuUElrREo0dXBGd3VRbFAwMFZTQzE4TUlZZno3bCtLVWYyTnhmdXM1UGV1VW9nNTVEWFNHKzF3THdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjM0MzYwCWZpbGU6QTkgU25hcF8wLjE2LjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTYuMQpzaWxXbXF5WHc4d1NoejFSUk1MNDczdm1teUdidFF2WHFSdWpmbllpN1BBK3Q5bGNaNUJ2d0k1eis2MS90S3VnckkrMTBQand4c2JjMlpVVWZVV25BUT09Cg==",
-      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.16.1/A9Snap_0.16.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb1BoNG1VVUhCSUVmbm9iTy9VL0hTcUFlaDhvanp4RmhkUEVEcldjRXJKSzdJNjNkdXRaakIzMS96RlNvelpuSDR1THVra05PUmQ4WnRMbmVlNFlyYndjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjYwNzczCWZpbGU6QTkgU25hcF8wLjE3LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMTcuMApBN1NyU3Bkd2lhamluT0hza2o4VlBWQ1hHVnZjT2ZFUmt6LzRIdnpORGhKdVZtNDRzSVlCcmoweG1CMUk1dDIyTXdmeGdHb3hLRy9HQ3ZGcTRpbW1Edz09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.17.0/A9Snap_0.17.0_x64-setup.exe"
     }
   },
-  "installer_sha256": "2e645dc46eb7af6f1a7548785a624dca0e4c602d0a87a1c943a8d16c578b19a4",
-  "installer_size": 3895502
+  "installer_sha256": "6d2cf14542d6c7fb292e6ecbf4148f8d19d9647e1852ff4ed23282f1799635cd",
+  "installer_size": 3933557
 }

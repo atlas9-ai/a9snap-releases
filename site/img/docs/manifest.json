@@ -13,7 +13,7 @@
  },
  "pro-features-page": {
   "w": 728,
-  "h": 1155
+  "h": 1243
  },
  "quick-capture-page": {
   "w": 1000,
@@ -31,9 +31,13 @@
   "w": 728,
   "h": 216
  },
+ "settings-redact": {
+  "w": 713,
+  "h": 1511
+ },
  "settings-saving": {
   "w": 713,
-  "h": 1503
+  "h": 1073
  },
  "settings-secure": {
   "w": 713,

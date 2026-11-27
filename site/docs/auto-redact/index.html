@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Auto-redact · A9 Snap Manual</title>
-<meta name="description" content="Auto-redact finds email addresses, phone numbers and card numbers in a picture and blurs them, so you can send it without a second look at every line. It is a Pro feature, and it reads the picture on your PC.">
+<meta name="description" content="Auto-redact finds email addresses, phone numbers, card numbers and your own patterns and words in a picture and blurs them, so you can send it without a second look at every line. It is a Pro feature, and it reads the picture on your PC.">
 <link rel="canonical" href="https://a9snap.com/docs/auto-redact/">
 <meta name="theme-color" content="#0B0C0E">
 <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A9 Snap">
 <meta property="og:title" content="Auto-redact · A9 Snap Manual">
-<meta property="og:description" content="Auto-redact finds email addresses, phone numbers and card numbers in a picture and blurs them, so you can send it without a second look at every line. It is a Pro feature, and it reads the picture on your PC.">
+<meta property="og:description" content="Auto-redact finds email addresses, phone numbers, card numbers and your own patterns and words in a picture and blurs them, so you can send it without a second look at every line. It is a Pro feature, and it reads the picture on your PC.">
 <meta property="og:url" content="https://a9snap.com/docs/auto-redact/">
 <meta property="og:image" content="https://a9snap.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -67,35 +67,71 @@
     <article class="docs-article">
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Editor</p>
       <h1>Auto-redact</h1>
-      <p class="docs-lead">Auto-redact finds email addresses, phone numbers and card numbers in a picture and blurs them, so you can send it without a second look at every line. It is a Pro feature, and it reads the picture on your PC.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.9.0</p>
-      <p>Screenshots catch more than you meant them to: an email address in a corner, a phone number in a signature, a card number in a receipt. <strong>Auto-redact</strong> is part of <a href="/docs/pro/">A9 Snap Pro</a>. It reads the words in the picture with the same Windows text recognition that <strong>Copy text</strong> and <strong>Alt+X</strong> use, finds the ones that look like private details and blurs them. Nothing is uploaded: the reading happens on your PC.</p>
+      <p class="docs-lead">Auto-redact finds email addresses, phone numbers, card numbers and your own patterns and words in a picture and blurs them, so you can send it without a second look at every line. It is a Pro feature, and it reads the picture on your PC.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.20.0</p>
+      <p>Screenshots catch more than you meant them to: an email address in a corner, a phone number in a signature, an employee ID in a header, a customer&#39;s name in a ticket. <strong>Auto-redact</strong> is part of <a href="/docs/pro/">A9 Snap Pro</a>. It reads the words in the picture with the same Windows text recognition that <strong>Copy text</strong> and <strong>Alt+X</strong> use, finds the ones that look like private details, and the ones you taught it, and blurs them. Nothing is uploaded: the reading happens on your PC.</p>
 <h2 id="what-it-finds">What it finds<a class="anchor" href="#what-it-finds" aria-label="Link to What it finds">#</a></h2>
 <ul>
 <li><strong>Email addresses</strong>, such as <code>ana.lee+news@mail.example.co.uk</code>.</li>
 <li><strong>Phone numbers</strong> in the usual North American writings, <code>(555) 123-4567</code>, <code>555-123-4567</code>, <code>555.123.4567</code>, <code>1 555 123 4567</code>, and international numbers that start with a plus, <code>+44 20 7183 8750</code>. A number split across words is still one number.</li>
 <li><strong>Card numbers</strong>: 13 to 19 digits that pass the card check, written together or in groups split by spaces or dashes.</li>
+<li><strong>Your own <a href="#my-patterns">patterns</a> and <a href="#words-to-always-hide">words</a>.</strong></li>
 </ul>
-<p>Two more are in the list and <strong>off</strong> until you turn them on in <a href="/docs/settings/#saving">Saving</a>: <strong>IP addresses</strong> and <strong>long key-like strings</strong> (a long run of letters and digits with no spaces, the shape of an access key).</p>
-<p>Look-alikes are left alone: a date such as <code>2024-10-31</code>, a version such as <code>1.2.3</code>, an order number, a sum, a number that fails the card check. A phone number must be written with a space, dash, dot or bracket, or start with a plus, so a plain run of ten digits (an id, a time stamp) is not blurred.</p>
+<p>Two more are in the list and <strong>off</strong> until you turn them on under <a href="/docs/settings/#auto-redact">Auto-redact</a> in Settings: <strong>IP addresses</strong> and <strong>long key-like strings</strong> (a long run of letters and digits with no spaces, the shape of an access key).</p>
+<p>Look-alikes are left alone: a date such as <code>2024-10-31</code>, a version such as <code>1.2.3</code>, an order number, a sum, a number that fails the card check. A phone number must be written with a space, dash, dot or bracket, or start with a plus, so a plain run of ten digits (an id, a time stamp) is not blurred as a phone number.</p>
 <p>Windows has to read the text correctly for A9 Snap to find it. Small, blurry or stylised text may be missed, and a misread digit can turn a card number into one that fails the check. <strong>Look at the picture before you send it.</strong> Auto-redact is a safety net, not a guarantee.</p>
 <h2 id="in-the-editor">In the editor<a class="anchor" href="#in-the-editor" aria-label="Link to In the editor">#</a></h2>
-<p>Open a capture in the <a href="/docs/mark-up-a-screenshot/">editor</a> and press <kbd>R</kbd>, or click <strong>Redact</strong> in the top bar. A9 Snap reads the capture and puts a <strong>Blur</strong> over every match, a few pixels larger than the words. A line under the toolbar says what it did: <strong>Blurred 3 items: 2 emails, 1 phone number.</strong> When nothing is found it says <strong>Nothing to redact found.</strong>, and pressing it again on a picture that is already blurred says <strong>Already blurred.</strong></p>
+<p>Open a capture in the <a href="/docs/mark-up-a-screenshot/">editor</a>, or press <kbd>E</kbd> on a picture in <a href="/docs/viewer/#edit-a-picture">A9 View</a>, and press <kbd>R</kbd> or click <strong>Redact</strong> in the top bar. A9 Snap reads the picture and puts a <strong>Blur</strong> over every match, a few pixels larger than the words. A line under the toolbar says what it did: <strong>Blurred 3 items: 2 emails, Employee IDs.</strong> When nothing is found it says <strong>Nothing to redact found.</strong>, and pressing it again on a picture that is already blurred says <strong>Already blurred.</strong></p>
+<p>At the top right of the picture, the <strong>Hidden</strong> list shows each thing that was blurred and what found it: <strong>Email address</strong>, <strong>Phone number</strong>, the name of your pattern, or <strong>Word list</strong>. Click a line to pick that blur and see where it is. If one is a wrong match, press <strong>Undo</strong> beside it: that blur goes and the others stay. <kbd>Ctrl</kbd>+<kbd>Z</kbd> brings it back.</p>
 <p>The blurs are ordinary Blur shapes. You can select one, move it, resize it, delete it with <kbd>Delete</kbd>, or undo the whole <strong>Redact</strong> with <kbd>Ctrl</kbd>+<kbd>Z</kbd>, and you can add your own. A blur is real pixelation: once you save, the file holds flat blocks where the text was. See <a href="/docs/saving-and-revert/#blur-is-permanent-in-the-saved-file">Blur is permanent in the saved file</a>.</p>
 <p>Without Pro the <strong>Redact</strong> button shows a <strong>Pro</strong> badge and opens the Pro sheet.</p>
 <h2 id="in-the-strip">In the strip<a class="anchor" href="#in-the-strip" aria-label="Link to In the strip">#</a></h2>
 <p>Right-click a capture in the <a href="/docs/strip/">strip</a> and choose <strong>Copy redacted</strong>. A blurred copy of the picture goes on the clipboard, ready to paste. <strong>The file is not changed.</strong> The note says <strong>Copied redacted · 3 blurred</strong>, or <strong>Copied · nothing to redact found</strong> when there was nothing to blur (the picture is then copied as it is). Without Pro the item shows a <strong>Pro</strong> badge and opens the Pro sheet.</p>
 <h2 id="redact-every-capture">Redact every capture<a class="anchor" href="#redact-every-capture" aria-label="Link to Redact every capture">#</a></h2>
-<p>Turn on <strong>Redact every capture before it&#39;s copied</strong> in <a href="/docs/settings/#saving">Saving</a> and every new capture is read and blurred before it reaches the clipboard and your screenshots folder. It is off by default, and it needs Pro.</p>
+<p>Turn on <strong>Redact every capture before it&#39;s copied</strong> under <a href="/docs/settings/#auto-redact">Auto-redact</a> in Settings and every new capture is read and blurred before it reaches the clipboard and your screenshots folder. It is off by default, and it needs Pro.</p>
 <ul>
-<li><strong>It adds a moment.</strong> The picture is on the clipboard only once Windows has read it: about a second for a full screen of text, a fraction of that for a small region. A capture with nothing to blur is copied as it is.</li>
+<li><strong>It adds a moment.</strong> The picture is on the clipboard only once Windows has read it: about a second for a full screen of text, a fraction of that for a small region. A capture with nothing to blur is copied as it is. Your patterns and words add very little to that.</li>
 <li><strong>The untouched original is kept</strong>, in the hidden <code>.a9snap</code> folder next to your screenshots, like an edit&#39;s original. Open the capture in the editor and <strong>Revert</strong> brings it back; <strong>Clear</strong> on the <strong>Edit originals</strong> row in <a href="/docs/settings/#saving">Saving</a> removes it, after which the capture can no longer be reverted. The capture shows the Volt dot of an edited one. Delete <code>.a9snap</code> before you share the whole folder.</li>
+<li><strong>A wrong match:</strong> open the capture in the editor, press <strong>Revert</strong> to get the untouched picture back, then press <kbd>R</kbd>. The <strong>Hidden</strong> list shows what matched; press <strong>Undo</strong> beside the wrong one and save.</li>
 <li><strong>If Windows can&#39;t read the picture</strong> (no text recognition language is installed, say), the capture is copied and saved as it is, and the note says <strong>couldn&#39;t check for private text</strong>.</li>
+<li><strong>If a pattern was skipped</strong> because it was too slow, the note says so: <strong>1 pattern skipped (too slow)</strong>. See <a href="#limits">Limits</a>.</li>
 <li><strong><a href="/docs/secure-capture/">Secure captures</a> are never redacted.</strong> They stay out of the strip and the screenshots folder already, and they are never read.</li>
 </ul>
-<p><strong>What auto-redact blurs</strong> in the same section chooses the kinds, for this setting, <strong>Redact</strong> in the editor and <strong>Copy redacted</strong> in the strip.</p>
+<p><strong>What auto-redact blurs</strong> in the same section chooses the built-in kinds, for this setting, <strong>Redact</strong> in the editor and <strong>Copy redacted</strong> in the strip. Your patterns have their own on/off switches.</p>
+<h2 id="my-patterns">My patterns<a class="anchor" href="#my-patterns" aria-label="Link to My patterns">#</a></h2>
+<p>Every workplace has private text of its own: employee IDs, ticket and case numbers, account numbers, project codes. Add them under <strong>Settings › Auto-redact</strong>, in <strong>My patterns</strong>, and Auto-redact hides them everywhere it runs, in the same way as the built-in kinds. Each pattern has a name, an on/off switch, and one of two kinds:</p>
+<ul>
+<li><strong>Simple</strong> describes the shape of the text. <code>#</code> is any digit, <code>A</code> any letter and <code>*</code> any letter or digit; everything else means itself. <code>EMP-######</code> is <code>EMP-</code> and six digits; <code>INC#######</code> is <code>INC</code> and seven digits; <code>AA-##</code> is two letters, a dash and two digits. To mean a real <code>#</code>, <code>A</code> or <code>*</code>, put a backslash before it: <code>\A</code> is the letter A, so <code>\ACME-####</code> finds ACME numbers. A Simple pattern matches a whole thing: <code>EMP-######</code> doesn&#39;t match inside <code>EMP-0044177</code>.</li>
+<li><strong>Advanced</strong> is a regular expression, such as <code>\bPRJ-\d{4}\b</code>. Use <code>\b</code> to keep a match from sitting inside a longer word. Look-ahead, look-behind and back-references aren&#39;t supported. An expression that isn&#39;t valid shows why, and can&#39;t be saved.</li>
+</ul>
+<p>Two options:</p>
+<ul>
+<li><strong>Ignore case</strong> (on to start): <code>emp-123</code> and <code>EMP-123</code> are the same.</li>
+<li><strong>Allow spaces or dashes inside</strong> (off to start): for text that gets read with a gap in it. With it on, <code>EMP-######</code> also finds <code>EMP 00 44 17</code>.</li>
+</ul>
+<p>As with every match, whole words are blurred: if a pattern matches part of a word, the whole word goes.</p>
+<h3 id="starters">Starters<a class="anchor" href="#starters" aria-label="Link to Starters">#</a></h3>
+<p><strong>Add a starter</strong> puts a ready pattern in your list, switched on, for you to change as you like:</p>
+<ul>
+<li><strong>Ticket numbers:</strong> <code>INC</code>, <code>RITM</code>, <code>REQ</code>, <code>CHG</code> or <code>TASK</code> followed by seven digits.</li>
+<li><strong>Employee IDs:</strong> <code>EMP-</code> or <code>E</code> followed by five to eight digits.</li>
+<li><strong>Account numbers:</strong> eight to twelve digits in a row. Dates written without separators, such as <code>20261031</code>, are eight digits too: turn this one off if you don&#39;t want them blurred.</li>
+</ul>
+<h2 id="words-to-always-hide">Words to always hide<a class="anchor" href="#words-to-always-hide" aria-label="Link to Words to always hide">#</a></h2>
+<p>For names that have no shape, such as a customer or a project code name, type them under <strong>Words to always hide</strong>, one word or phrase per line, and press <strong>Save</strong> (leaving the box saves too). Each is hidden wherever it stands as a whole word, ignoring case: <code>Heron</code> hides <code>heron</code> and <code>(Heron&#39;s)</code>, but not <code>Heronry</code>. A phrase is found when its words are on the same line.</p>
+<h2 id="try-it">Try it<a class="anchor" href="#try-it" aria-label="Link to Try it">#</a></h2>
+<p>Type or paste some text into <strong>Try it</strong>, under the words. The box shows which patterns and words match and what they would hide, as you type, including the pattern you are still editing. Nothing there is saved.</p>
+<h2 id="share-with-a-team">Share with a team<a class="anchor" href="#share-with-a-team" aria-label="Link to Share with a team">#</a></h2>
+<p><strong>Export…</strong> saves your patterns and words to a <code>.a9redact</code> file, which is plain JSON you can read. Send it to a colleague any way you like: A9 Snap sends nothing. <strong>Import…</strong> opens such a file and first lists what it holds and what will happen: entries already in your list are skipped, one that can&#39;t be used says so, and <strong>Add</strong> adds the rest. Importing the same file twice adds nothing.</p>
+<h2 id="limits">Limits<a class="anchor" href="#limits" aria-label="Link to Limits">#</a></h2>
+<ul>
+<li>Up to <strong>100 patterns</strong> and <strong>500 words</strong>.</li>
+<li>Each pattern gets <strong>50 milliseconds</strong> per picture. One that runs over is skipped for that picture, the note after the capture or in the editor says so, and the pattern is marked <strong>Too slow</strong> in your list until you change it or switch it off and on. Make it simpler: fewer repeats, and less that is optional.</li>
+</ul>
+<h2 id="privacy">Privacy<a class="anchor" href="#privacy" aria-label="Link to Privacy">#</a></h2>
+<p>Patterns and words are kept with your other settings on this PC. They are never sent anywhere, and the log records only how many, never a pattern, a word or what matched. See <a href="/docs/privacy/">Privacy</a>.</p>
 <h2 id="without-pro">Without Pro<a class="anchor" href="#without-pro" aria-label="Link to Without Pro">#</a></h2>
-<p>Without Pro, <strong>Redact</strong> and <strong>Copy redacted</strong> show a <strong>Pro</strong> badge and open the Pro sheet, and <strong>Redact every capture</strong> is greyed out. Nothing is read and the license is not checked: a free copy never makes one.</p>
+<p>Without Pro, <strong>Redact</strong> and <strong>Copy redacted</strong> show a <strong>Pro</strong> badge and open the Pro sheet, and the <strong>Auto-redact</strong> settings, <strong>My patterns</strong> and the rest, show the badge; pressing them opens the Pro sheet and saves nothing. Nothing is read and the license is not checked: a free copy never makes one.</p>
 <h2 id="where-to-go-next">Where to go next<a class="anchor" href="#where-to-go-next" aria-label="Link to Where to go next">#</a></h2>
 <ul>
 <li><a href="/docs/mark-up-a-screenshot/">Mark up a screenshot</a></li>
@@ -107,13 +143,13 @@
       <p class="docs-help">Something missing or wrong? <a href="/docs/troubleshooting/#contact-a9-snap">Contact A9 Snap</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/secure-capture/"><span class="docs-step-l">Previous</span><span>Secure capture</span></a><a class="docs-step next" href="/docs/record-video/"><span class="docs-step-l">Next</span><span>Record video and GIF</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#what-it-finds">What it finds</a></li><li class="d2"><a href="#in-the-editor">In the editor</a></li><li class="d2"><a href="#in-the-strip">In the strip</a></li><li class="d2"><a href="#redact-every-capture">Redact every capture</a></li><li class="d2"><a href="#without-pro">Without Pro</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#what-it-finds">What it finds</a></li><li class="d2"><a href="#in-the-editor">In the editor</a></li><li class="d2"><a href="#in-the-strip">In the strip</a></li><li class="d2"><a href="#redact-every-capture">Redact every capture</a></li><li class="d2"><a href="#my-patterns">My patterns</a></li><li class="d3"><a href="#starters">Starters</a></li><li class="d2"><a href="#words-to-always-hide">Words to always hide</a></li><li class="d2"><a href="#try-it">Try it</a></li><li class="d2"><a href="#share-with-a-team">Share with a team</a></li><li class="d2"><a href="#limits">Limits</a></li><li class="d2"><a href="#privacy">Privacy</a></li><li class="d2"><a href="#without-pro">Without Pro</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>
   <div class="wrap">
     <span class="brand foot-brand" role="img" aria-label="A9 Snap"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span><span class="by">An A9 Solutions product</span></span>
-    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a href="mailto:support@a9snap.com">support@a9snap.com</a><a class="ver" data-ver href="/docs/whats-new/">v0.19.0</a></div>
+    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a href="mailto:support@a9snap.com">support@a9snap.com</a><a class="ver" data-ver href="/docs/whats-new/">v0.20.0</a></div>
     <span class="mono">Point. Snap. Paste.</span>
   </div>
 </footer>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Record video and GIF · A9 Snap Manual</title>
-<meta name="description" content="Record a window, a region or a whole screen as an MP4, then paste it like a picture. A short recording can become a GIF. It is a Pro feature.">
+<meta name="description" content="Record a window, a region or a whole screen as an MP4, with a ring around every click, then paste it like a picture. A short recording can become a GIF. It is a Pro feature.">
 <link rel="canonical" href="https://a9snap.com/docs/record-video/">
 <meta name="theme-color" content="#0B0C0E">
 <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A9 Snap">
 <meta property="og:title" content="Record video and GIF · A9 Snap Manual">
-<meta property="og:description" content="Record a window, a region or a whole screen as an MP4, then paste it like a picture. A short recording can become a GIF. It is a Pro feature.">
+<meta property="og:description" content="Record a window, a region or a whole screen as an MP4, with a ring around every click, then paste it like a picture. A short recording can become a GIF. It is a Pro feature.">
 <meta property="og:url" content="https://a9snap.com/docs/record-video/">
 <meta property="og:image" content="https://a9snap.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -67,8 +67,8 @@
     <article class="docs-article">
       <p class="docs-crumb"><a href="/docs/">Manual</a> · Capture</p>
       <h1>Record video and GIF</h1>
-      <p class="docs-lead">Record a window, a region or a whole screen as an MP4, then paste it like a picture. A short recording can become a GIF. It is a Pro feature.</p>
-      <p class="docs-updated">Last updated for A9 Snap 0.16.0</p>
+      <p class="docs-lead">Record a window, a region or a whole screen as an MP4, with a ring around every click, then paste it like a picture. A short recording can become a GIF. It is a Pro feature.</p>
+      <p class="docs-updated">Last updated for A9 Snap 0.21.0</p>
       <p>Some things are easier to show than to screenshot: a click path, a bug that only happens when you hover. <strong>Video and GIF capture</strong> records what you choose to a small MP4 file, puts the file on the clipboard so it pastes into a chat or an email as an attachment, and keeps it next to your screenshots. It is part of A9 Snap Pro: see <a href="/docs/pro/">Pro features</a>.</p>
 <h2 id="record-something">Record something<a class="anchor" href="#record-something" aria-label="Link to Record something">#</a></h2>
 <ol>
@@ -88,6 +88,19 @@
 </ul>
 <p>A thin Volt outline marks the recorded area. Neither the outline nor the bar is ever in the video. Press <kbd>Esc</kbd> while the bar has the keyboard (or while the pointer is on it) and it asks <strong>Discard recording?</strong>, with <strong>Discard</strong> and <strong>Keep recording</strong>.</p>
 <p>A recording stops by itself after 10 minutes, with a warning 10 seconds before (<strong>Stops in 9 s</strong> on the bar). Change that under <strong>Longest recording</strong> in Settings: 1, 5, 10 or 30 minutes.</p>
+<h2 id="click-highlights">Click highlights<a class="anchor" href="#click-highlights" aria-label="Link to Click highlights">#</a></h2>
+<p>In a recording, a click is easy to miss. With <strong>Highlight clicks</strong> on, A9 Snap draws a ring where you click, so people watching can see what you pressed.</p>
+<ul>
+<li><strong>A click</strong> shows a ring around the pointer that grows a little and fades in about half a second.</li>
+<li><strong>Left and right</strong> clicks have their own colours: yellow for left and blue for right, unless you choose others.</li>
+<li><strong>A double-click</strong> shows two quick rings.</li>
+<li><strong>Holding a button down</strong> keeps a smaller ring on the pointer until you let go, so a drag can be followed.</li>
+</ul>
+<p>The rings are drawn into the video and nowhere else. Nothing appears on your screen while you record, and other apps never see them. They are in the GIF made from a recording, and they stay through <a href="/docs/viewer/#trim-pro">Trim</a>. They follow your display scaling, so they look the same size on a screen at 100% and one at 150%.</p>
+<p>Only clicks inside the area you are recording are shown. A click outside it, a click on the recording bar and a click while the recording is paused are left out. If you drag out of the area, the ring is hidden until the pointer comes back. The middle button and the wheel make no rings, and keys are never shown.</p>
+<p><strong>Highlight clicks</strong> is on for a new install. If you recorded with an earlier version, it starts off so your videos look as before, and the note after your next recording tells you where to turn it on.</p>
+<p>A9 Snap watches the mouse only while a recording with highlights is running. It uses where and when you clicked inside the area to draw the rings, and keeps none of it: nothing about a click is written anywhere except into the video. See <a href="/docs/privacy/">Privacy</a>.</p>
+<p>Windows doesn&#39;t tell an ordinary app about clicks in an app that is running as administrator, so those clicks get no ring.</p>
 <h2 id="what-you-get">What you get<a class="anchor" href="#what-you-get" aria-label="Link to What you get">#</a></h2>
 <ul>
 <li><strong>A file, in the same numbering as your pictures.</strong> The next number in your screenshots folder, ending in <code>.mp4</code>: if the last picture was <code>SNAP-0042.png</code>, the recording is <code>SNAP-0043.mp4</code>, and the next picture is <code>SNAP-0044.png</code>. See <a href="/docs/where-screenshots-go/">Where screenshots go</a>.</li>
@@ -100,17 +113,22 @@
 <h2 id="in-the-strip-and-the-home-window">In the strip and the Home window<a class="anchor" href="#in-the-strip-and-the-home-window" aria-label="Link to In the strip and the Home window">#</a></h2>
 <p>A recording&#39;s card shows its first frame, a play badge and its length. Press <kbd>Enter</kbd> or double-click to play it in <a href="/docs/viewer/">A9 View</a> (or, with <strong>Open my recordings in A9 View</strong> off in Settings, your default player). Clicking the note after a recording does the same. <kbd>Ctrl</kbd>+<kbd>C</kbd>, dragging it out, <kbd>Delete</kbd> and <strong>Undo</strong> work as they do for a picture; Copy puts the file on the clipboard. Search finds a recording by its name and by the app and window title noted when it started. The editor does not open recordings, and Secure capture, Auto-redact and search inside pictures do not apply to them in this version.</p>
 <h2 id="settings">Settings<a class="anchor" href="#settings" aria-label="Link to Settings">#</a></h2>
-<p>Open <strong>Saving</strong> in the Home window.</p>
+<p>Open <strong>Recording</strong> in the Home window&#39;s list of settings.</p>
+<p><figure class="shot"><img src="/img/docs/settings-recording-1x.webp" srcset="/img/docs/settings-recording-1x.webp 1x, /img/docs/settings-recording.webp 2x" width="713" height="679" alt="The Recording section: Highlight clicks with its preview, the two colours, the ring size, the pointer and the longest recording" loading="lazy" decoding="async"><figcaption>The Recording section.</figcaption></figure></p>
 <ul>
+<li><strong>Highlight clicks.</strong> On for a new install. A small preview under it shows the rings in your colours and size.</li>
+<li><strong>Left-click colour</strong> and <strong>Right-click colour.</strong> Click a colour to choose another.</li>
+<li><strong>Ring size.</strong> Small, Medium (the default) or Large.</li>
 <li><strong>Show the pointer in recordings.</strong> On by default.</li>
 <li><strong>Longest recording.</strong> 1, 5, 10 (the default) or 30 minutes.</li>
 </ul>
 <p>The microphone and PC sound switches are on the recording bar.</p>
 <h2 id="privacy">Privacy<a class="anchor" href="#privacy" aria-label="Link to Privacy">#</a></h2>
-<p>Recording happens on your PC and the files stay there: A9 Snap never uploads a recording. <strong>Sound is recorded only when you turn it on</strong>: the microphone and PC sound are off by default, and switching one off closes it. The log says how long a recording was and its size, never what was on screen. See <a href="/docs/privacy/">Privacy</a>.</p>
+<p>Recording happens on your PC and the files stay there: A9 Snap never uploads a recording. <strong>Sound is recorded only when you turn it on</strong>: the microphone and PC sound are off by default, and switching one off closes it. For click highlights, only clicks inside the recorded area are used, only while it records, and no keys are captured. The log says how long a recording was, its size and whether highlights were on, never what was on screen or where anyone clicked. See <a href="/docs/privacy/">Privacy</a>.</p>
 <h2 id="if-it-doesnt-work">If it doesn&#39;t work<a class="anchor" href="#if-it-doesnt-work" aria-label="Link to If it doesn't work">#</a></h2>
 <ul>
 <li><strong>&quot;The screen sent no picture to record.&quot;</strong> A locked PC or a protected screen has nothing to capture. Unlock it and try again.</li>
+<li><strong>No rings in the video.</strong> Check <strong>Highlight clicks</strong> under <strong>Recording</strong> in Settings. Clicks in an app running as administrator get none. If the bar says <strong>Clicks can&#39;t be highlighted</strong>, the recording goes on without them.</li>
 <li><strong>A sound switch turns itself off</strong> and the bar names the problem: no microphone, no sound output, or Windows blocking the microphone (<strong>Settings &gt; Privacy &amp; security &gt; Microphone</strong>, which has to allow desktop apps).</li>
 <li><strong>A recording that was running when you quit A9 Snap</strong> is finished and saved before it closes.</li>
 </ul>
@@ -125,13 +143,13 @@
       <p class="docs-help">Something missing or wrong? <a href="/docs/troubleshooting/#contact-a9-snap">Contact A9 Snap</a>.</p>
       <nav class="docs-steps" aria-label="Previous and next page"><a class="docs-step prev" href="/docs/auto-redact/"><span class="docs-step-l">Previous</span><span>Auto-redact</span></a><a class="docs-step next" href="/docs/scrolling-capture/"><span class="docs-step-l">Next</span><span>Scrolling capture</span></a></nav>
     </article>
-    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#record-something">Record something</a></li><li class="d2"><a href="#while-it-records">While it records</a></li><li class="d2"><a href="#what-you-get">What you get</a></li><li class="d2"><a href="#make-a-gif">Make a GIF</a></li><li class="d2"><a href="#in-the-strip-and-the-home-window">In the strip and the Home window</a></li><li class="d2"><a href="#settings">Settings</a></li><li class="d2"><a href="#privacy">Privacy</a></li><li class="d2"><a href="#if-it-doesnt-work">If it doesn't work</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+    <nav class="docs-toc" aria-label="On this page"><h2 class="docs-toc-h">On this page</h2><ul><li class="d2"><a href="#record-something">Record something</a></li><li class="d2"><a href="#while-it-records">While it records</a></li><li class="d2"><a href="#click-highlights">Click highlights</a></li><li class="d2"><a href="#what-you-get">What you get</a></li><li class="d2"><a href="#make-a-gif">Make a GIF</a></li><li class="d2"><a href="#in-the-strip-and-the-home-window">In the strip and the Home window</a></li><li class="d2"><a href="#settings">Settings</a></li><li class="d2"><a href="#privacy">Privacy</a></li><li class="d2"><a href="#if-it-doesnt-work">If it doesn't work</a></li><li class="d2"><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
   </main>
 </div>
 <footer>
   <div class="wrap">
     <span class="brand foot-brand" role="img" aria-label="A9 Snap"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect x=".5" y=".5" width="63" height="63" rx="15.5" fill="#17181B" stroke="#2A2C31"/><path d="M15 25V15h10M39 15h10v10M49 39v10H39M25 49H15V39" fill="none" stroke="#C8F31D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" fill="#E5484D"/></svg><svg class="a9" viewBox="0 0 68 64" aria-hidden="true"><path class="a" d="M0.03 54.91L13.43 8.62Q13.61 8 14.25 8L26.44 8Q27.08 8 27.26 8.62L30.35 19.29Q30.33 19.34 30.31 19.39Q27.97 25.93 30.1 32.54Q32.06 38.63 37.05 42.46L40.66 54.91Q40.75 55.25 40.58 55.56Q40.41 56 40.07 56Q39.96 56 39.84 56L28.87 56Q28.23 56 28.05 55.38L25.79 47.47L14.9 47.47L12.64 55.38Q12.46 56 11.82 56L0.85 56Q0.5 56 0.25 55.75Q0 55.5 0 55.15Q0 55.03 0.03 54.91ZM20.35 26.78L17.56 37.24L23.13 37.24Z"/><path fill="#E5484D" d="M65.87 34.57L55.18 55.53Q54.95 56 54.42 56L44.58 56Q44.23 56 43.98 55.75Q43.73 55.5 43.73 55.15Q43.73 54.94 43.82 54.76L49.03 44.54Q43.68 44.41 39.18 41.3Q34.08 37.77 32.19 31.87Q30.29 25.97 32.37 20.13Q34.46 14.29 39.66 10.93Q44.87 7.56 51.05 8Q57.22 8.55 61.83 12.71Q66.43 16.86 67.55 22.95Q68.68 29.05 65.87 34.57ZM56.89 26.27Q56.89 23.25 54.75 21.11Q52.61 18.96 49.58 18.96Q46.56 18.96 44.42 21.11Q42.27 23.25 42.27 26.27Q42.27 29.3 44.42 31.44Q46.56 33.58 49.58 33.58Q52.61 33.58 54.75 31.44Q56.89 29.3 56.89 26.27Z"/></svg><span class="snap">Snap</span><span class="by">An A9 Solutions product</span></span>
-    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a href="mailto:support@a9snap.com">support@a9snap.com</a><a class="ver" data-ver href="/docs/whats-new/">v0.20.0</a></div>
+    <div class="foot-links" role="navigation" aria-label="Footer"><a href="/docs/">Manual</a><a href="/docs/whats-new/">Changelog</a><a href="mailto:support@a9snap.com">support@a9snap.com</a><a class="ver" data-ver href="/docs/whats-new/">v0.21.0</a></div>
     <span class="mono">Point. Snap. Paste.</span>
   </div>
 </footer>

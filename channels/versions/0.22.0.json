@@ -1,0 +1,13 @@
+{
+  "version": "0.22.0",
+  "notes": "- **Other A9 apps can ask A9 Snap for a capture.** An app on your PC that is made to work with A9 Snap can open its picker, and it is told where the picture was saved. A9 Voice is the first app this is built for. A9 Snap starts by itself if it isn't running, without opening a window.\n- **The same capture you know.** Click a window, press **F** for the screen or drag a box; **Esc** cancels. The picture is saved like any capture: numbered file, clipboard, confirmation, strip and your settings. Only the free ways to capture are offered, even with Pro, and no Pro message appears. A picture of an app on your **Always secure** list is kept secure and not handed to the other app.\n- **One at a time.** A second request while one is open, or one that arrives during a capture or a recording, is answered \"busy\" at once. A request nobody answers within 2 minutes closes the picker.\n- **Private.** Nothing goes over the network. The answer can be written only into a folder inside your own AppData, never over another file. The log says only that a request came in and how it ended, never a file name or folder.\n- **For app makers.** The contract is in `docs/capture-for.md`. A small `capture-for.json` file beside `a9snap.exe` says this copy takes requests.\n- **Manual.** Take a screenshot has Other A9 apps; Privacy covers requests from other apps.\n- **Tests.** Unit tests cover the launch arguments, the allowed folders (including `..` and links that point outside), the answers and how they are written; `scripts/e2e/capture-for.mjs` plays the calling app against the real one.",
+  "pub_date": "2026-11-27T17:07:27Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNTF0a0tNMExDb0FteUxaeUdBMWdnSlF2amEzaTUxUEp0d2lwekRpSzg1MSsvTWV1OHRqSHlDOGd5VzNyR01kVHFFc2d2OTBncHZMTmlSaHlyOTdPSElTeXRTU0g3WGdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1Nzk5MjIzCWZpbGU6QTkgU25hcF8wLjIyLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMjIuMApQZFkycTJIT2lsSFRsK0hLSW9KeFpYelNUcjVYdWIyTDlVaVNMWnZ3dG5MQ1c2dzJDRkNlaCtjMms3bk13R0hEZ3VuekRRQWhpS2JvNE82bmw2S2ZBZz09Cg==",
+      "url": "https://github.com/atlas9-ai/a9snap-releases/releases/download/v0.22.0/A9Snap_0.22.0_x64-setup.exe"
+    }
+  },
+  "installer_sha256": "670ab2c0658e0bda7f550fd0b583e226e4c3f496e167b85c1040b88bfd0cd958",
+  "installer_size": 4682129
+}
